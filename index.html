@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GOALart — A arte de cumprir objetivos</title>
+<meta name="description" content="Consultoria em desenvolvimento organizacional e implementação para empresas e empresários, setor público e instituições sociais dos Açores. Objetivos fechados, entregáveis concretos, equipa autónoma.">
+<link rel="canonical" href="https://goalart.pt/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:site_name" content="GOALart">
+<meta property="og:title" content="GOALart — A arte de cumprir objetivos">
+<meta property="og:description" content="Transformamos organizações. Por dentro.">
+<meta property="og:url" content="https://goalart.pt/">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#005B67">
+<link rel="preload" href="fonts/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/source-sans-3-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/source-sans-3-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/source-sans-3-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/source-sans-3-latin-700-normal.woff2) format('woff2')}
+:root{--pet:#005B67;--agua:#9BC7CF;--tinta:#1A1A1A;--cobre:#985820;--champ:#F0C594;--nevoa:#EEF4F5;--linha:#C9DFE3}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Source Sans 3',Arial,Helvetica,sans-serif;color:var(--tinta);background:#fff;font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty}
+a{color:var(--cobre)}a:hover{color:var(--pet)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--cobre);outline-offset:3px}
+.saltar{position:absolute;left:-9999px;top:8px;background:#fff;padding:10px 16px;z-index:60}.saltar:focus{left:16px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+@media (max-width:640px){.wrap{padding:0 22px}body{font-size:18px}}
+.esc{background:var(--pet);color:#fff}
+.t-xl{font-size:clamp(46px,7vw,112px);line-height:.98;letter-spacing:-.035em;font-weight:600}
+.t-l{font-size:clamp(36px,4.6vw,68px);line-height:1.03;letter-spacing:-.03em;font-weight:600}
+.t-m{font-size:clamp(26px,2.4vw,34px);line-height:1.15;letter-spacing:-.015em;font-weight:600}
+.pet{color:var(--pet)}
+.lead{font-size:clamp(20px,1.7vw,23px);line-height:1.5}
+/* cabeçalho */
+.topo{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.9);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--linha)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px}
+.topo .logo img{height:52px;width:auto}
+.nav{display:flex;align-items:center;gap:32px;font-size:17px;font-weight:500}
+.nl{color:var(--tinta);text-decoration:none;background:linear-gradient(var(--cobre),var(--cobre)) 0 100%/0 2px no-repeat;transition:background-size .3s ease;padding-bottom:3px}
+.nl:hover{background-size:100% 2px;color:var(--tinta)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;text-decoration:none;font-weight:600;font-size:18px;border-radius:2px;transition:background-color .25s ease,transform .25s ease,color .25s ease}
+.btn-c{background:var(--cobre);color:#fff}.btn-c:hover{background:#7E4818;color:#fff;transform:translateY(-2px)}
+.btn-ch{background:var(--champ);color:var(--pet);font-weight:700}.btn-ch:hover{background:#fff;color:var(--pet);transform:translateY(-2px)}
+.btn-s{min-height:44px;padding:0 20px;font-size:16px}
+.menu{display:none;position:relative}
+.menu summary{list-style:none;cursor:pointer;min-height:44px;display:flex;align-items:center;gap:10px;font-weight:600;font-size:17px;color:var(--pet);padding:0 4px}
+.menu summary::-webkit-details-marker{display:none}
+.menu .barras{width:22px;height:14px;display:inline-block;background:linear-gradient(var(--pet),var(--pet)) 0 0/100% 2px no-repeat,linear-gradient(var(--pet),var(--pet)) 0 6px/100% 2px no-repeat,linear-gradient(var(--pet),var(--pet)) 0 12px/100% 2px no-repeat}
+.menu[open] .barras{background:linear-gradient(var(--pet),var(--pet)) 0 6px/100% 2px no-repeat}
+.menu nav{position:absolute;right:0;top:54px;background:#fff;border:1px solid var(--linha);border-radius:2px;padding:12px;display:flex;flex-direction:column;min-width:240px;box-shadow:0 12px 32px rgba(0,40,46,.12)}
+.menu nav a{padding:12px 14px;color:var(--tinta);text-decoration:none;font-weight:500}
+.menu nav a:hover{background:var(--nevoa)}
+.menu nav .btn{margin-top:8px}
+@media (max-width:900px){.nav{display:none}.menu{display:block}.topo .logo img{height:44px}}
+/* abertura */
+.hero{min-height:calc(100vh - 76px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:center;padding-top:64px;padding-bottom:80px}
+@media (max-width:900px){.hero{grid-template-columns:1fr;min-height:0;padding-top:48px;padding-bottom:64px}}
+.hero h1 span{display:block}
+.hero .c2{color:var(--cobre);margin-top:.12em}
+.hero .lead{margin-top:40px;max-width:28em}
+.acoes{margin-top:44px;display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px}
+.lk{font-weight:600;font-size:18px;color:var(--pet);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+.alvo{width:100%;max-width:560px;height:auto;overflow:visible;margin:0 auto}
+@media (max-width:900px){.alvo{max-width:300px}}
+@keyframes subir{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes desenhar{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes aparecer{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}
+@keyframes girar{to{transform:rotate(360deg)}}
+@keyframes pulsar{0%,100%{opacity:0;transform:scale(1)}50%{opacity:.35;transform:scale(2.4)}}
+@keyframes troca{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes encher{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.hl{opacity:0;animation:subir .9s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.15s}.d2{animation-delay:.35s}.d3{animation-delay:.7s}.d4{animation-delay:.9s}
+.anel{stroke-dasharray:1;stroke-dashoffset:1;animation:desenhar 1.6s cubic-bezier(.6,0,.2,1) forwards}
+.a1{animation-delay:.2s}.a2{animation-delay:.45s}.a3{animation-delay:.7s}.a4{animation-delay:.95s}
+.vetor{stroke-dasharray:1;stroke-dashoffset:1;animation:desenhar 1.1s cubic-bezier(.7,0,.2,1) 1.6s forwards}
+.centro{transform-box:fill-box;transform-origin:center;opacity:0;animation:aparecer .6s cubic-bezier(.3,1.6,.5,1) 2.5s forwards}
+.eco{transform-box:fill-box;transform-origin:center;opacity:0;animation:pulsar 3.6s ease-in-out 3.2s infinite}
+.orbita{transform-box:view-box;transform-origin:260px 260px;animation:girar 90s linear infinite}
+/* manifesto */
+.manif{padding:128px 0 120px}
+.manif .t-l{max-width:21ch}
+.manif .t-l em{font-style:normal;color:var(--champ);display:block;margin-top:.15em}
+.linhas{margin-top:88px;border-top:1px solid rgba(155,199,207,.5)}
+.linha{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:16px 48px;padding:36px 0;border-bottom:1px solid rgba(155,199,207,.5);align-items:baseline}
+.linha h3{font-size:clamp(26px,2.6vw,36px);line-height:1.15;letter-spacing:-.02em;font-weight:600;color:#fff}
+.linha p{font-size:20px;line-height:1.55;max-width:34em}
+@media (max-width:760px){.linha{grid-template-columns:1fr}}
+/* direção à medida */
+.dam{padding-top:128px;padding-bottom:128px}
+.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:center}
+.split.inv{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+@media (max-width:900px){.split,.split.inv{grid-template-columns:1fr;gap:40px}}
+.foto{margin:0;overflow:hidden;border-radius:3px;aspect-ratio:4/5;background:var(--nevoa)}
+.foto img{width:100%;height:100%;object-fit:cover}
+@media (max-width:900px){.foto{aspect-ratio:4/3;max-height:520px}.dam .foto img{object-position:58% 72%}}
+.dam .foto img{object-position:62% 78%}
+.etq{font-size:16px;font-weight:600;color:var(--cobre);letter-spacing:.02em}
+.dam h2{margin-top:14px}
+.dam .perg{margin-top:28px;font-size:clamp(22px,2vw,27px);line-height:1.35;font-weight:500;color:var(--pet)}
+.dam .corpo{margin-top:20px;max-width:32em}
+.funcoes{margin:44px 0 0;padding:0;list-style:none;border-top:1px solid var(--linha)}
+.funcoes li{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:6px 28px;padding:18px 0;border-bottom:1px solid var(--linha)}
+.funcoes b{font-weight:600;color:var(--pet);font-size:19px}
+.funcoes span{font-size:17px;line-height:1.5}
+@media (max-width:640px){.funcoes li{grid-template-columns:1fr}}
+/* outros serviços */
+.outros{background:var(--nevoa);padding:112px 0}
+.outros .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:56px 80px}
+.outros h3{color:var(--pet)}
+.outros p{margin-top:16px;max-width:30em}
+/* setores */
+.setores{padding:128px 0 136px}
+.setores .sub{margin-top:18px;font-size:20px;max-width:34em}
+.tabs{margin-top:44px;display:flex;flex-wrap:wrap;gap:10px}
+.tab{min-height:48px;padding:0 22px;border:1px solid var(--agua);background:transparent;color:#fff;font-family:inherit;font-size:17px;font-weight:600;border-radius:999px;cursor:pointer;transition:background-color .25s ease,color .25s ease}
+.tab:hover{background:rgba(255,255,255,.1)}
+.tab[aria-selected="true"]{background:#fff;border-color:#fff;color:var(--pet)}
+.painel{margin-top:64px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px 72px;align-items:start;animation:troca .5s cubic-bezier(.2,.7,.2,1)}
+.painel[hidden]{display:none}
+@media (max-width:860px){.painel{grid-template-columns:1fr}}
+.painel h3{font-size:clamp(34px,4.4vw,64px);line-height:1.04;letter-spacing:-.03em;font-weight:600;color:#fff}
+.painel .txt{font-size:20px;line-height:1.55}
+.rotulo{font-size:15px;font-weight:600;color:var(--champ);margin-bottom:14px}
+.onde{margin-top:28px;font-size:15px;font-weight:600;color:var(--champ)}
+.entradas{margin:12px 0 0;padding:0;list-style:none}
+.entradas li{padding:10px 0;border-bottom:1px solid rgba(155,199,207,.45);font-size:17px}
+/* método */
+.metodo{padding-top:128px;padding-bottom:120px}
+.metodo .intro{margin-top:22px;max-width:34em}
+.trilho{margin-top:72px;height:2px;background:var(--linha);overflow:hidden}
+.trilho div{height:2px;background:var(--cobre)}
+.passos{margin:36px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px}
+@media (max-width:980px){.passos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.passos{grid-template-columns:1fr}}
+.passos .n{font-size:15px;font-weight:600;color:var(--cobre);letter-spacing:.06em}
+.passos h3{margin:10px 0 10px;font-size:23px;font-weight:600;color:var(--pet);letter-spacing:-.01em}
+.passos p{font-size:17px;line-height:1.55}
+.ia{margin-top:72px;display:flex;gap:20px;align-items:flex-start;max-width:44em;font-size:20px;line-height:1.5}
+.ia svg{flex:0 0 auto;margin-top:4px}
+/* quem */
+.quem{background:var(--nevoa);padding-top:128px;padding-bottom:128px}
+.quem .foto img{object-position:42% 30%}
+@media (max-width:900px){.quem .foto{aspect-ratio:4/5;max-height:none;max-width:460px}}
+.quem .corpo{margin-top:28px;max-width:34em}
+.quem .frase{margin-top:28px;font-size:clamp(22px,2vw,27px);line-height:1.35;font-weight:500;color:var(--pet);max-width:26em}
+.dados{margin-top:48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;border-top:1px solid var(--linha);padding-top:28px}
+@media (max-width:560px){.dados{grid-template-columns:1fr}}
+.dados b{display:block;font-size:clamp(44px,4vw,60px);line-height:1;font-weight:600;color:var(--cobre);letter-spacing:-.02em}
+.dados span{display:block;margin-top:8px;font-size:16px;line-height:1.4}
+.cred{margin-top:40px;font-size:15px;line-height:1.7;color:var(--tinta);max-width:44em}
+.cred b{font-weight:600;color:var(--pet)}
+/* contacto */
+.contacto .wrap{padding-top:136px;padding-bottom:112px}
+.contacto .t-l{max-width:14ch}
+.contacto .lead{margin-top:28px;max-width:28em}
+.contacto .acoes{margin-top:44px}
+.contacto .mail{color:#fff;font-weight:600;text-underline-offset:6px;text-decoration-thickness:1px}
+.contacto .mail:hover{color:var(--champ)}
+.contacto address{margin-top:72px;font-style:normal;font-size:16px;line-height:1.6;padding-top:24px;border-top:1px solid rgba(155,199,207,.5)}
+.rodape{border-top:1px solid rgba(155,199,207,.5)}
+.rodape .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;padding-top:28px;padding-bottom:32px;font-size:15px}
+.rodape .ass{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.rodape .slogan{color:var(--champ);font-weight:500;font-size:16px}
+.rodape .end{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+@supports (animation-timeline: view()){
+.rv{animation:subir linear both;animation-timeline:view();animation-range:entry 0% cover 25%}
+.trilho div{transform-origin:left center;animation:encher linear both;animation-timeline:view();animation-range:entry 15% cover 50%}
+.foto img{animation:zoom linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+@keyframes zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+.hl,.anel,.vetor,.centro,.orbita,.painel,.rv,.trilho div,.foto img{animation:none!important;opacity:1!important;stroke-dashoffset:0!important;transform:none!important}
+.eco{animation:none!important;opacity:0!important}
+.btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="saltar" href="#conteudo">Saltar para o conteúdo</a>
+
+<header class="topo">
+<div class="wrap">
+<a class="logo" href="#topo" aria-label="GOALart, início"><img src="img/goalart_horizontal_positivo.svg" alt="GOALart" width="150" height="52"></a>
+<nav class="nav" aria-label="Principal">
+<a class="nl" href="#servicos">Serviços</a>
+<a class="nl" href="#setores">Setores</a>
+<a class="nl" href="#metodo">Como trabalhamos</a>
+<a class="nl" href="#hugo">Quem somos</a>
+<a class="btn btn-c btn-s" href="#contacto">Conversa de diagnóstico</a>
+</nav>
+<details class="menu">
+<summary><span class="barras" aria-hidden="true"></span>Menu</summary>
+<nav aria-label="Principal (telemóvel)">
+<a href="#servicos">Serviços</a>
+<a href="#setores">Setores</a>
+<a href="#metodo">Como trabalhamos</a>
+<a href="#hugo">Quem somos</a>
+<a class="btn btn-c btn-s" href="#contacto">Conversa de diagnóstico</a>
+</nav>
+</details>
+</div>
+</header>
+
+<main id="conteudo">
+<section id="topo" class="wrap hero">
+<div>
+<h1 class="t-xl pet"><span class="hl d1">Transformamos organizações.</span><span class="hl d2 c2">Por dentro.</span></h1>
+<p class="lead hl d3">Desenvolvimento organizacional e implementação, com inteligência artificial integrada, para empresas e empresários, setor público e instituições sociais dos Açores.</p>
+<div class="acoes hl d4">
+<a class="btn btn-c" href="#contacto">Marcar uma conversa de diagnóstico</a>
+<a class="lk" href="#metodo">Ver como trabalhamos</a>
+</div>
+</div>
+<div>
+<svg class="alvo" viewBox="0 0 520 520" aria-hidden="true" focusable="false">
+<g class="orbita"><circle cx="260" cy="260" r="250" fill="none" stroke="#9BC7CF" stroke-width="1.2" stroke-dasharray="2 10"/></g>
+<circle class="anel a1" pathLength="1" cx="260" cy="260" r="214" fill="none" stroke="#9BC7CF" stroke-width="1.5" transform="rotate(-90 260 260)"/>
+<circle class="anel a2" pathLength="1" cx="260" cy="260" r="164" fill="none" stroke="#005B67" stroke-width="2.5" transform="rotate(-90 260 260)"/>
+<circle class="anel a3" pathLength="1" cx="260" cy="260" r="112" fill="none" stroke="#005B67" stroke-width="6" transform="rotate(-90 260 260)"/>
+<circle class="anel a4" pathLength="1" cx="260" cy="260" r="58" fill="none" stroke="#9BC7CF" stroke-width="1.5" transform="rotate(-90 260 260)"/>
+<path class="vetor" pathLength="1" d="M 96 424 L 245 275" fill="none" stroke="#985820" stroke-width="2.5" stroke-linecap="round"/>
+<circle class="eco" cx="260" cy="260" r="18" fill="#B87333"/>
+<circle class="centro" cx="260" cy="260" r="18" fill="#B87333"/>
+</svg>
+</div>
+</section>
+
+<section class="esc manif">
+<div class="wrap">
+<h2 class="t-l rv">Não vendemos sessões, horas nem teoria.<em>Entregamos transformação implementada.</em></h2>
+<div class="linhas">
+<div class="linha rv"><h3>Objetivos fechados</h3><p>Âmbito, prazos e momentos de presença definidos por contrato. Sabe desde o início o que nos cabe fazer.</p></div>
+<div class="linha rv"><h3>Entregáveis concretos</h3><p>O preço está ligado ao que fica feito, não ao tempo gasto. Sabe à partida quanto custa e como se verifica.</p></div>
+<div class="linha rv"><h3>Equipa autónoma</h3><p>Cada etapa termina com a sua equipa capaz de manter o que foi construído. Depois, decidimos juntos se há um patamar seguinte.</p></div>
+</div>
+</div>
+</section>
+
+<section id="servicos" class="dam">
+<div class="wrap split">
+<figure class="foto"><picture><source srcset="img/notas.webp" type="image/webp"><img src="img/notas.jpg" alt="Mãos a tomar notas num caderno durante uma reunião de trabalho" width="770" height="963" loading="lazy" decoding="async"></picture></figure>
+<div class="txt">
+<p class="etq">Serviço principal</p>
+<h2 class="t-l pet">Direção à medida</h2>
+<p class="perg">Precisa de um diretor financeiro, mas não faz sentido pagar um a tempo inteiro?</p>
+<p class="corpo">Assumimos uma função de direção na sua organização, a tempo parcial, com objetivos e entregáveis definidos por contrato. Sem contagem de horas. Com poucas organizações em simultâneo, para estarmos presentes quando é preciso.</p>
+<ul class="funcoes">
+<li><b>Direção de transformação</b><span>Da decisão à implementação, com ferramentas digitais e de IA desde o desenho.</span></li>
+<li><b>Direção financeira</b><span>Orçamento, tesouraria e controlo de gestão, com relatórios e previsões automatizados.</span></li>
+<li><b>Direção de operações</b><span>Processos e serviços redesenhados, e automatizados onde a tecnologia poupa tempo.</span></li>
+<li><b>Direção de pessoas</b><span>Organização, funções e desenvolvimento das equipas.</span></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="outros">
+<div class="wrap grid">
+<div class="rv"><h3 class="t-m">Desenvolvimento organizacional e implementação</h3><p>Reorganização de serviços e processos, cultura de gestão e implementação de sistemas e ferramentas de gestão, incluindo inteligência artificial. Do desenho à entrada em funcionamento.</p></div>
+<div class="rv"><h3 class="t-m">Desenvolvimento de lideranças</h3><p>Programas para equipas dirigentes, planos de desenvolvimento individual e workshops, com coaching integrado e análise comportamental DISC.</p></div>
+</div>
+</section>
+
+<section id="setores" class="esc setores">
+<div class="wrap">
+<h2 class="t-l rv">Reconhece alguma destas perguntas?</h2>
+<p class="sub rv">Trabalhamos com organizações dos Açores, a começar pela ilha do Pico.</p>
+<div class="tabs" role="tablist" aria-label="Setores">
+<button class="tab" role="tab" id="t-emp" aria-controls="p-emp" aria-selected="true">Empresas e empresários</button>
+<button class="tab" role="tab" id="t-aut" aria-controls="p-aut" aria-selected="false" tabindex="-1">Setor público</button>
+<button class="tab" role="tab" id="t-soc" aria-controls="p-soc" aria-selected="false" tabindex="-1">Setor social</button>
+</div>
+<div class="painel" role="tabpanel" id="p-emp" aria-labelledby="t-emp">
+<h3>Faltam-lhe mãos para tudo o que o negócio pede?</h3>
+<div><p class="txt">Clientes, equipa, contas, fornecedores: tudo passa por si, e os problemas aparecem mais depressa do que consegue resolvê-los. Assumimos a direção do que está a ficar para trás e pomos a gestão a funcionar sem depender só de si.</p>
+<p class="onde">Onde costumamos entrar</p><ul class="entradas"><li>Direção financeira</li><li>Direção de operações ou de pessoas</li><li>Sistemas e ferramentas de gestão</li></ul></div>
+</div>
+<div class="painel" role="tabpanel" id="p-aut" aria-labelledby="t-aut" hidden>
+<h3>Prioridades, serviços e pessoas puxam para o mesmo lado?</h3>
+<div><p class="rotulo">Autarquias e administração pública</p><p class="txt">Câmaras municipais, administração regional e outras entidades públicas decidem dentro de ciclos políticos e orçamentais exigentes. Conhecemos esses ritmos por dentro, e é dentro deles que a mudança tem de acontecer.</p>
+<p class="onde">Onde costumamos entrar</p><ul class="entradas"><li>Desenvolvimento de lideranças</li><li>Projetos de transformação</li><li>Modernização de serviços</li></ul></div>
+</div>
+<div class="painel" role="tabpanel" id="p-soc" aria-labelledby="t-soc" hidden>
+<h3>Quem cuida dos outros tem tempo para cuidar da instituição?</h3>
+<div><p class="txt">Sustentabilidade financeira, governação e equipas sobrecarregadas. Ajudamos quem dirige IPSS e Santas Casas a pôr a gestão em ordem, sem perder de vista a missão.</p>
+<p class="onde">Onde costumamos entrar</p><ul class="entradas"><li>Direção financeira</li><li>Reorganização de serviços e processos</li><li>Desenvolvimento de lideranças</li></ul></div>
+</div>
+</div>
+</section>
+
+<section id="metodo" class="wrap metodo">
+<h2 class="t-l pet rv">Como trabalhamos</h2>
+<p class="lead intro rv">Sem programas fechados. Cada intervenção é desenhada à medida da organização e da decisão que tem pela frente.</p>
+<div class="trilho" aria-hidden="true"><div></div></div>
+<ol class="passos">
+<li class="rv"><span class="n">01</span><h3>Diagnóstico</h3><p>Uma leitura objetiva da organização, com a liderança e com quem está no terreno.</p></li>
+<li class="rv"><span class="n">02</span><h3>Definição dos objetivos</h3><p>Âmbito, entregáveis, prazos, preço e ritmo de acompanhamento, por escrito.</p></li>
+<li class="rv"><span class="n">03</span><h3>Implementação</h3><p>No terreno, com a liderança e as equipas, até as mudanças funcionarem. O coaching entra onde ajuda a decidir melhor.</p></li>
+<li class="rv"><span class="n">04</span><h3>Autonomia da equipa</h3><p>A equipa passa a manter o que foi construído. Quando estiver pronta, definimos o passo seguinte.</p></li>
+</ol>
+<p class="ia rv"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="none" stroke="#005B67" stroke-width="2"/><circle cx="14" cy="14" r="4" fill="#B87333"/></svg><span>Em todas as fases, integramos ferramentas de inteligência artificial onde realmente aceleram o trabalho: na análise, nos processos e no apoio à decisão. Tecnologia ao serviço das pessoas, nunca o contrário.</span></p>
+</section>
+
+<section id="hugo" class="quem">
+<div class="wrap split">
+<figure class="foto"><picture><source srcset="img/sessao.webp" type="image/webp"><img src="img/sessao.jpg" alt="Hugo Goulart à mesa, a explicar durante uma sessão de trabalho" width="820" height="873" loading="lazy" decoding="async"></picture></figure>
+<div class="txt">
+<p class="etq">Quem está por trás</p>
+<h2 class="t-l pet" style="margin-top:14px">Hugo Goulart</h2>
+<p class="corpo">Natural do Pico, dirige organizações açorianas há mais de dezassete anos: foi Secretário-Geral e Diretor Financeiro da Santa Casa da Misericórdia das Lajes do Pico, vereador na Câmara Municipal das Lajes do Pico e Diretor de Pessoas e Operações na AZx. É empresário desde 2015, foi consultor financeiro e coach executivo, e há vários anos que trabalha com câmaras municipais dos Açores.</p>
+<p class="frase">Não chega de fora com teoria. Conhece a realidade das organizações das ilhas por dentro, porque as dirigiu.</p>
+<div class="dados rv">
+<div><b>17+</b><span>anos em funções de direção nos Açores</span></div>
+<div><b>12</b><span>anos como Secretário-Geral e Diretor Financeiro no setor social</span></div>
+<div><b>3</b><span>setores dirigidos por dentro: social, autárquico e empresarial</span></div>
+</div>
+<p class="cred"><b>Formação e certificações</b> · Engenharia Informática (Universidade de Coimbra) · Pós-graduações em Gestão de Empresas (MBA) e em Gestão Autárquica e Modernização · Coaching executivo e profissional (IBCI) · Analista comportamental DISC · Formador certificado (CCP) · Auditor interno ISO 9001</p>
+</div>
+</div>
+</section>
+</main>
+
+<section id="contacto" class="esc contacto">
+<div class="wrap">
+<h2 class="t-l rv">Por onde começa a mudança na sua organização?</h2>
+<p class="lead">Uma primeira conversa para perceber o ponto de partida e se faz sentido trabalharmos juntos. Respondemos pessoalmente.</p>
+<div class="acoes">
+<a class="btn btn-ch" href="mailto:geral@goalart.pt?subject=Conversa%20de%20diagn%C3%B3stico">Marcar uma conversa de diagnóstico</a>
+<a class="mail" href="mailto:geral@goalart.pt?subject=Conversa%20de%20diagn%C3%B3stico">geral@goalart.pt</a>
+</div>
+<address>Rua Dr. Machado Serpa, 9 · 9930-146 Lajes do Pico · Açores</address>
+</div>
+<footer class="rodape">
+<div class="wrap">
+<div class="ass"><img src="img/goalart_horizontal_negativo.svg" alt="GOALart" width="130" height="45"><span class="slogan">A arte de cumprir objetivos</span></div>
+<div class="end"><span>GOALart. Uma marca do Grupo Ávila Goulart.</span><img src="img/avilagoulart_horizontal_negativo.svg" alt="Grupo Ávila Goulart" width="100" height="25"><span>Ávila Goulart, Lda · NIPC 513484132</span></div>
+</div>
+</footer>
+</section>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function ativar(t,foco){
+    tabs.forEach(function(x){
+      var on=x===t;
+      x.setAttribute('aria-selected',on?'true':'false');
+      x.tabIndex=on?0:-1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
+    });
+    if(foco)t.focus();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){ativar(t,false)});
+    t.addEventListener('keydown',function(e){
+      var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;
+      if(d){e.preventDefault();ativar(tabs[(i+d+tabs.length)%tabs.length],true)}
+    });
+  });
+  var menu=document.querySelector('.menu');
+  if(menu){[].forEach.call(menu.querySelectorAll('a'),function(a){a.addEventListener('click',function(){menu.removeAttribute('open')})});}
+})();
+</script>
+</body>
+</html>
