@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GOALart — A arte de cumprir objetivos</title>
-<meta name="description" content="Consultoria em desenvolvimento organizacional e implementação para empresas e empresários, setor público e instituições sociais dos Açores. Objetivos fechados, entregáveis concretos, equipa autónoma.">
+<title>GOALart — Coaching executivo e desenvolvimento organizacional nos Açores</title>
+<meta name="description" content="Transformação organizacional que começa na liderança. Coaching executivo feito por quem já foi executivo, desenvolvimento organizacional e direção à medida para empresas, setor público e IPSS dos Açores.">
 <link rel="canonical" href="https://goalart.pt/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_PT">
@@ -12,6 +12,10 @@
 <meta property="og:title" content="GOALart — A arte de cumprir objetivos">
 <meta property="og:description" content="Transformamos organizações. Por dentro.">
 <meta property="og:url" content="https://goalart.pt/">
+<meta property="og:image" content="https://goalart.pt/img/partilha.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#005B67">
 <link rel="preload" href="fonts/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -108,6 +112,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .dam h2{margin-top:14px}
 .dam .perg{margin-top:28px;font-size:clamp(22px,2vw,27px);line-height:1.35;font-weight:500;color:var(--pet)}
 .dam .corpo{margin-top:20px;max-width:32em}
+.dam .mais{display:inline-block;margin-top:28px}
 .funcoes{margin:44px 0 0;padding:0;list-style:none;border-top:1px solid var(--linha)}
 .funcoes li{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:6px 28px;padding:18px 0;border-bottom:1px solid var(--linha)}
 .funcoes b{font-weight:600;color:var(--pet);font-size:19px}
@@ -115,7 +120,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 @media (max-width:640px){.funcoes li{grid-template-columns:1fr}}
 /* outros serviços */
 .outros{background:var(--nevoa);padding:112px 0}
-.outros .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:56px 80px}
+.outros .intro2{margin-top:18px;max-width:34em}
+.outros .grid{margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:56px 80px}
 .outros h3{color:var(--pet)}
 .outros p{margin-top:16px;max-width:30em}
 /* setores */
@@ -172,6 +178,16 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .rodape .ass{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .rodape .slogan{color:var(--champ);font-weight:500;font-size:16px}
 .rodape .end{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.faq{margin-top:40px;border-top:1px solid var(--linha)}
+.faq details{border-bottom:1px solid var(--linha);padding:20px 0}
+.faq summary{cursor:pointer;font-size:21px;font-weight:600;color:var(--pet);list-style:none;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-weight:400;font-size:26px;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:12px;max-width:44em}
+.tres3{margin-top:48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+@media (max-width:860px){.tres3{grid-template-columns:1fr}}
+.tres3 h3{font-size:22px;font-weight:600;color:var(--pet);margin-bottom:10px}
 @supports (animation-timeline: view()){
 .rv{animation:subir linear both;animation-timeline:view();animation-range:entry 0% cover 25%}
 .trilho div{transform-origin:left center;animation:encher linear both;animation-timeline:view();animation-range:entry 15% cover 50%}
@@ -184,7 +200,17 @@ html{scroll-behavior:auto}
 .eco{animation:none!important;opacity:0!important}
 .btn:hover{transform:none}
 }
+.legal{padding-bottom:28px;font-size:13px;line-height:1.6;color:#fff}
+.legal p{margin:0}
+.legal p+p{margin-top:6px}
+.legal a{color:#fff;text-underline-offset:3px}
+.depo{margin:40px 0 0;padding:28px 32px;background:#fff;border-left:3px solid var(--cobre);border-radius:2px}
+.depo blockquote{margin:0}
+.depo p{font-size:clamp(19px,1.6vw,22px);line-height:1.5;color:var(--tinta)}
+.depo figcaption{margin-top:14px;font-size:15px;font-weight:600;color:var(--pet)}
+.contacto .canais{margin-top:20px;display:flex;flex-wrap:wrap;gap:12px 28px;font-size:17px}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "GOALart", "url": "https://goalart.pt/", "image": "https://goalart.pt/img/partilha.jpg", "logo": "https://goalart.pt/img/goalart_horizontal_positivo.svg", "description": "Transformação organizacional que começa na liderança: coaching executivo, desenvolvimento organizacional e direção à medida nos Açores.", "email": "geral@goalart.pt", "telephone": "+351919534748", "address": {"@type": "PostalAddress", "streetAddress": "Rua Dr. Machado Serpa, 9", "postalCode": "9930-146", "addressLocality": "Lajes do Pico", "addressRegion": "Açores", "addressCountry": "PT"}, "areaServed": {"@type": "AdministrativeArea", "name": "Açores"}, "founder": {"@type": "Person", "name": "Hugo Goulart", "jobTitle": "Coach executivo e consultor de gestão"}, "parentOrganization": {"@type": "Organization", "name": "Ávila Goulart, Unipessoal Lda", "url": "https://avilagoulart.pt/"}, "knowsAbout": ["Coaching executivo", "Desenvolvimento organizacional", "Gestão autárquica", "Gestão de IPSS", "Direção financeira"]}</script>
 </head>
 <body>
 <a class="saltar" href="#conteudo">Saltar para o conteúdo</a>
@@ -193,15 +219,16 @@ html{scroll-behavior:auto}
 <div class="wrap">
 <a class="logo" href="#topo" aria-label="GOALart, início"><img src="img/goalart_horizontal_positivo.svg" alt="GOALart" width="150" height="52"></a>
 <nav class="nav" aria-label="Principal">
+<a class="nl" href="coaching-executivo.html">Coaching executivo</a>
 <a class="nl" href="#servicos">Serviços</a>
 <a class="nl" href="#setores">Setores</a>
-<a class="nl" href="#metodo">Como trabalhamos</a>
 <a class="nl" href="#hugo">Quem somos</a>
 <a class="btn btn-c btn-s" href="#contacto">Conversa de diagnóstico</a>
 </nav>
 <details class="menu">
 <summary><span class="barras" aria-hidden="true"></span>Menu</summary>
 <nav aria-label="Principal (telemóvel)">
+<a href="coaching-executivo.html">Coaching executivo</a>
 <a href="#servicos">Serviços</a>
 <a href="#setores">Setores</a>
 <a href="#metodo">Como trabalhamos</a>
@@ -216,10 +243,10 @@ html{scroll-behavior:auto}
 <section id="topo" class="wrap hero">
 <div>
 <h1 class="t-xl pet"><span class="hl d1">Transformamos organizações.</span><span class="hl d2 c2">Por dentro.</span></h1>
-<p class="lead hl d3">Desenvolvimento organizacional e implementação, com inteligência artificial integrada, para empresas e empresários, setor público e instituições sociais dos Açores.</p>
+<p class="lead hl d3">A transformação começa em quem lidera. Juntamos coaching executivo, feito por quem já foi executivo, a desenvolvimento organizacional e direção à medida. Para empresas e empresários, setor público e instituições sociais dos Açores.</p>
 <div class="acoes hl d4">
 <a class="btn btn-c" href="#contacto">Marcar uma conversa de diagnóstico</a>
-<a class="lk" href="#metodo">Ver como trabalhamos</a>
+<a class="lk" href="coaching-executivo.html">Conhecer o coaching executivo</a>
 </div>
 </div>
 <div>
@@ -238,7 +265,7 @@ html{scroll-behavior:auto}
 
 <section class="esc manif">
 <div class="wrap">
-<h2 class="t-l rv">Não vendemos sessões, horas nem teoria.<em>Entregamos transformação implementada.</em></h2>
+<h2 class="t-l rv">Não vendemos horas nem teoria.<em>Entregamos transformação implementada.</em></h2>
 <div class="linhas">
 <div class="linha rv"><h3>Objetivos fechados</h3><p>Âmbito, prazos e momentos de presença definidos por contrato. Sabe desde o início o que nos cabe fazer.</p></div>
 <div class="linha rv"><h3>Entregáveis concretos</h3><p>O preço está ligado ao que fica feito, não ao tempo gasto. Sabe à partida quanto custa e como se verifica.</p></div>
@@ -249,26 +276,31 @@ html{scroll-behavior:auto}
 
 <section id="servicos" class="dam">
 <div class="wrap split">
-<figure class="foto"><picture><source srcset="img/notas.webp" type="image/webp"><img src="img/notas.jpg" alt="Mãos a tomar notas num caderno durante uma reunião de trabalho" width="770" height="963" loading="lazy" decoding="async"></picture></figure>
+<figure class="foto"><picture><source srcset="img/notas.webp" type="image/webp"><img src="img/notas.jpg" alt="Mãos a tomar notas num caderno durante uma sessão de trabalho" width="770" height="963" loading="lazy" decoding="async"></picture></figure>
 <div class="txt">
-<p class="etq">Serviço principal</p>
-<h2 class="t-l pet">Direção à medida</h2>
-<p class="perg">Precisa de um diretor financeiro, mas não faz sentido pagar um a tempo inteiro?</p>
-<p class="corpo">Assumimos uma função de direção na sua organização, a tempo parcial, com objetivos e entregáveis definidos por contrato. Sem contagem de horas. Com poucas organizações em simultâneo, para estarmos presentes quando é preciso.</p>
+<p class="etq">O ponto de partida</p>
+<h2 class="t-l pet">Coaching executivo</h2>
+<p class="perg">Coaching executivo feito por quem já foi executivo.</p>
+<p class="corpo">A transformação de uma organização começa em quem a lidera. Trabalhamos com autarcas, empresários, administradores e direções de instituições sociais para clarificar prioridades, decidir melhor e conduzir as equipas na mudança, com a experiência de quem já esteve do outro lado da mesa.</p>
 <ul class="funcoes">
-<li><b>Direção de transformação</b><span>Da decisão à implementação, com ferramentas digitais e de IA desde o desenho.</span></li>
-<li><b>Direção financeira</b><span>Orçamento, tesouraria e controlo de gestão, com relatórios e previsões automatizados.</span></li>
-<li><b>Direção de operações</b><span>Processos e serviços redesenhados, e automatizados onde a tecnologia poupa tempo.</span></li>
-<li><b>Direção de pessoas</b><span>Organização, funções e desenvolvimento das equipas.</span></li>
+<li><b>Coaching executivo individual</b><span>Um programa com objetivos fechados, não um pacote de sessões.</span></li>
+<li><b>Equipas de liderança</b><span>Intervenção com equipas dirigentes, com análise comportamental DISC.</span></li>
+<li><b>Planos de desenvolvimento individual</b><span>Para dirigentes e quadros que vão assumir mais responsabilidade.</span></li>
+<li><b>Workshops para equipas dirigentes</b><span>Decisão, prioridades e comunicação, aplicadas ao contexto de cada organização.</span></li>
 </ul>
+<a class="lk mais" href="coaching-executivo.html">Conhecer o coaching executivo →</a>
 </div>
 </div>
 </section>
 
 <section class="outros">
-<div class="wrap grid">
+<div class="wrap">
+<h2 class="t-l pet rv">Da liderança à organização</h2>
+<p class="lead intro2 rv">Muitas vezes, o coaching mostra que a mudança tem de chegar à estrutura. Aí o trabalho continua, com a mesma pessoa, na organização.</p>
+<div class="grid">
 <div class="rv"><h3 class="t-m">Desenvolvimento organizacional e implementação</h3><p>Reorganização de serviços e processos, cultura de gestão e implementação de sistemas e ferramentas de gestão, incluindo inteligência artificial. Do desenho à entrada em funcionamento.</p></div>
-<div class="rv"><h3 class="t-m">Desenvolvimento de lideranças</h3><p>Programas para equipas dirigentes, planos de desenvolvimento individual e workshops, com coaching integrado e análise comportamental DISC.</p></div>
+<div class="rv"><h3 class="t-m">Direção à medida</h3><p>Precisa de um diretor financeiro, mas não faz sentido pagar um a tempo inteiro? Assumimos, a tempo parcial, a direção de transformação, financeira, de operações ou de pessoas, com objetivos e entregáveis definidos por contrato. Sem contagem de horas, e com poucas organizações em simultâneo.</p></div>
+</div>
 </div>
 </section>
 
@@ -284,17 +316,17 @@ html{scroll-behavior:auto}
 <div class="painel" role="tabpanel" id="p-emp" aria-labelledby="t-emp">
 <h3>Faltam-lhe mãos para tudo o que o negócio pede?</h3>
 <div><p class="txt">Clientes, equipa, contas, fornecedores: tudo passa por si, e os problemas aparecem mais depressa do que consegue resolvê-los. Assumimos a direção do que está a ficar para trás e pomos a gestão a funcionar sem depender só de si.</p>
-<p class="onde">Onde costumamos entrar</p><ul class="entradas"><li>Direção financeira</li><li>Direção de operações ou de pessoas</li><li>Sistemas e ferramentas de gestão</li></ul></div>
+<p class="onde">Onde costumamos entrar</p><ul class="entradas"><li>Coaching executivo</li><li>Direção financeira</li><li>Direção de operações ou de pessoas</li></ul></div>
 </div>
 <div class="painel" role="tabpanel" id="p-aut" aria-labelledby="t-aut" hidden>
 <h3>Prioridades, serviços e pessoas puxam para o mesmo lado?</h3>
 <div><p class="rotulo">Autarquias e administração pública</p><p class="txt">Câmaras municipais, administração regional e outras entidades públicas decidem dentro de ciclos políticos e orçamentais exigentes. Conhecemos esses ritmos por dentro, e é dentro deles que a mudança tem de acontecer.</p>
-<p class="onde">Onde costumamos entrar</p><ul class="entradas"><li>Desenvolvimento de lideranças</li><li>Projetos de transformação</li><li>Modernização de serviços</li></ul></div>
+<p class="onde">Onde costumamos entrar</p><ul class="entradas"><li>Coaching executivo</li><li>Projetos de transformação</li><li>Modernização de serviços</li></ul></div>
 </div>
 <div class="painel" role="tabpanel" id="p-soc" aria-labelledby="t-soc" hidden>
 <h3>Quem cuida dos outros tem tempo para cuidar da instituição?</h3>
 <div><p class="txt">Sustentabilidade financeira, governação e equipas sobrecarregadas. Ajudamos quem dirige IPSS e Santas Casas a pôr a gestão em ordem, sem perder de vista a missão.</p>
-<p class="onde">Onde costumamos entrar</p><ul class="entradas"><li>Direção financeira</li><li>Reorganização de serviços e processos</li><li>Desenvolvimento de lideranças</li></ul></div>
+<p class="onde">Onde costumamos entrar</p><ul class="entradas"><li>Direção financeira</li><li>Coaching executivo</li><li>Reorganização de serviços e processos</li></ul></div>
 </div>
 </div>
 </section>
@@ -318,13 +350,14 @@ html{scroll-behavior:auto}
 <div class="txt">
 <p class="etq">Quem está por trás</p>
 <h2 class="t-l pet" style="margin-top:14px">Hugo Goulart</h2>
-<p class="corpo">Natural do Pico, dirige organizações açorianas há mais de dezassete anos: foi Secretário-Geral e Diretor Financeiro da Santa Casa da Misericórdia das Lajes do Pico, vereador na Câmara Municipal das Lajes do Pico e Diretor de Pessoas e Operações na AZx. É empresário desde 2015, foi consultor financeiro e coach executivo, e há vários anos que trabalha com câmaras municipais dos Açores.</p>
-<p class="frase">Não chega de fora com teoria. Conhece a realidade das organizações das ilhas por dentro, porque as dirigiu.</p>
+<p class="corpo">Natural do Pico, é coach executivo certificado (IBCI) e dirige organizações açorianas há mais de dezassete anos: foi Secretário-Geral e Diretor Financeiro da Santa Casa da Misericórdia das Lajes do Pico, vereador na Câmara Municipal das Lajes do Pico e Diretor de Pessoas e Operações na AZx. É empresário desde 2015, foi consultor financeiro e coach executivo, e há vários anos que trabalha com câmaras municipais dos Açores.</p>
+<p class="frase">Coaching executivo feito por quem já foi executivo. Conhece a realidade das organizações das ilhas por dentro, porque as dirigiu.</p>
 <div class="dados rv">
 <div><b>17+</b><span>anos em funções de direção nos Açores</span></div>
 <div><b>12</b><span>anos como Secretário-Geral e Diretor Financeiro no setor social</span></div>
-<div><b>3</b><span>setores dirigidos por dentro: social, autárquico e empresarial</span></div>
+<div><b>IBCI</b><span>coach executivo e profissional certificado</span></div>
 </div>
+<figure class="depo rv"><blockquote><p>«O trabalho que temos desenvolvido tem sido fundamental para o nosso crescimento, abrindo novos horizontes e permitindo visualizar com clareza os patamares que queremos alcançar. As minhas expectativas foram totalmente superadas.»</p></blockquote><figcaption>Cliente · Empresa de construção e projetos, Porto</figcaption></figure>
 <p class="cred"><b>Formação e certificações</b> · Engenharia Informática (Universidade de Coimbra) · Pós-graduações em Gestão de Empresas (MBA) e em Gestão Autárquica e Modernização · Coaching executivo e profissional (IBCI) · Analista comportamental DISC · Formador certificado (CCP) · Auditor interno ISO 9001</p>
 </div>
 </div>
@@ -334,18 +367,19 @@ html{scroll-behavior:auto}
 <section id="contacto" class="esc contacto">
 <div class="wrap">
 <h2 class="t-l rv">Por onde começa a mudança na sua organização?</h2>
-<p class="lead">Uma primeira conversa para perceber o ponto de partida e se faz sentido trabalharmos juntos. Respondemos pessoalmente.</p>
+<p class="lead">Uma primeira conversa de 45 minutos, sem custo e sem compromisso, para perceber o ponto de partida e se faz sentido trabalharmos juntos. Respondemos pessoalmente, em menos de 48 horas.</p>
 <div class="acoes">
-<a class="btn btn-ch" href="mailto:geral@goalart.pt?subject=Conversa%20de%20diagn%C3%B3stico">Marcar uma conversa de diagnóstico</a>
-<a class="mail" href="mailto:geral@goalart.pt?subject=Conversa%20de%20diagn%C3%B3stico">geral@goalart.pt</a>
+<a class="btn btn-ch" href="https://calendar.app.google/sAL11MT9BZyRDrzg7" target="_blank" rel="noopener" data-marcacao>Marcar uma conversa de diagnóstico</a>
 </div>
+<div class="canais"><a class="mail" href="https://wa.me/351919534748?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20conversa%20de%20diagn%C3%B3stico." target="_blank" rel="noopener">WhatsApp · 919 534 748</a><a class="mail" href="mailto:geral@goalart.pt">geral@goalart.pt</a></div>
 <address>Rua Dr. Machado Serpa, 9 · 9930-146 Lajes do Pico · Açores</address>
 </div>
 <footer class="rodape">
 <div class="wrap">
 <div class="ass"><img src="img/goalart_horizontal_negativo.svg" alt="GOALart" width="130" height="45"><span class="slogan">A arte de cumprir objetivos</span></div>
-<div class="end"><span>GOALart. Uma marca do Grupo Ávila Goulart.</span><img src="img/avilagoulart_horizontal_negativo.svg" alt="Grupo Ávila Goulart" width="100" height="25"><span>Ávila Goulart, Lda · NIPC 513484132</span></div>
+<div class="end"><span>GOALart. Uma marca do Grupo Ávila Goulart.</span><img src="img/avilagoulart_horizontal_negativo.svg" alt="Grupo Ávila Goulart" width="100" height="25"></div>
 </div>
+<div class="wrap legal"><p>ÁVILA GOULART, UNIPESSOAL LDA · Sede: Rua Dr. Machado Serpa, n.º 9, 9930-146 Lajes do Pico · Capital social: 5.000,00 € · NIPC e matrícula na Conservatória do Registo Comercial: 513484132</p><p><a href="privacidade.html">Política de privacidade</a> · <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener">Livro de Reclamações Eletrónico</a> · Resolução alternativa de litígios: <a href="https://www.consumidor.gov.pt/" target="_blank" rel="noopener">Portal do Consumidor</a></p></div>
 </footer>
 </section>
 
