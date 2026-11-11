@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Formação, palestras e projetos — GOALart | Hugo Goulart</title>
-<meta name="description" content="Formação para chefias e equipas, palestras para eventos e projetos de consultoria por tema: liderança, comunicação, tempo e produtividade, pessoas e cultura. Hugo Goulart, Açores.">
+<meta name="description" content="Formação para chefias e equipas, palestras para eventos e projetos de consultoria especializados em liderança, comunicação, tempo e produtividade, pessoas e cultura. Hugo Goulart, Açores.">
 <link rel="canonical" href="https://goalart.pt/formacao-palestras.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_PT">
@@ -215,6 +215,21 @@ html{scroll-behavior:auto}
 @media (max-width:760px){.quatro{grid-template-columns:1fr}}
 .quatro h3{font-size:22px;font-weight:600;color:var(--pet);margin-bottom:10px}
 .nota{margin-top:40px;font-size:18px;max-width:40em}
+.menu nav a.btn{color:#fff}
+/* submenu O que faço */
+.nav .sub{position:relative}
+.nav .sub summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px}
+.nav .sub summary::-webkit-details-marker{display:none}
+.nav .sub summary::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s ease}
+.nav .sub[open] summary::after{transform:translateY(2px) rotate(-135deg)}
+.nav .sub summary.ativo{background-size:100% 2px}
+.subm{position:absolute;top:calc(100% + 16px);left:-18px;background:#fff;border:1px solid var(--linha);border-radius:2px;padding:10px;min-width:320px;display:flex;flex-direction:column;box-shadow:0 12px 32px rgba(0,40,46,.12);z-index:40}
+.subm a{display:block;padding:12px 14px;color:var(--tinta);text-decoration:none;border-radius:2px}
+.subm a b{display:block;font-weight:600;color:var(--pet);font-size:17px}
+.subm a span{display:block;font-size:15px;font-weight:400;margin-top:2px}
+.subm a:hover,.subm a[aria-current]{background:var(--nevoa)}
+.menu .m-grupo{margin:8px 14px 0;font-size:14px;font-weight:600;color:var(--cobre)}
+.menu nav a.m-sub{padding-left:28px}
 </style>
 </head>
 <body>
@@ -225,9 +240,14 @@ html{scroll-behavior:auto}
 <a class="logo" href="index.html" aria-label="GOALart, página inicial"><img src="img/goalart_horizontal_positivo.svg" alt="GOALart" width="150" height="52"></a>
 <nav class="nav" aria-label="Principal">
 <a class="nl" href="index.html#situacoes">O que resolvo</a>
+<details class="sub"><summary class="nl ativo">O que faço</summary>
+<div class="subm">
+<a href="direcao-tempo-parcial.html"><b>Direção a tempo parcial</b><span>Quando falta quem dirija</span></a>
+<a href="coaching-executivo.html"><b>Coaching executivo</b><span>Quando há estrutura, mas falta liderança</span></a>
+<a href="formacao-palestras.html" aria-current="page"><b>Formação, palestras e projetos</b><span>Para equipas, eventos e parcerias</span></a>
+</div>
+</details>
 <a class="nl" href="index.html#como">Como trabalho</a>
-<a class="nl" href="direcao-tempo-parcial.html">Direção</a>
-<a class="nl" href="coaching-executivo.html">Coaching</a>
 <a class="nl" href="index.html#hugo">Quem sou</a>
 <a class="btn btn-c btn-s" href="#contacto">Conversa de diagnóstico</a>
 </nav>
@@ -235,10 +255,12 @@ html{scroll-behavior:auto}
 <summary><span class="barras" aria-hidden="true"></span>Menu</summary>
 <nav aria-label="Principal (telemóvel)">
 <a href="index.html#situacoes">O que resolvo</a>
+<p class="m-grupo">O que faço</p>
+<a class="m-sub" href="direcao-tempo-parcial.html">Direção a tempo parcial</a>
+<a class="m-sub" href="coaching-executivo.html">Coaching executivo</a>
+<a class="m-sub" href="formacao-palestras.html" aria-current="page">Formação, palestras e projetos</a>
 <a href="index.html#como">Como trabalho</a>
 <a href="index.html#para-quem">Para quem é</a>
-<a href="direcao-tempo-parcial.html">Direção a tempo parcial</a>
-<a href="coaching-executivo.html">Coaching executivo</a>
 <a href="index.html#hugo">Quem sou</a>
 <a class="btn btn-c btn-s" href="#contacto">Conversa de diagnóstico</a>
 </nav>
@@ -251,14 +273,14 @@ html{scroll-behavior:auto}
 <div>
 <p class="etq hl d1">Formação, palestras e projetos</p>
 <h1 class="t-xl pet" style="margin-top:16px;max-width:16ch"><span class="hl d1">O mesmo trabalho, noutros formatos.</span></h1>
-<p class="lead hl d3">Gestão e liderança levadas a salas de formação, a palcos e a projetos de consultoria por tema. Para equipas e chefias, para organizadores de eventos e para quem procura um parceiro num projeto.</p>
-<div class="acoes hl d4"><a class="btn btn-c" href="#contacto">Pedir uma proposta</a><a class="lk" href="#temas">Ver os temas</a></div>
+<p class="lead hl d3">Gestão e liderança levadas a salas de formação, a palcos e a projetos de consultoria especializados. Para equipas e chefias, para organizadores de eventos e para quem procura um parceiro num projeto.</p>
+<div class="acoes hl d4"><a class="btn btn-c" href="#contacto">Pedir uma proposta</a><a class="lk" href="#temas">Ver as áreas de especialização</a></div>
 </div>
 </section>
 
 <section id="temas" class="esc manif">
 <div class="wrap">
-<h2 class="t-l rv">Temas</h2>
+<h2 class="t-l rv">Áreas de especialização</h2>
 <div class="linhas">
 <div class="linha rv"><h3>Liderança e gestão de equipas</h3><p>Da chefia que executa à chefia que lidera: delegar, dar feedback, acompanhar e conduzir a equipa. Inclui autoconhecimento com análise comportamental DISC.</p></div>
 <div class="linha rv"><h3>Comunicação</h3><p>Comunicar para decidir e para mobilizar: reuniões que concluem, conversas difíceis e mensagens claras.</p></div>
@@ -273,7 +295,7 @@ html{scroll-behavior:auto}
 <div class="tres3">
 <div class="rv"><h3>Formação</h3><p>Programas para chefias e equipas, desenhados para o contexto de cada organização, presenciais ou à distância. Diretamente ou em parceria com entidades formadoras certificadas. Mais de 100 horas de formação dada, com avaliações dos formandos no topo da escala.</p></div>
 <div class="rv"><h3>Palestras</h3><p>Para congressos, encontros e eventos internos. Os mesmos temas, com a experiência de quem dirigiu organizações nos Açores.</p></div>
-<div class="rv"><h3>Projetos e parcerias</h3><p>Projetos de consultoria por tema, como diagnóstico organizacional, modernização de serviços ou implementação de inteligência artificial. Sozinho ou em parceria com outros consultores e entidades.</p></div>
+<div class="rv"><h3>Projetos e parcerias</h3><p>Projetos de consultoria especializados, como diagnóstico organizacional, modernização de serviços ou implementação de inteligência artificial. Sozinho ou em parceria com outros consultores e entidades.</p></div>
 </div>
 <p class="nota rv">Quando uma formação ou uma palestra mostra que a mudança tem de ir mais longe, o trabalho continua na organização, com <a href="direcao-tempo-parcial.html">direção a tempo parcial</a> ou <a href="coaching-executivo.html">coaching executivo</a>.</p>
 </section>
@@ -319,6 +341,13 @@ html{scroll-behavior:auto}
   });
   var menu=document.querySelector('.menu');
   if(menu){[].forEach.call(menu.querySelectorAll('a'),function(a){a.addEventListener('click',function(){menu.removeAttribute('open')})});}
+})();
+</script>
+<script>
+(function(){
+  var s=document.querySelector('.nav .sub'); if(!s) return;
+  document.addEventListener('click',function(e){ if(s.open && !s.contains(e.target)) s.removeAttribute('open'); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && s.open){ s.removeAttribute('open'); s.querySelector('summary').focus(); } });
 })();
 </script>
 </body>
