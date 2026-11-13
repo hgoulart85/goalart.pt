@@ -277,6 +277,17 @@ html{scroll-behavior:auto}
 .passos li::before{content:"";position:absolute;left:18px;right:18px;top:-23px;height:4px;background:var(--pet);transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
 .passos li:hover::before{transform:scaleX(1)}
 }
+/* para quem é: sim e não */
+.fit .sim,.fit .nao{padding:32px 32px 12px;border-radius:3px;border-top:4px solid var(--pet)}
+.fit .sim{background:#fff}
+.fit .nao{border-top-color:#A9BEC3}
+.fit h3{display:flex;align-items:center;gap:12px;border-bottom:0;padding-bottom:8px}
+.fit .nao h3{color:#4E6267}
+.fit li:last-child{border-bottom:0}
+.fit .sim li::before{left:3px;top:1.05em;width:6px;height:11px;border-radius:0;background:none;border-right:2.2px solid var(--pet);border-bottom:2.2px solid var(--pet);transform:rotate(45deg)}
+.fit .nao li{color:#3F4F54}
+.fit .nao li::before{content:"\00D7";left:1px;top:14px;width:auto;height:auto;background:none;font-size:22px;line-height:1;color:#6B7F84}
+@media (max-width:860px){.fit .sim,.fit .nao{padding:24px 22px 8px}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "GOALart", "url": "https://goalart.pt/", "image": "https://goalart.pt/img/partilha.jpg", "logo": "https://goalart.pt/img/goalart_horizontal_positivo.svg", "description": "Gestão e liderança para empresas e IPSS dos Açores: direção a tempo parcial, desenvolvimento de lideranças e coaching executivo.", "email": "geral@goalart.pt", "telephone": "+351919534748", "address": {"@type": "PostalAddress", "streetAddress": "Rua Dr. Machado Serpa, 9", "postalCode": "9930-146", "addressLocality": "Lajes do Pico", "addressRegion": "Açores", "addressCountry": "PT"}, "areaServed": {"@type": "AdministrativeArea", "name": "Açores"}, "founder": {"@type": "Person", "name": "Hugo Goulart", "jobTitle": "Consultor de gestão e coach executivo", "sameAs": ["https://www.linkedin.com/in/avilagoulart/"]}, "parentOrganization": {"@type": "Organization", "name": "Ávila Goulart, Unipessoal Lda", "url": "https://avilagoulart.pt/"}, "knowsAbout": ["Gestão de PME", "Direção financeira", "Desenvolvimento de chefias", "Organização e processos", "Coaching executivo", "Gestão de IPSS", "Gestão autárquica"]}</script>
 </head>
@@ -373,7 +384,7 @@ html{scroll-behavior:auto}
 <ol class="passos">
 <li class="rv"><span class="n">01</span><h3>Diagnóstico</h3><p>Olho para a organização inteira: pessoas e liderança, processos, números, e onde a tecnologia e a inteligência artificial podem poupar tempo. Converso com a liderança e com quem está no terreno.</p></li>
 <li class="rv"><span class="n">02</span><h3>Desafio por escrito</h3><p>Definimos o que tem de mudar, os entregáveis, os prazos e o preço. Sabe à partida o que me cabe fazer e como se verifica.</p></li>
-<li class="rv"><span class="n">03</span><h3>Implementação</h3><p>Trabalho ao lado da liderança e com a equipa até as mudanças funcionarem no dia a dia. Pode ser direção a tempo parcial, um programa para as chefias, coaching ou tudo junto: decide o diagnóstico, não um pacote.</p></li>
+<li class="rv"><span class="n">03</span><h3>Implementação</h3><p>Trabalho ao lado da liderança e com a equipa até a transformação funcionar no dia a dia. Pode ser direção a tempo parcial, um programa para as chefias, coaching ou tudo junto: decide o diagnóstico, não um pacote.</p></li>
 <li class="rv"><span class="n">04</span><h3>Autonomia</h3><p>Cada etapa termina com a equipa capaz de manter o que se construiu. Depois decidimos juntos qual é o passo seguinte.</p></li>
 </ol>
 <p class="ia rv"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="none" stroke="#005B67" stroke-width="2"/><circle cx="14" cy="14" r="4" fill="#B87333"/></svg><span>Uso inteligência artificial em todo o trabalho, na análise, nos relatórios e na automatização do que é repetitivo. É isso que me permite entregar um resultado ao nível de um profissional a tempo inteiro, ou de uma equipa, a um preço que uma organização da sua dimensão consegue pagar.</span></p>
@@ -381,16 +392,16 @@ html{scroll-behavior:auto}
 
 <section id="para-quem" class="fit">
 <div class="wrap">
-<h2 class="t-l pet rv">Trabalho com poucas organizações de cada vez, e nunca com duas empresas concorrentes.</h2>
-<p class="lead promessa rv">Não acompanho ao mesmo tempo duas empresas do mesmo setor na mesma ilha. Exclusividade e confidencialidade são regras inegociáveis do meu trabalho.</p>
+<h2 class="t-l pet rv">Trabalho com um número restrito de organizações, e nunca com duas empresas concorrentes.</h2>
+<p class="lead promessa rv">Só avanço com um projeto quando sei que posso fazer a diferença. Não acompanho ao mesmo tempo duas empresas do mesmo setor na mesma ilha. Exclusividade e confidencialidade são regras inegociáveis do meu trabalho.</p>
 <div class="colunas">
-<div class="sim rv"><h3>É para si se:</h3><ul>
+<div class="sim rv"><h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="12" fill="#005B67"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>É para si se:</h3><ul>
 <li>A gestão depende demasiado de si, haja ou não chefias entre si e a equipa.</li>
 <li>A sua organização ainda não tem uma direção profissional, ou tem chefias que precisam de aprender a liderar.</li>
 <li>Quer mudar e está disposto a fazer diferente: largar algumas decisões e entregar processos a outras pessoas, desde que fiquem em boas mãos.</li>
 <li>Quer resultados que se possam verificar, não relatórios elegantes que acabam na gaveta.</li>
 </ul></div>
-<div class="nao rv"><h3>Não é para si se:</h3><ul>
+<div class="nao rv"><h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="11" fill="none" stroke="#6B7F84" stroke-width="1.6"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="#6B7F84" stroke-width="1.8" stroke-linecap="round"/></svg></span>Não é para si se:</h3><ul>
 <li>Procura alguém disponível a qualquer hora para resolver o que é urgente.</li>
 <li>Quer alguém que execute sem questionar.</li>
 <li>Quer comprar horas de consultoria.</li>
@@ -436,7 +447,7 @@ html{scroll-behavior:auto}
 
 <section id="contacto" class="esc contacto">
 <div class="wrap">
-<h2 class="t-l rv">Por onde começa a mudança na sua organização?</h2>
+<h2 class="t-l rv">Por onde começa a transformação na sua organização?</h2>
 <p class="lead">Uma reunião de 45 minutos, gratuita e sem compromisso. Olhamos para a sua situação e percebemos, os dois, se faz sentido trabalharmos juntos. Se não fizer, digo-lho com franqueza. Respondo pessoalmente em 48 horas.</p>
 <div class="acoes">
 <a class="btn btn-ch" href="https://calendar.app.google/sAL11MT9BZyRDrzg7" target="_blank" rel="noopener" data-marcacao>Marcar uma reunião de diagnóstico</a>
