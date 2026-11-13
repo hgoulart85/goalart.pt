@@ -271,8 +271,10 @@ html{scroll-behavior:auto}
 .passos li:hover h3{color:var(--cobre)}
 }
 @media (hover:hover) and (prefers-reduced-motion:no-preference) and (min-width:981px){
-.passos li{position:relative}
-.passos li::before{content:"";position:absolute;left:0;right:0;top:-39px;height:4px;background:var(--pet);transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.passos li{position:relative;padding:16px 18px 20px;margin:-16px -18px -20px;border-radius:3px;transition:background-color .35s ease}
+.passos li:hover{background:var(--nevoa)}
+.nevoa-sec .passos li:hover{background:#fff}
+.passos li::before{content:"";position:absolute;left:18px;right:18px;top:-23px;height:4px;background:var(--pet);transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
 .passos li:hover::before{transform:scaleX(1)}
 }
 </style>
@@ -318,12 +320,12 @@ html{scroll-behavior:auto}
 <section id="topo" class="wrap hero">
 <div>
 <h1 class="pet"><span class="hl d1">Tudo acaba em cima da sua secretária?</span><span class="hl d2 c2">A sua organização não pode depender só de si.</span></h1>
-<p class="lead hl d3">Ou não há ninguém entre si e a equipa, ou há chefias que executam e tratam da operação, mas não lideram. As decisões vão todas parar a si e não sobra tempo para planear. Numa empresa ou numa IPSS, é aí que entro: pessoas, processos e números a puxar para o mesmo lado.</p>
+<p class="lead hl d3">Não há ninguém entre si e a equipa? Há chefias que executam e tratam da operação, mas não lideram? As decisões vão todas parar a si e não sobra tempo para planear? É aí que entro: pessoas, processos e números a puxar para o mesmo lado.</p>
 <div class="acoes hl d4">
 <a class="btn btn-c" href="#contacto">Marcar uma reunião de diagnóstico</a>
 <a class="lk" href="#situacoes">Ver o que resolvo</a>
 </div>
-<p class="apoio hl d4">45 minutos, gratuita e sem compromisso. A partir do Pico, nos Açores e fora deles.</p>
+<p class="apoio hl d4">45 minutos, gratuita e sem compromisso. Do Pico, para os Açores e mais além.</p>
 </div>
 <div>
 <svg class="alvo" viewBox="0 0 520 520" aria-hidden="true" focusable="false">
@@ -341,26 +343,26 @@ html{scroll-behavior:auto}
 
 <section class="portas" aria-label="Duas situações, o mesmo trabalho">
 <div class="wrap">
-<div><h2>Quando falta quem dirija</h2><p>Não há ninguém entre quem lidera e a equipa, ou a organização não tem dimensão para um diretor-geral a tempo inteiro, nem justifica esse investimento. Assumo a direção a tempo parcial: o rigor de uma gestão profissional, a um preço proporcional à sua dimensão.</p><a href="direcao-tempo-parcial.html">Ver a direção a tempo parcial</a></div>
-<div><h2>Quando há estrutura, mas falta liderança</h2><p>Há chefias que executam e tratam da operação, mas não lideram. Quem decide sente falta de ferramentas para gerir pessoas, tempo e prioridades. Desenvolvimento de lideranças e coaching executivo, até a estrutura de liderança puxar para o mesmo lado.</p><a href="coaching-executivo.html">Ver o coaching executivo</a></div>
+<div><h2>Quando falta quem dirija</h2><p>Não há ninguém entre quem lidera e a equipa? A organização não tem dimensão para um diretor-geral a tempo inteiro, ou não justifica esse investimento? Assumo a direção a tempo parcial: o rigor de uma gestão profissional, a um preço proporcional à sua dimensão.</p><a href="direcao-tempo-parcial.html">Ver a direção a tempo parcial</a></div>
+<div><h2>Quando há estrutura, mas falta liderança</h2><p>As chefias tratam bem da operação, mas a liderança fica por fazer? Quem decide sente falta de ferramentas para gerir pessoas, tempo e prioridades? Desenvolvimento de lideranças e coaching executivo, até a estrutura de liderança puxar para o mesmo lado.</p><a href="coaching-executivo.html">Ver o coaching executivo</a></div>
 </div>
 </section>
 
 <section id="situacoes" class="esc sit">
 <div class="wrap">
 <h2 class="t-l rv">Reconhece alguma destas situações?</h2>
-<p class="lead intro rv">Raramente aparecem sozinhas. Quase sempre têm a mesma origem: a organização cresceu e a forma de gerir e de liderar não acompanhou.</p>
+<p class="lead intro rv">Raramente aparecem sozinhas e quase sempre têm a mesma origem:<br>a organização cresceu e a forma de gerir e de liderar não acompanhou.</p>
 <div class="linhas">
 <!-- Página futura: equipas-e-chefias.html -->
-<div class="linha rv"><h3>«Não consigo tirar o melhor da minha equipa.»</h3><div><p>Tem pessoas capazes, mas o resultado fica aquém. Ou ninguém assume responsabilidades além de si, ou as chefias executam, mas não lideram.</p><a class="ir" href="coaching-executivo.html">Ver o coaching executivo</a></div></div>
+<div class="linha rv"><h3>«Não consigo tirar o melhor da minha equipa.»</h3><div><p>Tem pessoas capazes, mas o resultado fica aquém? Ninguém assume responsabilidades além de si? As chefias executam, mas não lideram?</p><a class="ir" href="coaching-executivo.html">Ver o coaching executivo</a></div></div>
 <!-- Página futura: numeros-e-decisao.html -->
-<div class="linha rv"><h3>«Tenho dados, mas não me ajudam a decidir.»</h3><div><p>Há números, relatórios e mapas, mas chegam tarde, soltos ou por trabalhar. Na hora de decidir, falta saber ao certo quanto custa, quanto sobra e onde se está a perder.</p><a class="ir" href="direcao-tempo-parcial.html">Ver a direção a tempo parcial</a></div></div>
+<div class="linha rv"><h3>«Tenho dados, mas não me ajudam a decidir.»</h3><div><p>Há números, relatórios e mapas, mas chegam tarde, soltos ou por trabalhar? Na hora de decidir, falta saber ao certo quanto custa, quanto sobra e onde está a perder?</p><a class="ir" href="direcao-tempo-parcial.html">Ver a direção a tempo parcial</a></div></div>
 <!-- Página futura: organizacao-e-processos.html (entrada «apagar fogos») -->
-<div class="linha rv"><h3>«Passo o dia a apagar fogos.»</h3><div><p>Tudo chega a si. Não há tempo para planear, os planos que existem não se cumprem e o importante fica sempre para amanhã.</p><a class="ir" href="direcao-tempo-parcial.html">Ver a direção a tempo parcial</a></div></div>
+<div class="linha rv"><h3>«Passo o dia a apagar fogos.»</h3><div><p>Tudo chega a si? Não há tempo para planear, os planos que existem não se cumprem e o importante fica sempre para depois?</p><a class="ir" href="direcao-tempo-parcial.html">Ver a direção a tempo parcial</a></div></div>
 <!-- Página futura: organizacao-e-processos.html (entrada «qualidade») -->
-<div class="linha rv"><h3>«Crescemos, mas a qualidade baixou.»</h3><div><p>Mais trabalho, mais pessoas, mais erros. O que funcionava com poucas pessoas já não funciona com muitas.</p><a class="ir" href="direcao-tempo-parcial.html">Ver a direção a tempo parcial</a></div></div>
-<div class="linha rv"><h3>«Faltam-me ferramentas para gerir pessoas e tempo.»</h3><div><p>Sabe o que quer da equipa, mas não tem método para o pedir, acompanhar e corrigir. As reuniões multiplicam-se e o tempo não chega.</p><a class="ir" href="coaching-executivo.html">Ver o coaching executivo</a></div></div>
-<div class="linha rv"><h3>«Decido sozinho as coisas difíceis.»</h3><div><p>Não tem com quem pensar uma decisão sem interesses à mistura. Falta-lhe uma segunda opinião de quem já decidiu.</p><a class="ir" href="coaching-executivo.html">Ver o coaching executivo</a></div></div>
+<div class="linha rv"><h3>«Crescemos, mas a qualidade baixou.»</h3><div><p>Mais trabalho, mais pessoas, mais erros? O que funcionava com poucas pessoas já não funciona com muitas?</p><a class="ir" href="direcao-tempo-parcial.html">Ver a direção a tempo parcial</a></div></div>
+<div class="linha rv"><h3>«Faltam-me ferramentas para gerir pessoas e tempo.»</h3><div><p>Sabe o que quer da equipa, mas não tem método para o pedir, acompanhar e corrigir? As tarefas multiplicam-se e o tempo não chega?</p><a class="ir" href="coaching-executivo.html">Ver o coaching executivo</a></div></div>
+<div class="linha rv"><h3>«Decido tudo sozinho.»</h3><div><p>Não tem com quem conversar para tomar melhores decisões? Falta-lhe uma segunda opinião externa, independente e experiente?</p><a class="ir" href="coaching-executivo.html">Ver o coaching executivo</a></div></div>
 </div>
 </div>
 </section>

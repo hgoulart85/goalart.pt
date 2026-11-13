@@ -256,8 +256,10 @@ html{scroll-behavior:auto}
 .passos li:hover h3{color:var(--cobre)}
 }
 @media (hover:hover) and (prefers-reduced-motion:no-preference) and (min-width:981px){
-.passos li{position:relative}
-.passos li::before{content:"";position:absolute;left:0;right:0;top:-39px;height:4px;background:var(--pet);transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.passos li{position:relative;padding:16px 18px 20px;margin:-16px -18px -20px;border-radius:3px;transition:background-color .35s ease}
+.passos li:hover{background:var(--nevoa)}
+.nevoa-sec .passos li:hover{background:#fff}
+.passos li::before{content:"";position:absolute;left:18px;right:18px;top:-23px;height:4px;background:var(--pet);transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
 .passos li:hover::before{transform:scaleX(1)}
 }
 </style>
