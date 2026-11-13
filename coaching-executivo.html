@@ -236,6 +236,30 @@ html{scroll-behavior:auto}
 .rodape .legal p{width:100%}
 .rodape .legal p+p{margin-top:0}
 @media (max-width:640px){.rodape .wrap{justify-content:center}.rodape .ass,.rodape .end{justify-content:center;width:100%}}
+/* interação ao passar o rato */
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+.portas .wrap>div{position:relative;padding:20px 24px 24px;margin:-20px -24px -24px;border-radius:3px;transition:background-color .35s ease}
+.portas .wrap>div::before{content:"";position:absolute;left:0;top:22px;bottom:26px;width:3px;background:var(--cobre);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.portas .wrap>div:hover,.portas .wrap>div:focus-within{background:var(--nevoa)}
+.portas .wrap>div:hover::before,.portas .wrap>div:focus-within::before{transform:scaleY(1)}
+.portas a::after{content:"\2192";display:inline-block;margin-left:.4em;transition:transform .3s ease}
+.portas .wrap>div:hover a::after{transform:translateX(5px)}
+.linha{position:relative}
+.linha::before{content:"";position:absolute;left:-22px;top:38px;bottom:38px;width:3px;background:var(--champ);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.linha h3{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.linha:hover::before,.linha:focus-within::before{transform:scaleY(1)}
+.linha:hover h3,.linha:focus-within h3{transform:translateX(8px)}
+.quatro>div,.tres3>div{position:relative}
+.quatro>div::before,.tres3>div::before{content:"";position:absolute;left:-18px;top:2px;bottom:2px;width:3px;background:var(--cobre);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.quatro>div:hover::before,.tres3>div:hover::before{transform:scaleY(1)}
+.passos h3{transition:color .3s ease}
+.passos li:hover h3{color:var(--cobre)}
+}
+@media (hover:hover) and (prefers-reduced-motion:no-preference) and (min-width:981px){
+.passos li{position:relative}
+.passos li::before{content:"";position:absolute;left:0;right:0;top:-39px;height:4px;background:var(--pet);transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.passos li:hover::before{transform:scaleX(1)}
+}
 </style>
 </head>
 <body>

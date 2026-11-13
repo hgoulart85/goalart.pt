@@ -248,6 +248,33 @@ html{scroll-behavior:auto}
 .dados b small{display:block;font-size:13px;line-height:1.2;font-weight:600;letter-spacing:.01em;color:var(--cobre);margin-bottom:4px}
 @media (max-width:560px){.dados b small.vazio{display:none}}
 @media (min-width:901px){.quem .split{align-items:start}.quem .foto{position:sticky;top:120px}}
+.dados b .num{display:inline-block;font-size:inherit;line-height:inherit;margin-top:0}
+.dados b .num.um{margin-left:-.058em}
+.dados b .num:not(.um){margin-left:-.009em}
+/* interação ao passar o rato */
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+.portas .wrap>div{position:relative;padding:20px 24px 24px;margin:-20px -24px -24px;border-radius:3px;transition:background-color .35s ease}
+.portas .wrap>div::before{content:"";position:absolute;left:0;top:22px;bottom:26px;width:3px;background:var(--cobre);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.portas .wrap>div:hover,.portas .wrap>div:focus-within{background:var(--nevoa)}
+.portas .wrap>div:hover::before,.portas .wrap>div:focus-within::before{transform:scaleY(1)}
+.portas a::after{content:"\2192";display:inline-block;margin-left:.4em;transition:transform .3s ease}
+.portas .wrap>div:hover a::after{transform:translateX(5px)}
+.linha{position:relative}
+.linha::before{content:"";position:absolute;left:-22px;top:38px;bottom:38px;width:3px;background:var(--champ);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.linha h3{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.linha:hover::before,.linha:focus-within::before{transform:scaleY(1)}
+.linha:hover h3,.linha:focus-within h3{transform:translateX(8px)}
+.quatro>div,.tres3>div{position:relative}
+.quatro>div::before,.tres3>div::before{content:"";position:absolute;left:-18px;top:2px;bottom:2px;width:3px;background:var(--cobre);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.quatro>div:hover::before,.tres3>div:hover::before{transform:scaleY(1)}
+.passos h3{transition:color .3s ease}
+.passos li:hover h3{color:var(--cobre)}
+}
+@media (hover:hover) and (prefers-reduced-motion:no-preference) and (min-width:981px){
+.passos li{position:relative}
+.passos li::before{content:"";position:absolute;left:0;right:0;top:-39px;height:4px;background:var(--pet);transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.passos li:hover::before{transform:scaleX(1)}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "GOALart", "url": "https://goalart.pt/", "image": "https://goalart.pt/img/partilha.jpg", "logo": "https://goalart.pt/img/goalart_horizontal_positivo.svg", "description": "Gestão e liderança para empresas e IPSS dos Açores: direção a tempo parcial, desenvolvimento de lideranças e coaching executivo.", "email": "geral@goalart.pt", "telephone": "+351919534748", "address": {"@type": "PostalAddress", "streetAddress": "Rua Dr. Machado Serpa, 9", "postalCode": "9930-146", "addressLocality": "Lajes do Pico", "addressRegion": "Açores", "addressCountry": "PT"}, "areaServed": {"@type": "AdministrativeArea", "name": "Açores"}, "founder": {"@type": "Person", "name": "Hugo Goulart", "jobTitle": "Consultor de gestão e coach executivo", "sameAs": ["https://www.linkedin.com/in/avilagoulart/"]}, "parentOrganization": {"@type": "Organization", "name": "Ávila Goulart, Unipessoal Lda", "url": "https://avilagoulart.pt/"}, "knowsAbout": ["Gestão de PME", "Direção financeira", "Desenvolvimento de chefias", "Organização e processos", "Coaching executivo", "Gestão de IPSS", "Gestão autárquica"]}</script>
 </head>
@@ -382,10 +409,10 @@ html{scroll-behavior:auto}
 <p class="corpo">Sou empresário desde 2015, consultor de gestão, coach executivo certificado e formador. Fiz consultoria e coaching executivo com empresários de setores muito diferentes, da construção à distribuição alimentar, dos eventos ao turismo, consultoria a IPSS e projetos para entidades públicas da região. Hoje acompanho líderes e executivos em contexto empresarial, autárquico e no setor social.</p>
 <p class="frase">Domino duas linguagens que raramente andam juntas: a dos números e a das pessoas. E o que proponho, já o fiz no terreno.</p>
 <div class="dados rv">
-<div><b><small>mais de</small>15</b><span>anos em funções de direção nos Açores</span></div>
-<div><b><small>mais de</small>10</b><span>anos como empresário</span></div>
-<div><b><small class="vazio" aria-hidden="true">&nbsp;</small>12</b><span>anos como Diretor Financeiro no setor social</span></div>
-<div><b><small>mais de</small>500</b><span>horas de coaching executivo, individual e de equipa</span></div>
+<div><b><small>mais de</small><span class="num um">15</span></b><span>anos em funções de direção nos Açores</span></div>
+<div><b><small>mais de</small><span class="num um">10</span></b><span>anos como empresário</span></div>
+<div><b><small class="vazio" aria-hidden="true">&nbsp;</small><span class="num um">12</span></b><span>anos como Diretor Financeiro no setor social</span></div>
+<div><b><small>mais de</small><span class="num">500</span></b><span>horas de coaching executivo, individual e de equipa</span></div>
 </div>
 <p class="cred"><b>Formação</b> · Engenharia Informática (Universidade de Coimbra) · Pós-graduações em Gestão de Empresas (MBA) e em Gestão Autárquica e Modernização · MBA em Felicidade Organizacional · Coach executivo certificado (IBCI) · Analista comportamental DISC · Formador certificado · Auditor interno ISO 9001</p>
 </div>
@@ -434,6 +461,28 @@ html{scroll-behavior:auto}
   var s=document.querySelector('.nav .sub'); if(!s) return;
   document.addEventListener('click',function(e){ if(s.open && !s.contains(e.target)) s.removeAttribute('open'); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape' && s.open){ s.removeAttribute('open'); s.querySelector('summary').focus(); } });
+})();
+</script>
+<script>
+(function(){
+  var nums=[].slice.call(document.querySelectorAll('.dados .num'));
+  if(!nums.length || !('IntersectionObserver' in window)) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  function animar(el){
+    var fim=parseInt(el.getAttribute('data-valor'),10), dur=2600, t0=null;
+    function passo(t){
+      if(!t0) t0=t;
+      var p=Math.min((t-t0)/dur,1), e=1-Math.pow(1-p,2);
+      el.textContent=Math.round(fim*e);
+      if(p<1) requestAnimationFrame(passo); else el.textContent=fim;
+    }
+    requestAnimationFrame(passo);
+  }
+  nums=nums.filter(function(el){ el.setAttribute('data-valor',el.textContent.trim()); if(el.getBoundingClientRect().top>window.innerHeight){ el.textContent='0'; return true; } return false; });
+  var io=new IntersectionObserver(function(ent){
+    ent.forEach(function(x){ if(x.isIntersecting){ io.unobserve(x.target); animar(x.target); } });
+  },{threshold:0.6});
+  nums.forEach(function(el){ io.observe(el); });
 })();
 </script>
 </body>
