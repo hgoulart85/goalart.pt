@@ -278,16 +278,27 @@ html{scroll-behavior:auto}
 .passos li:hover::before{transform:scaleX(1)}
 }
 /* para quem é: sim e não */
-.fit .sim,.fit .nao{padding:32px 32px 12px;border-radius:3px;border-top:4px solid var(--pet)}
-.fit .sim{background:#fff}
-.fit .nao{border-top-color:#A9BEC3}
-.fit h3{display:flex;align-items:center;gap:12px;border-bottom:0;padding-bottom:8px}
-.fit .nao h3{color:#4E6267}
+.fit .colunas{gap:0;margin-top:64px}
+.fit .sim,.fit .nao{padding:0;background:none;border:0}
+.fit .sim{padding-right:clamp(32px,5vw,72px)}
+.fit .nao{padding-left:clamp(32px,5vw,72px);border-left:1px solid var(--linha)}
+@media (max-width:860px){.fit .sim{padding-right:0}.fit .nao{padding-left:0;border-left:0;border-top:1px solid var(--linha);padding-top:40px;margin-top:8px}}
+.fit h3{display:flex;align-items:center;gap:14px;padding-bottom:16px;border-bottom:2px solid var(--pet);color:var(--pet)}
+.fit .nao h3{border-bottom-color:var(--cobre);color:var(--pet)}
+.fit li{padding:16px 0 16px 34px;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
 .fit li:last-child{border-bottom:0}
-.fit .sim li::before{left:3px;top:1.05em;width:6px;height:11px;border-radius:0;background:none;border-right:2.2px solid var(--pet);border-bottom:2.2px solid var(--pet);transform:rotate(45deg)}
-.fit .nao li{color:#3F4F54}
-.fit .nao li::before{content:"\00D7";left:1px;top:14px;width:auto;height:auto;background:none;font-size:22px;line-height:1;color:#6B7F84}
-@media (max-width:860px){.fit .sim,.fit .nao{padding:24px 22px 8px}}
+.fit li::before{content:"";position:absolute;left:0;top:19px;width:20px;height:20px;border-radius:50%;background-repeat:no-repeat;background-position:center;background-size:12px 12px;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.fit .sim li::before{left:0;top:19px;border-radius:50%;background-color:rgba(0,91,103,.12);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.2 6.3l2.4 2.4 5.2-5.2' fill='none' stroke='%23005B67' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");border:0;transform:none;width:20px;height:20px}
+.fit .nao li{color:var(--tinta)}
+.fit .nao li::before{left:0;top:19px;width:20px;height:20px;border-radius:50%;background-color:rgba(152,88,32,.12);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3.2 3.2l5.6 5.6M8.8 3.2L3.2 8.8' fill='none' stroke='%23985820' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");content:"";font-size:0}
+@media (hover:hover){.fit li:hover{transform:translateX(4px)}.fit li:hover::before{transform:scale(1.15)}}
+.fit.anim .colunas li{opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.fit.anim.ver .colunas li{opacity:1;transform:none}
+.fit.anim.ver .colunas li:nth-child(1){transition-delay:.05s}
+.fit.anim.ver .colunas li:nth-child(2){transition-delay:.15s}
+.fit.anim.ver .colunas li:nth-child(3){transition-delay:.25s}
+.fit.anim.ver .colunas li:nth-child(4){transition-delay:.35s}
+.fit.anim.ver .nao li{transition-delay:calc(var(--d,0s) + .3s)}
 /* mapa dos Açores no alvo */
 .mapa{margin:0;text-align:center}
 .mapa figcaption{margin-top:14px;font-size:15px;font-weight:500;color:var(--cobre);letter-spacing:.01em}
@@ -304,8 +315,56 @@ html{scroll-behavior:auto}
 @keyframes so{0%{opacity:0;transform:none}12%{opacity:1}80%,100%{opacity:0;transform:translateX(-170px)}}
 @keyframes se{0%{opacity:0;transform:none}12%{opacity:1}80%,100%{opacity:0;transform:translateX(170px)}}
 @media (prefers-reduced-motion:reduce){.onda,.sinal{display:none}}
+/* títulos que surgem palavra a palavra */
+.palavras.rv{animation:none!important;opacity:1!important;transform:none!important}
+.palavras .pal{display:inline-block;opacity:0;transform:translateY(.35em);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.palavras.ver .pal{opacity:1;transform:none}
+/* números dos passos em marca de água */
+.passos li{position:relative;isolation:isolate}
+.passos .n{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:-1;font-size:104px;font-weight:700;line-height:1;letter-spacing:-.05em;color:var(--pet);opacity:.08;pointer-events:none;user-select:none;transition:opacity .4s ease,color .4s ease}
+.passos h3{margin-top:4px;padding-right:56px}
+@media (hover:hover){.passos li:hover .n{opacity:.12;color:var(--cobre)}}
+@media (max-width:560px){.passos .n{font-size:84px}}
+.rodape .grupo{display:inline-flex;opacity:.9;transition:opacity .2s}
+.rodape .grupo:hover{opacity:1}
+/* ícones em marca de água nos passos */
+.ico-wm{position:absolute;right:16px;top:12px;width:42px;height:42px;z-index:0;opacity:.55;pointer-events:none;transition:opacity .45s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.ico-wm svg{display:block;width:100%;height:100%;fill:none;stroke:var(--pet);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.ico-wm .pt,.ico-wm .acf{fill:var(--cobre);stroke:none}
+.ico-wm .ac{stroke:var(--cobre)}
+@media (hover:hover){.passos li:hover .ico-wm{opacity:1;transform:translateY(-3px) rotate(-4deg)}}
+@keyframes tracar{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes acender{from{opacity:0}to{opacity:1}}
+.passos.anim .ico-wm [pathLength]{stroke-dasharray:1;stroke-dashoffset:1}
+.passos.anim .ico-wm .pt,.passos.anim .ico-wm .acf{opacity:0}
+.passos.anim.ver .ico-wm [pathLength]{animation:tracar 1.6s cubic-bezier(.4,.1,.2,1) forwards}
+.passos.anim.ver .ico-wm .pt,.passos.anim.ver .ico-wm .acf{animation:acender .8s ease forwards}
+.passos.anim.ver li:nth-child(2) .ico-wm [pathLength]{animation-delay:.35s}
+.passos.anim.ver li:nth-child(3) .ico-wm [pathLength]{animation-delay:.7s}
+.passos.anim.ver li:nth-child(4) .ico-wm [pathLength]{animation-delay:1.05s}
+.passos.anim.ver li:nth-child(1) .ico-wm .pt,.passos.anim.ver li:nth-child(1) .ico-wm .acf{animation-delay:1.4s}
+.passos.anim.ver li:nth-child(2) .ico-wm .pt,.passos.anim.ver li:nth-child(2) .ico-wm .acf{animation-delay:1.75s}
+.passos.anim.ver li:nth-child(3) .ico-wm .pt,.passos.anim.ver li:nth-child(3) .ico-wm .acf{animation-delay:2.1s}
+.passos.anim.ver li:nth-child(4) .ico-wm .pt,.passos.anim.ver li:nth-child(4) .ico-wm .acf{animation-delay:2.45s}
+@media (max-width:560px){.ico-wm{width:40px;height:40px}}
+/* redes sociais */
+.redes{display:inline-flex;gap:10px;align-items:center}
+.redes a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.35);color:#fff;transition:background-color .3s ease,border-color .3s ease,color .3s ease}
+.redes a:hover,.redes a:focus-visible{background:#fff;border-color:#fff;color:var(--pet)}
+.rodape .redes{margin-right:28px}
+/* contactos integrados */
+.canais-grid{margin-top:32px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:940px}
+@media (max-width:900px){.canais-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.canais-grid{grid-template-columns:1fr}}
+.canal{display:flex;align-items:center;gap:14px;padding:14px 16px;border:1px solid rgba(255,255,255,.28);border-radius:3px;color:#fff;text-decoration:none;transition:background-color .3s ease,border-color .3s ease}
+.canal .ic{flex:none;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;transition:background-color .3s ease,color .3s ease}
+.canal .tx{min-width:0}
+.canal b{display:block;font-size:15px;font-weight:600;line-height:1.3}
+.canal .det{display:block;font-size:14px;line-height:1.35;opacity:.82;overflow-wrap:anywhere}
+.canal:hover,.canal:focus-visible{background:rgba(255,255,255,.07);border-color:#fff;color:#fff}
+.canal:hover .ic,.canal:focus-visible .ic{background:#fff;color:var(--pet)}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "GOALart", "url": "https://goalart.pt/", "image": "https://goalart.pt/img/partilha.jpg", "logo": "https://goalart.pt/img/goalart_horizontal_positivo.svg", "description": "Gestão e liderança para empresas e IPSS dos Açores: direção a tempo parcial, desenvolvimento de lideranças e coaching executivo.", "email": "geral@goalart.pt", "telephone": "+351919534748", "address": {"@type": "PostalAddress", "streetAddress": "Rua Dr. Machado Serpa, 9", "postalCode": "9930-146", "addressLocality": "Lajes do Pico", "addressRegion": "Açores", "addressCountry": "PT"}, "areaServed": {"@type": "AdministrativeArea", "name": "Açores"}, "founder": {"@type": "Person", "name": "Hugo Goulart", "jobTitle": "Consultor de gestão e coach executivo", "sameAs": ["https://www.linkedin.com/in/avilagoulart/"]}, "parentOrganization": {"@type": "Organization", "name": "Ávila Goulart, Unipessoal Lda", "url": "https://avilagoulart.pt/"}, "knowsAbout": ["Gestão de PME", "Direção financeira", "Desenvolvimento de chefias", "Organização e processos", "Coaching executivo", "Gestão de IPSS", "Gestão autárquica"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "GOALart", "url": "https://goalart.pt/", "image": "https://goalart.pt/img/partilha.jpg", "logo": "https://goalart.pt/img/goalart_horizontal_positivo.svg", "description": "Gestão e liderança para empresas e IPSS dos Açores: direção a tempo parcial, desenvolvimento de lideranças e coaching executivo.", "email": "geral@goalart.pt", "telephone": "+351919534748", "address": {"@type": "PostalAddress", "streetAddress": "Rua Dr. Machado Serpa, 9", "postalCode": "9930-146", "addressLocality": "Lajes do Pico", "addressRegion": "Açores", "addressCountry": "PT"}, "areaServed": {"@type": "AdministrativeArea", "name": "Açores"}, "founder": {"@type": "Person", "name": "Hugo Goulart", "jobTitle": "Consultor de gestão e coach executivo", "sameAs": ["https://www.linkedin.com/in/avilagoulart/"]}, "sameAs":["https://www.instagram.com/thegoalart/"],"parentOrganization": {"@type": "Organization", "name": "Ávila Goulart, Unipessoal Lda", "url": "https://avilagoulart.pt/"}, "knowsAbout": ["Gestão de PME", "Direção financeira", "Desenvolvimento de chefias", "Organização e processos", "Coaching executivo", "Gestão de IPSS", "Gestão autárquica"]}</script>
 </head>
 <body>
 <a class="saltar" href="#conteudo">Saltar para o conteúdo</a>
@@ -400,10 +459,10 @@ html{scroll-behavior:auto}
 <h2 class="t-l pet rv">O que contrata não é o meu tempo. É a minha experiência, o meu conhecimento e o resultado executado.</h2>
 <div class="trilho" aria-hidden="true"><div></div></div>
 <ol class="passos">
-<li class="rv"><span class="n">01</span><h3>Diagnóstico</h3><p>Olho para a organização inteira: pessoas e liderança, processos, números, e onde a tecnologia e a inteligência artificial podem poupar tempo. Converso com a liderança e com quem está no terreno.</p></li>
-<li class="rv"><span class="n">02</span><h3>Desafio por escrito</h3><p>Definimos o que tem de mudar, os entregáveis, os prazos e o preço. Sabe à partida o que me cabe fazer e como se verifica.</p></li>
-<li class="rv"><span class="n">03</span><h3>Implementação</h3><p>Trabalho ao lado da liderança e com a equipa até a transformação funcionar no dia a dia. Pode ser direção a tempo parcial, um programa para as chefias, coaching ou tudo junto: decide o diagnóstico, não um pacote.</p></li>
-<li class="rv"><span class="n">04</span><h3>Autonomia</h3><p>Cada etapa termina com a equipa capaz de manter o que se construiu. Depois decidimos juntos qual é o passo seguinte.</p></li>
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><circle pathLength="1" cx="10" cy="10" r="6.5"/><path pathLength="1" d="M15 15l5.5 5.5"/><circle class="pt" cx="10" cy="10" r="1.7"/></svg></span><span class="n">01</span><h3>Diagnóstico</h3><p>Olho para a organização inteira: pessoas e liderança, processos, números, e onde a tecnologia e a inteligência artificial podem poupar tempo. Converso com a liderança e com quem está no terreno.</p></li>
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M6 3h9l4 4v14H6z"/><path pathLength="1" d="M15 3v4h4"/><path pathLength="1" d="M9 13h7"/><path pathLength="1" d="M9 16.5h5"/><path class="ac" pathLength="1" d="M9 8.6l1.5 1.5 2.8-2.8"/></svg></span><span class="n">02</span><h3>Desafio por escrito</h3><p>Definimos o que tem de mudar, os entregáveis, os prazos e o preço. Sabe à partida o que me cabe fazer e como se verifica.</p></li>
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M4 20h16"/><path pathLength="1" d="M6 20v-5h3v5"/><path pathLength="1" d="M10.5 20v-8.5h3V20"/><path pathLength="1" d="M15 20V8h3v12"/><circle class="pt" cx="16.5" cy="4.6" r="1.7"/></svg></span><span class="n">03</span><h3>Implementação</h3><p>Trabalho ao lado da liderança e com a equipa até a transformação funcionar no dia a dia. Pode ser direção a tempo parcial, um programa para as chefias, coaching ou tudo junto: decide o diagnóstico, não um pacote.</p></li>
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M12 20.5V10.5"/><path pathLength="1" d="M12 14c-4.2 0-6.5-2.3-6.5-6.5 4.2 0 6.5 2.3 6.5 6.5z"/><path pathLength="1" d="M12 11c0-4.2 2.3-6.5 6.5-6.5 0 4.2-2.3 6.5-6.5 6.5z"/><path pathLength="1" d="M6.5 20.5h11"/><circle class="pt" cx="12" cy="20.5" r="1.7"/></svg></span><span class="n">04</span><h3>Autonomia</h3><p>Cada etapa termina com a equipa capaz de manter o que se construiu. Depois decidimos juntos qual é o passo seguinte.</p></li>
 </ol>
 <p class="ia rv"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="none" stroke="#005B67" stroke-width="2"/><circle cx="14" cy="14" r="4" fill="#B87333"/></svg><span>Uso inteligência artificial em todo o trabalho, na análise, nos relatórios e na automatização do que é repetitivo. É isso que me permite entregar um resultado ao nível de um profissional a tempo inteiro, ou de uma equipa, a um preço que uma organização da sua dimensão consegue pagar.</span></p>
 </section>
@@ -419,7 +478,7 @@ html{scroll-behavior:auto}
 <li>Quer mudar e está disposto a fazer diferente: largar algumas decisões e entregar processos a outras pessoas, desde que fiquem em boas mãos.</li>
 <li>Quer resultados que se possam verificar, não relatórios elegantes que acabam na gaveta.</li>
 </ul></div>
-<div class="nao rv"><h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="11" fill="none" stroke="#6B7F84" stroke-width="1.6"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="#6B7F84" stroke-width="1.8" stroke-linecap="round"/></svg></span>Não é para si se:</h3><ul>
+<div class="nao rv"><h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="12" fill="#985820"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span>Não é para si se:</h3><ul>
 <li>Procura alguém disponível a qualquer hora para resolver o que é urgente.</li>
 <li>Quer alguém que execute sem questionar.</li>
 <li>Quer comprar horas de consultoria.</li>
@@ -470,12 +529,12 @@ html{scroll-behavior:auto}
 <div class="acoes">
 <a class="btn btn-ch" href="https://calendar.app.google/sAL11MT9BZyRDrzg7" target="_blank" rel="noopener" data-marcacao>Marcar uma reunião de diagnóstico</a>
 </div>
-<div class="canais"><a class="mail" href="https://wa.me/351919534748?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20reuni%C3%A3o%20de%20diagn%C3%B3stico." target="_blank" rel="noopener">WhatsApp · 919 534 748</a><a class="mail" href="mailto:geral@goalart.pt">geral@goalart.pt</a></div>
+<div class="canais-grid"><a class="canal" href="https://wa.me/351919534748?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20reuni%C3%A3o%20de%20diagn%C3%B3stico." target="_blank" rel="noopener" aria-label="WhatsApp, 919 534 748 (abre noutra janela)"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.7 16.9L2.4 21.6l4.8-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 19.9zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1l-.5-.3z"/></svg></span><span class="tx"><b>WhatsApp</b><span class="det">919 534 748</span></span></a><a class="canal" href="mailto:geral@goalart.pt"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.8 7l8.2 6 8.2-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span class="tx"><b>Email</b><span class="det">geral@goalart.pt</span></span></a><a class="canal" href="https://www.linkedin.com/in/avilagoulart/" target="_blank" rel="noopener" aria-label="LinkedIn de Hugo Goulart (abre noutra janela)"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6v5.4h-4v-4.8c0-1.2 0-2.6-1.6-2.6s-1.9 1.3-1.9 2.5v4.9h-4z"/></svg></span><span class="tx"><b>LinkedIn</b><span class="det">Hugo Goulart</span></span></a><a class="canal" href="https://www.instagram.com/thegoalart/" target="_blank" rel="noopener" aria-label="Instagram da GOALart (abre noutra janela)"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></span><span class="tx"><b>Instagram</b><span class="det">@thegoalart</span></span></a></div>
 </div>
 <footer class="rodape">
 <div class="wrap">
 <div class="ass"><img src="img/goalart_horizontal_negativo.svg" alt="GOALart" width="130" height="45"><span class="slogan">A arte de cumprir objetivos</span></div>
-<div class="end"><span>Uma marca do Grupo</span><img src="img/avilagoulart_horizontal_negativo.svg" alt="Grupo Ávila Goulart" width="100" height="25"></div>
+<div class="end"><nav class="redes" aria-label="Redes sociais"><a href="https://www.linkedin.com/in/avilagoulart/" target="_blank" rel="noopener" aria-label="LinkedIn (abre noutra janela)"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6v5.4h-4v-4.8c0-1.2 0-2.6-1.6-2.6s-1.9 1.3-1.9 2.5v4.9h-4z"/></svg></a><a href="https://www.instagram.com/thegoalart/" target="_blank" rel="noopener" aria-label="Instagram (abre noutra janela)"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a><!-- FACEBOOK: <a href="URL" target="_blank" rel="noopener" aria-label="Facebook (abre noutra janela)"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21z"/></svg></a> --></nav><span>Uma marca do Grupo</span><a class="grupo" href="https://avilagoulart.pt/" target="_blank" rel="noopener" aria-label="Grupo Ávila Goulart (abre noutra janela)"><img src="img/avilagoulart_horizontal_negativo.svg" alt="Grupo Ávila Goulart" width="100" height="25"></a></div>
 </div>
 <div class="wrap legal"><p>ÁVILA GOULART, UNIPESSOAL LDA · Sede: Rua Dr. Machado Serpa, n.º 9, 9930-146 Lajes do Pico</p><p>Capital social: 5.000,00 € · NIPC e matrícula na Conservatória do Registo Comercial: 513484132</p><p><a href="privacidade.html">Política de privacidade</a> · <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener">Livro de Reclamações Eletrónico</a> · Resolução alternativa de litígios: <a href="https://www.consumidor.gov.pt/" target="_blank" rel="noopener">Portal do Consumidor</a></p></div>
 </footer>
@@ -514,6 +573,54 @@ html{scroll-behavior:auto}
     ent.forEach(function(x){ if(x.isIntersecting){ io.unobserve(x.target); animar(x.target); } });
   },{threshold:0.6});
   nums.forEach(function(el){ io.observe(el); });
+})();
+</script>
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var io=new IntersectionObserver(function(ent){
+    ent.forEach(function(x){ if(x.isIntersecting){ x.target.classList.add('ver'); io.unobserve(x.target); } });
+  },{threshold:0.4});
+  [].slice.call(document.querySelectorAll('h2.t-l')).forEach(function(h){
+    if(h.getBoundingClientRect().top < window.innerHeight*0.9) return;
+    var i=0;
+    (function walk(node){
+      [].slice.call(node.childNodes).forEach(function(n){
+        if(n.nodeType===3){
+          var frag=document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(function(p){
+            if(p===''||/^\s+$/.test(p)){ frag.appendChild(document.createTextNode(p)); return; }
+            var sp=document.createElement('span'); sp.className='pal'; sp.style.transitionDelay=(i++*80)+'ms'; sp.textContent=p; frag.appendChild(sp);
+          });
+          n.parentNode.replaceChild(frag,n);
+        } else if(n.nodeType===1 && n.tagName!=='BR'){ walk(n); }
+      });
+    })(h);
+    h.classList.add('palavras');
+    io.observe(h);
+  });
+})();
+</script>
+<script>
+(function(){
+  var ol=document.querySelector('.passos'); if(!ol || !ol.querySelector('.ico-wm')) return;
+  if(!('IntersectionObserver' in window)) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(ol.getBoundingClientRect().top < window.innerHeight*0.85) return;
+  ol.classList.add('anim');
+  var io=new IntersectionObserver(function(e){ if(e[0].isIntersecting){ ol.classList.add('ver'); io.disconnect(); } },{threshold:0.35});
+  io.observe(ol);
+})();
+</script>
+<script>
+(function(){
+  var sec=document.querySelector('.fit'); if(!sec || !('IntersectionObserver' in window)) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(sec.querySelector('.colunas').getBoundingClientRect().top < window.innerHeight*0.85) return;
+  sec.classList.add('anim');
+  var io=new IntersectionObserver(function(e){ if(e[0].isIntersecting){ sec.classList.add('ver'); io.disconnect(); } },{threshold:0.25});
+  io.observe(sec.querySelector('.colunas'));
 })();
 </script>
 </body>
