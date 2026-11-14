@@ -25,7 +25,7 @@
 @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/source-sans-3-latin-500-normal.woff2) format('woff2')}
 @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/source-sans-3-latin-600-normal.woff2) format('woff2')}
 @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/source-sans-3-latin-700-normal.woff2) format('woff2')}
-:root{--pet:#005B67;--agua:#9BC7CF;--tinta:#1A1A1A;--cobre:#985820;--champ:#F0C594;--nevoa:#EEF4F5;--linha:#C9DFE3}
+:root{--pet:#005B67;--agua:#9BC7CF;--tinta:#1A1A1A;--cobre:#985820;--cv:#D9762B;--champ:#F0C594;--nevoa:#EEF4F5;--linha:#C9DFE3}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:'Source Sans 3',Arial,Helvetica,sans-serif;color:var(--tinta);background:#fff;font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -33,8 +33,8 @@ img{max-width:100%;display:block}
 h1,h2,h3,p{margin:0}
 h1,h2,h3{text-wrap:balance}
 p{text-wrap:pretty}
-a{color:var(--cobre)}a:hover{color:var(--pet)}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--cobre);outline-offset:3px}
+a{color:var(--pet)}a:hover{color:var(--tinta)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--cv);outline-offset:3px}
 .saltar{position:absolute;left:-9999px;top:8px;background:#fff;padding:10px 16px;z-index:60}.saltar:focus{left:16px}
 .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
 @media (max-width:640px){.wrap{padding:0 22px}body{font-size:18px}}
@@ -49,10 +49,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px}
 .topo .logo img{height:52px;width:auto}
 .nav{display:flex;align-items:center;gap:32px;font-size:17px;font-weight:500}
-.nl{color:var(--tinta);text-decoration:none;background:linear-gradient(var(--cobre),var(--cobre)) 0 100%/0 2px no-repeat;transition:background-size .3s ease;padding-bottom:3px}
+.nl{color:var(--tinta);text-decoration:none;background:linear-gradient(var(--cv),var(--cv)) 0 100%/0 2px no-repeat;transition:background-size .3s ease;padding-bottom:3px}
 .nl:hover{background-size:100% 2px;color:var(--tinta)}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;text-decoration:none;font-weight:600;font-size:18px;border-radius:2px;transition:background-color .25s ease,transform .25s ease,color .25s ease}
-.btn-c{background:var(--cobre);color:#fff}.btn-c:hover{background:#7E4818;color:#fff;transform:translateY(-2px)}
+.btn-c{background:var(--cv);color:var(--tinta)}.btn-c:hover{background:var(--pet);color:#fff;transform:translateY(-2px)}
 .btn-ch{background:var(--champ);color:var(--pet);font-weight:700}.btn-ch:hover{background:#fff;color:var(--pet);transform:translateY(-2px)}
 .btn-s{min-height:44px;padding:0 20px;font-size:16px}
 .menu{display:none;position:relative}
@@ -70,7 +70,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .hero{min-height:calc(100vh - 76px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:center;padding-top:64px;padding-bottom:80px}
 @media (max-width:900px){.hero{grid-template-columns:1fr;min-height:0;padding-top:48px;padding-bottom:64px}}
 .hero h1 span{display:block}
-.hero .c2{color:var(--cobre);margin-top:.12em}
+.hero .c2{color:var(--pet);margin-top:.12em}
 .hero .lead{margin-top:40px;max-width:28em}
 .acoes{margin-top:44px;display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px}
 .lk{font-weight:600;font-size:18px;color:var(--pet);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
@@ -109,7 +109,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .foto img{width:100%;height:100%;object-fit:cover}
 @media (max-width:900px){.foto{aspect-ratio:4/3;max-height:520px}.dam .foto img{object-position:58% 72%}}
 .dam .foto img{object-position:62% 78%}
-.etq{font-size:16px;font-weight:600;color:var(--cobre);letter-spacing:.02em}
+.etq{font-size:16px;font-weight:600;color:var(--pet);letter-spacing:.02em}
 .dam h2{margin-top:14px}
 .dam .perg{margin-top:28px;font-size:clamp(22px,2vw,27px);line-height:1.35;font-weight:500;color:var(--pet)}
 .dam .corpo{margin-top:20px;max-width:32em}
@@ -145,11 +145,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .metodo{padding-top:128px;padding-bottom:120px}
 .metodo .intro{margin-top:22px;max-width:34em}
 .trilho{margin-top:72px;height:2px;background:var(--linha);overflow:hidden}
-.trilho div{height:2px;background:var(--cobre)}
+.trilho div{height:2px;background:var(--cv)}
 .passos{margin:36px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px}
 @media (max-width:980px){.passos{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.passos{grid-template-columns:1fr}}
-.passos .n{font-size:15px;font-weight:600;color:var(--cobre);letter-spacing:.06em}
+.passos .n{font-size:15px;font-weight:600;color:var(--pet);letter-spacing:.06em}
 .passos h3{margin:10px 0 10px;font-size:23px;font-weight:600;color:var(--pet);letter-spacing:-.01em}
 .passos p{font-size:17px;line-height:1.55}
 .ia{margin-top:72px;display:flex;gap:20px;align-items:flex-start;max-width:44em;font-size:20px;line-height:1.5}
@@ -162,7 +162,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .quem .frase{margin-top:28px;font-size:clamp(22px,2vw,27px);line-height:1.35;font-weight:500;color:var(--pet);max-width:26em}
 .dados{margin-top:48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;border-top:1px solid var(--linha);padding-top:28px}
 @media (max-width:560px){.dados{grid-template-columns:1fr}}
-.dados b{display:block;font-size:clamp(44px,4vw,60px);line-height:1;font-weight:600;color:var(--cobre);letter-spacing:-.02em}
+.dados b{display:block;font-size:clamp(44px,4vw,60px);line-height:1;font-weight:600;color:var(--pet);letter-spacing:-.02em}
 .dados span{display:block;margin-top:8px;font-size:16px;line-height:1.4}
 .cred{margin-top:40px;font-size:15px;line-height:1.7;color:var(--tinta);max-width:44em}
 .cred b{font-weight:600;color:var(--pet)}
@@ -206,7 +206,7 @@ html{scroll-behavior:auto}
 .legal p{margin:0}
 .legal p+p{margin-top:6px}
 .legal a{color:#fff;text-underline-offset:3px}
-.depo{margin:40px 0 0;padding:28px 32px;background:#fff;border-left:3px solid var(--cobre);border-radius:2px}
+.depo{margin:40px 0 0;padding:28px 32px;background:#fff;border-left:3px solid var(--cv);border-radius:2px}
 .depo blockquote{margin:0}
 .depo p{font-size:clamp(19px,1.6vw,22px);line-height:1.5;color:var(--tinta)}
 .depo figcaption{margin-top:14px;font-size:15px;font-weight:600;color:var(--pet)}
@@ -228,7 +228,7 @@ html{scroll-behavior:auto}
 .subm a b{display:block;font-weight:600;color:var(--pet);font-size:17px}
 .subm a span{display:block;font-size:15px;font-weight:400;margin-top:2px}
 .subm a:hover,.subm a[aria-current]{background:var(--nevoa)}
-.menu .m-grupo{margin:0;padding:12px 14px 4px;font-size:inherit;line-height:inherit;font-weight:600;color:var(--cobre)}
+.menu .m-grupo{margin:0;padding:12px 14px 4px;font-size:inherit;line-height:inherit;font-weight:600;color:var(--pet)}
 .menu nav a.m-sub{padding-left:28px}
 .quatro h3 .en{font-weight:400;color:var(--tinta);font-size:.8em}
 .rodape .slogan{position:relative;top:2px}
@@ -239,7 +239,7 @@ html{scroll-behavior:auto}
 /* interação ao passar o rato */
 @media (hover:hover) and (prefers-reduced-motion:no-preference){
 .portas .wrap>div{position:relative;padding:20px 24px 24px;margin:-20px -24px -24px;border-radius:3px;transition:background-color .35s ease}
-.portas .wrap>div::before{content:"";position:absolute;left:0;top:22px;bottom:26px;width:3px;background:var(--cobre);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.portas .wrap>div::before{content:"";position:absolute;left:0;top:22px;bottom:26px;width:3px;background:var(--cv);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
 .portas .wrap>div:hover,.portas .wrap>div:focus-within{background:var(--nevoa)}
 .portas .wrap>div:hover::before,.portas .wrap>div:focus-within::before{transform:scaleY(1)}
 .portas a::after{content:"\2192";display:inline-block;margin-left:.4em;transition:transform .3s ease}
@@ -250,10 +250,10 @@ html{scroll-behavior:auto}
 .linha:hover::before,.linha:focus-within::before{transform:scaleY(1)}
 .linha:hover h3,.linha:focus-within h3{transform:translateX(8px)}
 .quatro>div,.tres3>div{position:relative}
-.quatro>div::before,.tres3>div::before{content:"";position:absolute;left:-18px;top:2px;bottom:2px;width:3px;background:var(--cobre);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.quatro>div::before,.tres3>div::before{content:"";position:absolute;left:-18px;top:2px;bottom:2px;width:3px;background:var(--cv);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
 .quatro>div:hover::before,.tres3>div:hover::before{transform:scaleY(1)}
 .passos h3{transition:color .3s ease}
-.passos li:hover h3{color:var(--cobre)}
+.passos li:hover h3{color:var(--pet)}
 }
 @media (hover:hover) and (prefers-reduced-motion:no-preference) and (min-width:981px){
 .passos li{position:relative;padding:16px 18px 20px;margin:-16px -18px -20px;border-radius:3px;transition:background-color .35s ease}
@@ -270,15 +270,15 @@ html{scroll-behavior:auto}
 .passos li{position:relative;isolation:isolate}
 .passos .n{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:-1;font-size:104px;font-weight:700;line-height:1;letter-spacing:-.05em;color:var(--pet);opacity:.08;pointer-events:none;user-select:none;transition:opacity .4s ease,color .4s ease}
 .passos h3{margin-top:4px;padding-right:56px}
-@media (hover:hover){.passos li:hover .n{opacity:.12;color:var(--cobre)}}
+@media (hover:hover){.passos li:hover .n{opacity:.12;color:var(--pet)}}
 @media (max-width:560px){.passos .n{font-size:84px}}
 .rodape .grupo{display:inline-flex;opacity:.9;transition:opacity .2s}
 .rodape .grupo:hover{opacity:1}
 /* ícones em marca de água nos passos */
 .ico-wm{position:absolute;right:16px;top:12px;width:42px;height:42px;z-index:0;opacity:.55;pointer-events:none;transition:opacity .45s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
 .ico-wm svg{display:block;width:100%;height:100%;fill:none;stroke:var(--pet);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
-.ico-wm .pt,.ico-wm .acf{fill:var(--cobre);stroke:none}
-.ico-wm .ac{stroke:var(--cobre)}
+.ico-wm .pt,.ico-wm .acf{fill:var(--cv);stroke:none}
+.ico-wm .ac{stroke:var(--cv)}
 @media (hover:hover){.passos li:hover .ico-wm{opacity:1;transform:translateY(-3px) rotate(-4deg)}}
 @keyframes tracar{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
 @keyframes acender{from{opacity:0}to{opacity:1}}
@@ -298,10 +298,10 @@ html{scroll-behavior:auto}
 .faq summary{transition:color .3s ease}
 .faq summary span.q{background:linear-gradient(currentColor,currentColor) 0 100%/0 1.5px no-repeat;padding-bottom:2px;transition:background-size .45s cubic-bezier(.2,.7,.2,1)}
 .faq summary::after{transition:transform .35s ease}
-@media (hover:hover){.faq summary:hover{color:var(--cobre)}.faq summary:hover span.q{background-size:100% 1.5px}.faq summary:hover::after{transform:rotate(90deg)}}
-.faq summary:focus-visible{color:var(--cobre)}
+@media (hover:hover){.faq summary:hover{color:var(--pet)}.faq summary:hover span.q{background-size:100% 1.5px}.faq summary:hover::after{transform:rotate(90deg)}}
+.faq summary:focus-visible{color:var(--pet)}
 .faq summary:focus-visible span.q{background-size:100% 1.5px}
-.faq details[open] summary{color:var(--cobre)}
+.faq details[open] summary{color:var(--pet)}
 /* redes sociais */
 .redes{display:inline-flex;gap:10px;align-items:center}
 .redes a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.35);color:#fff;transition:background-color .3s ease,border-color .3s ease,color .3s ease}
@@ -330,7 +330,7 @@ html{scroll-behavior:auto}
 
 <header class="topo">
 <div class="wrap">
-<a class="logo" href="index.html" aria-label="GOALart, página inicial"><img src="img/goalart_horizontal_positivo.svg" alt="GOALart" width="150" height="52"></a>
+<a class="logo" href="index.html" aria-label="GOALart, página inicial"><img src="img/goalart_horizontal_positivo.svg" alt="GOALart" width="147" height="52"></a>
 <nav class="nav" aria-label="Principal">
 <a class="nl" href="index.html#situacoes">O que resolvo</a>
 <details class="sub"><summary class="nl ativo">O que faço</summary>
@@ -448,8 +448,8 @@ html{scroll-behavior:auto}
 </div>
 <footer class="rodape">
 <div class="wrap">
-<div class="ass"><img src="img/goalart_horizontal_negativo.svg" alt="GOALart" width="130" height="45"><span class="slogan">A arte de cumprir objetivos</span></div>
-<div class="end"><nav class="redes" aria-label="Redes sociais"><a href="https://www.linkedin.com/in/avilagoulart/" target="_blank" rel="noopener" aria-label="LinkedIn (abre noutra janela)"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6v5.4h-4v-4.8c0-1.2 0-2.6-1.6-2.6s-1.9 1.3-1.9 2.5v4.9h-4z"/></svg></a><a href="https://www.instagram.com/hugo.avilagoulart" target="_blank" rel="noopener" aria-label="Instagram (abre noutra janela)"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a><!-- FACEBOOK: <a href="URL" target="_blank" rel="noopener" aria-label="Facebook (abre noutra janela)"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21z"/></svg></a> --></nav><span>Uma marca do Grupo</span><a class="grupo" href="https://avilagoulart.pt/" target="_blank" rel="noopener" aria-label="Grupo Ávila Goulart (abre noutra janela)"><img src="img/avilagoulart_horizontal_negativo.svg" alt="Grupo Ávila Goulart" width="100" height="25"></a></div>
+<div class="ass"><img src="img/goalart_horizontal_negativo.svg" alt="GOALart" width="127" height="45"><span class="slogan">A arte de cumprir objetivos</span></div>
+<div class="end"><nav class="redes" aria-label="Redes sociais"><a href="https://www.linkedin.com/in/avilagoulart/" target="_blank" rel="noopener" aria-label="LinkedIn (abre noutra janela)"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6v5.4h-4v-4.8c0-1.2 0-2.6-1.6-2.6s-1.9 1.3-1.9 2.5v4.9h-4z"/></svg></a><a href="https://www.instagram.com/hugo.avilagoulart" target="_blank" rel="noopener" aria-label="Instagram (abre noutra janela)"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a><!-- FACEBOOK: <a href="URL" target="_blank" rel="noopener" aria-label="Facebook (abre noutra janela)"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21z"/></svg></a> --></nav><span>Uma marca do Grupo</span><a class="grupo" href="https://avilagoulart.pt/" target="_blank" rel="noopener" aria-label="Grupo Ávila Goulart (abre noutra janela)"><img src="img/avilagoulart_horizontal_negativo.svg" alt="Grupo Ávila Goulart" width="89" height="25"></a></div>
 </div>
 <div class="wrap legal"><p>ÁVILA GOULART, UNIPESSOAL LDA · Sede: Rua Dr. Machado Serpa, n.º 9, 9930-146 Lajes do Pico</p><p>Capital social: 5.000,00 € · NIPC e matrícula na Conservatória do Registo Comercial: 513484132</p><p><a href="privacidade.html">Política de privacidade</a> · <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener">Livro de Reclamações Eletrónico</a> · Resolução alternativa de litígios: <a href="https://www.consumidor.gov.pt/" target="_blank" rel="noopener">Portal do Consumidor</a></p></div>
 </footer>

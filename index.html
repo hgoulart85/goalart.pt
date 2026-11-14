@@ -25,7 +25,7 @@
 @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/source-sans-3-latin-500-normal.woff2) format('woff2')}
 @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/source-sans-3-latin-600-normal.woff2) format('woff2')}
 @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/source-sans-3-latin-700-normal.woff2) format('woff2')}
-:root{--pet:#005B67;--agua:#9BC7CF;--tinta:#1A1A1A;--cobre:#985820;--champ:#F0C594;--nevoa:#EEF4F5;--linha:#C9DFE3}
+:root{--pet:#005B67;--agua:#9BC7CF;--tinta:#1A1A1A;--cobre:#985820;--cv:#D9762B;--champ:#F0C594;--nevoa:#EEF4F5;--linha:#C9DFE3}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:'Source Sans 3',Arial,Helvetica,sans-serif;color:var(--tinta);background:#fff;font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -33,8 +33,8 @@ img{max-width:100%;display:block}
 h1,h2,h3,p{margin:0}
 h1,h2,h3{text-wrap:balance}
 p{text-wrap:pretty}
-a{color:var(--cobre)}a:hover{color:var(--pet)}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--cobre);outline-offset:3px}
+a{color:var(--pet)}a:hover{color:var(--tinta)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--cv);outline-offset:3px}
 .saltar{position:absolute;left:-9999px;top:8px;background:#fff;padding:10px 16px;z-index:60}.saltar:focus{left:16px}
 .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
 @media (max-width:640px){.wrap{padding:0 22px}body{font-size:18px}}
@@ -49,10 +49,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px}
 .topo .logo img{height:52px;width:auto}
 .nav{display:flex;align-items:center;gap:32px;font-size:17px;font-weight:500}
-.nl{color:var(--tinta);text-decoration:none;background:linear-gradient(var(--cobre),var(--cobre)) 0 100%/0 2px no-repeat;transition:background-size .3s ease;padding-bottom:3px}
+.nl{color:var(--tinta);text-decoration:none;background:linear-gradient(var(--cv),var(--cv)) 0 100%/0 2px no-repeat;transition:background-size .3s ease;padding-bottom:3px}
 .nl:hover{background-size:100% 2px;color:var(--tinta)}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;text-decoration:none;font-weight:600;font-size:18px;border-radius:2px;transition:background-color .25s ease,transform .25s ease,color .25s ease}
-.btn-c{background:var(--cobre);color:#fff}.btn-c:hover{background:#7E4818;color:#fff;transform:translateY(-2px)}
+.btn-c{background:var(--cv);color:var(--tinta)}.btn-c:hover{background:var(--pet);color:#fff;transform:translateY(-2px)}
 .btn-ch{background:var(--champ);color:var(--pet);font-weight:700}.btn-ch:hover{background:#fff;color:var(--pet);transform:translateY(-2px)}
 .btn-s{min-height:44px;padding:0 20px;font-size:16px}
 .menu{display:none;position:relative}
@@ -70,7 +70,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .hero{min-height:calc(100vh - 76px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:center;padding-top:64px;padding-bottom:80px}
 @media (max-width:900px){.hero{grid-template-columns:1fr;min-height:0;padding-top:48px;padding-bottom:64px}}
 .hero h1 span{display:block}
-.hero .c2{color:var(--cobre);margin-top:.12em}
+.hero .c2{color:var(--pet);margin-top:.12em}
 .hero .lead{margin-top:40px;max-width:28em}
 .acoes{margin-top:44px;display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px}
 .lk{font-weight:600;font-size:18px;color:var(--pet);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
@@ -107,7 +107,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .foto{margin:0;overflow:hidden;border-radius:3px;aspect-ratio:4/5;background:var(--nevoa)}
 .foto img{width:100%;height:100%;object-fit:cover}
 @media (max-width:900px){.foto{aspect-ratio:4/3;max-height:520px}.dam .foto img{object-position:58% 72%}}
-.etq{font-size:16px;font-weight:600;color:var(--cobre);letter-spacing:.02em}
+.etq{font-size:16px;font-weight:600;color:var(--pet);letter-spacing:.02em}
 /* outros serviços */
 /* setores */
 .rotulo{font-size:15px;font-weight:600;color:var(--champ);margin-bottom:14px}
@@ -115,11 +115,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .metodo{padding-top:128px;padding-bottom:120px}
 .metodo .intro{margin-top:22px;max-width:34em}
 .trilho{margin-top:72px;height:2px;background:var(--linha);overflow:hidden}
-.trilho div{height:2px;background:var(--cobre)}
+.trilho div{height:2px;background:var(--cv)}
 .passos{margin:36px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px}
 @media (max-width:980px){.passos{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.passos{grid-template-columns:1fr}}
-.passos .n{font-size:15px;font-weight:600;color:var(--cobre);letter-spacing:.06em}
+.passos .n{font-size:15px;font-weight:600;color:var(--pet);letter-spacing:.06em}
 .passos h3{margin:10px 0 10px;font-size:23px;font-weight:600;color:var(--pet);letter-spacing:-.01em}
 .passos p{font-size:17px;line-height:1.55}
 .ia{margin-top:72px;display:flex;gap:20px;align-items:flex-start;max-width:44em;font-size:20px;line-height:1.5}
@@ -132,7 +132,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .quem .frase{margin-top:28px;font-size:clamp(22px,2vw,27px);line-height:1.35;font-weight:500;color:var(--pet);max-width:26em}
 .dados{margin-top:48px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;border-top:1px solid var(--linha);padding-top:28px}
 @media (max-width:560px){.dados{grid-template-columns:1fr}}
-.dados b{display:block;font-size:clamp(44px,4vw,60px);line-height:1;font-weight:600;color:var(--cobre);letter-spacing:-.02em}
+.dados b{display:block;font-size:clamp(44px,4vw,60px);line-height:1;font-weight:600;color:var(--pet);letter-spacing:-.02em}
 .dados span{display:block;margin-top:8px;font-size:16px;line-height:1.4}
 .cred{margin-top:40px;font-size:15px;line-height:1.7;color:var(--tinta);max-width:44em}
 .cred b{font-weight:600;color:var(--pet)}
@@ -175,7 +175,7 @@ html{scroll-behavior:auto}
 .legal p{margin:0}
 .legal p+p{margin-top:6px}
 .legal a{color:#fff;text-underline-offset:3px}
-.depo{margin:40px 0 0;padding:28px 32px;background:#fff;border-left:3px solid var(--cobre);border-radius:2px}
+.depo{margin:40px 0 0;padding:28px 32px;background:#fff;border-left:3px solid var(--cv);border-radius:2px}
 .depo blockquote{margin:0}
 .depo p{font-size:clamp(19px,1.6vw,22px);line-height:1.5;color:var(--tinta)}
 .depo figcaption{margin-top:14px;font-size:15px;font-weight:600;color:var(--pet)}
@@ -201,7 +201,7 @@ html{scroll-behavior:auto}
 .fit .nao h3{border-bottom-color:var(--linha)}
 .fit ul{margin:0;padding:0;list-style:none}
 .fit li{padding:16px 0 16px 30px;border-bottom:1px solid var(--linha);position:relative;font-size:19px;line-height:1.5}
-.fit .sim li::before{content:"";position:absolute;left:4px;top:.95em;width:10px;height:10px;border-radius:50%;background:var(--cobre)}
+.fit .sim li::before{content:"";position:absolute;left:4px;top:.95em;width:10px;height:10px;border-radius:50%;background:var(--cv)}
 .fit .nao li::before{content:"";position:absolute;left:2px;top:1.15em;width:14px;height:2px;background:var(--tinta)}
 .fit .publico{margin-top:56px;max-width:44em;font-size:20px;line-height:1.55}
 .fit .publico b{color:var(--pet);font-weight:600}
@@ -238,14 +238,14 @@ html{scroll-behavior:auto}
 .subm a b{display:block;font-weight:600;color:var(--pet);font-size:17px}
 .subm a span{display:block;font-size:15px;font-weight:400;margin-top:2px}
 .subm a:hover,.subm a[aria-current]{background:var(--nevoa)}
-.menu .m-grupo{margin:0;padding:12px 14px 4px;font-size:inherit;line-height:inherit;font-weight:600;color:var(--cobre)}
+.menu .m-grupo{margin:0;padding:12px 14px 4px;font-size:inherit;line-height:inherit;font-weight:600;color:var(--pet)}
 .menu nav a.m-sub{padding-left:28px}
 .rodape .slogan{position:relative;top:2px}
 .rodape .legal{justify-content:center;text-align:center;row-gap:8px}
 .rodape .legal p{width:100%}
 .rodape .legal p+p{margin-top:0}
 @media (max-width:640px){.rodape .wrap{justify-content:center}.rodape .ass,.rodape .end{justify-content:center;width:100%}}
-.dados b small{display:block;font-size:13px;line-height:1.2;font-weight:600;letter-spacing:.01em;color:var(--cobre);margin-bottom:4px}
+.dados b small{display:block;font-size:13px;line-height:1.2;font-weight:600;letter-spacing:.01em;color:var(--pet);margin-bottom:4px}
 @media (max-width:560px){.dados b small.vazio{display:none}}
 @media (min-width:901px){.quem .split{align-items:start}.quem .foto{position:sticky;top:120px}}
 .dados b .num{display:inline-block;font-size:inherit;line-height:inherit;margin-top:0}
@@ -254,7 +254,7 @@ html{scroll-behavior:auto}
 /* interação ao passar o rato */
 @media (hover:hover) and (prefers-reduced-motion:no-preference){
 .portas .wrap>div{position:relative;padding:20px 24px 24px;margin:-20px -24px -24px;border-radius:3px;transition:background-color .35s ease}
-.portas .wrap>div::before{content:"";position:absolute;left:0;top:22px;bottom:26px;width:3px;background:var(--cobre);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.portas .wrap>div::before{content:"";position:absolute;left:0;top:22px;bottom:26px;width:3px;background:var(--cv);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
 .portas .wrap>div:hover,.portas .wrap>div:focus-within{background:var(--nevoa)}
 .portas .wrap>div:hover::before,.portas .wrap>div:focus-within::before{transform:scaleY(1)}
 .portas a::after{content:"\2192";display:inline-block;margin-left:.4em;transition:transform .3s ease}
@@ -265,10 +265,10 @@ html{scroll-behavior:auto}
 .linha:hover::before,.linha:focus-within::before{transform:scaleY(1)}
 .linha:hover h3,.linha:focus-within h3{transform:translateX(8px)}
 .quatro>div,.tres3>div{position:relative}
-.quatro>div::before,.tres3>div::before{content:"";position:absolute;left:-18px;top:2px;bottom:2px;width:3px;background:var(--cobre);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.quatro>div::before,.tres3>div::before{content:"";position:absolute;left:-18px;top:2px;bottom:2px;width:3px;background:var(--cv);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
 .quatro>div:hover::before,.tres3>div:hover::before{transform:scaleY(1)}
 .passos h3{transition:color .3s ease}
-.passos li:hover h3{color:var(--cobre)}
+.passos li:hover h3{color:var(--pet)}
 }
 @media (hover:hover) and (prefers-reduced-motion:no-preference) and (min-width:981px){
 .passos li{position:relative;padding:16px 18px 20px;margin:-16px -18px -20px;border-radius:3px;transition:background-color .35s ease}
@@ -284,7 +284,7 @@ html{scroll-behavior:auto}
 .fit .nao{padding-left:clamp(32px,5vw,72px);border-left:1px solid var(--linha)}
 @media (max-width:860px){.fit .sim{padding-right:0}.fit .nao{padding-left:0;border-left:0;border-top:1px solid var(--linha);padding-top:40px;margin-top:8px}}
 .fit h3{display:flex;align-items:center;gap:14px;padding-bottom:16px;border-bottom:2px solid var(--pet);color:var(--pet)}
-.fit .nao h3{border-bottom-color:var(--cobre);color:var(--pet)}
+.fit .nao h3{border-bottom-color:var(--pet);color:var(--pet)}
 .fit li{padding:16px 0 16px 34px;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
 .fit li:last-child{border-bottom:0}
 .fit li::before{content:"";position:absolute;left:0;top:19px;width:20px;height:20px;border-radius:50%;background-repeat:no-repeat;background-position:center;background-size:12px 12px;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
@@ -301,7 +301,7 @@ html{scroll-behavior:auto}
 .fit.anim.ver .nao li{transition-delay:calc(var(--d,0s) + .3s)}
 /* mapa dos Açores no alvo */
 .mapa{margin:0;text-align:center}
-.mapa figcaption{margin-top:14px;font-size:15px;font-weight:500;color:var(--cobre);letter-spacing:.01em}
+.mapa figcaption{margin-top:14px;font-size:15px;font-weight:500;color:var(--pet);letter-spacing:.01em}
 .ilhas{opacity:0;animation:surgir 1.4s ease .2s forwards}
 @keyframes surgir{to{opacity:1}}
 @media (prefers-reduced-motion:reduce){.ilhas{animation:none;opacity:1}}
@@ -322,15 +322,15 @@ html{scroll-behavior:auto}
 .passos li{position:relative;isolation:isolate}
 .passos .n{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:-1;font-size:104px;font-weight:700;line-height:1;letter-spacing:-.05em;color:var(--pet);opacity:.08;pointer-events:none;user-select:none;transition:opacity .4s ease,color .4s ease}
 .passos h3{margin-top:4px;padding-right:56px}
-@media (hover:hover){.passos li:hover .n{opacity:.12;color:var(--cobre)}}
+@media (hover:hover){.passos li:hover .n{opacity:.12;color:var(--pet)}}
 @media (max-width:560px){.passos .n{font-size:84px}}
 .rodape .grupo{display:inline-flex;opacity:.9;transition:opacity .2s}
 .rodape .grupo:hover{opacity:1}
 /* ícones em marca de água nos passos */
 .ico-wm{position:absolute;right:16px;top:12px;width:42px;height:42px;z-index:0;opacity:.55;pointer-events:none;transition:opacity .45s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
 .ico-wm svg{display:block;width:100%;height:100%;fill:none;stroke:var(--pet);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
-.ico-wm .pt,.ico-wm .acf{fill:var(--cobre);stroke:none}
-.ico-wm .ac{stroke:var(--cobre)}
+.ico-wm .pt,.ico-wm .acf{fill:var(--cv);stroke:none}
+.ico-wm .ac{stroke:var(--cv)}
 @media (hover:hover){.passos li:hover .ico-wm{opacity:1;transform:translateY(-3px) rotate(-4deg)}}
 @keyframes tracar{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
 @keyframes acender{from{opacity:0}to{opacity:1}}
@@ -378,7 +378,7 @@ html{scroll-behavior:auto}
 
 <header class="topo">
 <div class="wrap">
-<a class="logo" href="#topo" aria-label="GOALart, início"><img src="img/goalart_horizontal_positivo.svg" alt="GOALart" width="150" height="52"></a>
+<a class="logo" href="#topo" aria-label="GOALart, início"><img src="img/goalart_horizontal_positivo.svg" alt="GOALart" width="147" height="52"></a>
 <nav class="nav" aria-label="Principal">
 <a class="nl" href="#situacoes">O que resolvo</a>
 <details class="sub"><summary class="nl">O que faço</summary>
@@ -422,8 +422,8 @@ html{scroll-behavior:auto}
 </div>
 <div>
 <figure class="mapa"><svg class="alvo" viewBox="0 0 520 520" role="img" aria-label="Mapa dos Açores, com a ilha do Pico em destaque no centro da mira da GOALart" focusable="false">
-<g class="pulso"><circle class="batida b1" cx="260" cy="260" r="58" fill="none" stroke="#B87333" stroke-width="2"/><circle class="batida b2" cx="260" cy="260" r="112" fill="none" stroke="#B87333" stroke-width="3"/><circle class="batida b3" cx="260" cy="260" r="164" fill="none" stroke="#B87333" stroke-width="2"/><circle class="batida b4" cx="260" cy="260" r="214" fill="none" stroke="#B87333" stroke-width="1.5"/></g>
-<g class="ilhas"><path class="ilha" style="--d:0.73s" d="M509.1 397.9 L510.7 398.9 L512.1 400.8 L513.0 403.0 L513.4 405.1 L512.2 406.6 L509.6 406.3 L505.0 404.7 L502.5 405.4 L501.1 405.4 L500.5 404.4 L500.0 403.1 L499.1 402.0 L498.6 401.0 L499.4 400.0 L501.0 398.4 L503.9 397.7 L507.0 397.6 L509.1 397.9Z" fill="#9BC7CF"/><path class="ilha" style="--d:0.67s" d="M498.9 313.6 L501.9 314.8 L503.8 317.8 L504.0 321.4 L502.1 324.5 L499.1 325.9 L488.7 327.3 L485.2 328.3 L481.5 328.6 L477.9 328.5 L476.1 328.6 L474.8 329.3 L472.7 328.0 L470.6 327.1 L466.2 325.9 L459.2 325.6 L449.8 318.5 L447.1 314.6 L448.5 309.4 L454.5 308.8 L456.5 309.4 L459.2 311.7 L459.7 312.6 L459.8 313.7 L460.0 314.7 L460.4 315.4 L461.1 315.7 L471.0 317.0 L472.2 316.7 L474.2 315.3 L475.3 314.9 L476.0 315.2 L477.7 316.5 L478.5 317.0 L479.8 316.3 L487.8 313.8 L498.9 313.6Z" fill="#9BC7CF"/><path class="pico" d="M271.0 255.3 L274.6 255.7 L275.9 256.7 L276.4 259.1 L275.3 260.1 L272.9 260.2 L266.8 259.3 L265.1 259.4 L263.5 260.0 L260.6 262.2 L259.7 261.7 L259.0 260.5 L258.1 259.4 L256.3 258.9 L245.2 258.6 L243.6 259.4 L238.4 254.6 L236.6 251.6 L236.6 247.1 L239.0 245.0 L241.6 244.2 L247.1 244.4 L250.3 245.0 L258.1 249.8 L260.9 251.0 L261.0 251.2 L261.9 251.6 L263.4 252.9 L264.2 253.2 L265.9 253.5 L271.0 255.3Z" fill="#985820"/><path class="ilha" style="--d:0.27s" d="M231.8 240.3 L232.9 244.7 L232.4 244.9 L229.9 245.9 L229.2 246.5 L229.6 247.1 L229.8 247.4 L230.1 247.6 L230.8 247.8 L229.8 248.4 L228.9 248.4 L227.0 247.8 L226.0 247.9 L223.7 248.5 L222.7 248.5 L220.9 247.6 L218.9 244.6 L217.3 243.0 L213.7 240.9 L213.6 240.1 L216.3 239.6 L218.5 239.5 L219.6 239.3 L220.6 238.8 L221.3 238.1 L222.5 236.1 L223.2 235.5 L230.1 238.6 L231.8 240.3Z" fill="#9BC7CF"/><path class="ilha" style="--d:0.25s" d="M288.1 239.6 L293.9 241.7 L296.9 243.3 L298.3 245.1 L297.0 245.6 L295.5 245.8 L292.4 245.7 L291.1 245.3 L288.6 243.9 L286.2 243.5 L284.9 243.0 L283.6 242.2 L282.5 241.3 L281.4 240.7 L279.3 241.1 L277.9 240.3 L276.9 241.0 L276.1 240.6 L274.7 238.8 L273.7 238.2 L265.6 235.5 L264.2 234.4 L262.7 231.8 L262.1 231.4 L261.5 231.5 L261.2 231.7 L260.9 231.7 L260.2 231.4 L260.0 231.0 L260.1 230.6 L260.1 230.2 L259.4 230.0 L258.8 229.7 L255.1 226.5 L254.9 225.8 L254.9 224.5 L256.3 225.1 L258.9 226.8 L260.0 227.2 L261.4 227.4 L276.9 233.4 L288.1 239.6Z" fill="#9BC7CF"/><path class="ilha" style="--d:0.37s" d="M356.3 230.6 L355.8 231.0 L354.1 231.7 L353.6 232.1 L353.4 232.9 L353.8 234.6 L353.6 235.5 L353.1 235.9 L350.9 236.9 L348.9 236.1 L343.6 236.1 L341.8 234.7 L340.8 235.9 L340.0 235.9 L338.0 234.7 L336.0 234.3 L334.0 234.1 L332.2 233.4 L330.2 231.6 L328.6 229.3 L327.8 227.2 L327.2 224.1 L329.0 221.7 L331.9 220.2 L334.5 219.6 L346.5 220.4 L348.8 221.4 L352.0 223.3 L354.5 225.6 L354.9 227.6 L354.6 228.6 L355.3 229.1 L356.0 229.7 L356.3 230.6Z" fill="#9BC7CF"/><path class="ilha" style="--d:0.33s" d="M280.9 198.5 L279.3 198.4 L277.6 198.1 L276.0 197.4 L274.7 196.4 L273.9 194.7 L274.0 193.2 L275.3 190.2 L276.1 189.7 L276.9 189.5 L277.7 189.7 L278.5 190.2 L279.0 189.5 L280.2 191.2 L282.8 193.4 L284.1 194.7 L284.6 196.4 L283.7 197.6 L282.2 198.3 L280.9 198.5Z" fill="#9BC7CF"/><path class="ilha" style="--d:0.73s" d="M28.5 149.1 L29.2 149.8 L30.2 150.3 L31.3 150.5 L32.3 149.8 L33.8 151.7 L34.4 153.4 L34.5 157.7 L33.9 160.0 L32.5 162.7 L30.9 164.4 L29.6 163.5 L28.2 164.2 L26.4 164.4 L24.8 164.2 L23.7 163.5 L23.0 162.2 L22.5 160.2 L22.5 158.4 L23.2 157.4 L22.8 155.7 L23.2 154.3 L23.9 152.8 L24.2 150.8 L24.8 149.3 L26.1 148.2 L27.6 147.8 L29.1 147.8 L28.5 149.1Z" fill="#9BC7CF"/><path class="ilha" style="--d:0.73s" d="M35.6 127.2 L38.3 127.7 L38.5 130.7 L37.0 133.6 L34.5 134.1 L34.4 133.5 L33.1 130.4 L32.8 129.9 L33.1 128.9 L33.7 127.9 L34.7 127.3 L35.6 127.2Z" fill="#9BC7CF"/></g>
+<g class="pulso"><circle class="batida b1" cx="260" cy="260" r="58" fill="none" stroke="#D9762B" stroke-width="2"/><circle class="batida b2" cx="260" cy="260" r="112" fill="none" stroke="#D9762B" stroke-width="3"/><circle class="batida b3" cx="260" cy="260" r="164" fill="none" stroke="#D9762B" stroke-width="2"/><circle class="batida b4" cx="260" cy="260" r="214" fill="none" stroke="#D9762B" stroke-width="1.5"/></g>
+<g class="ilhas"><path class="ilha" style="--d:0.73s" d="M509.1 397.9 L510.7 398.9 L512.1 400.8 L513.0 403.0 L513.4 405.1 L512.2 406.6 L509.6 406.3 L505.0 404.7 L502.5 405.4 L501.1 405.4 L500.5 404.4 L500.0 403.1 L499.1 402.0 L498.6 401.0 L499.4 400.0 L501.0 398.4 L503.9 397.7 L507.0 397.6 L509.1 397.9Z" fill="#9BC7CF"/><path class="ilha" style="--d:0.67s" d="M498.9 313.6 L501.9 314.8 L503.8 317.8 L504.0 321.4 L502.1 324.5 L499.1 325.9 L488.7 327.3 L485.2 328.3 L481.5 328.6 L477.9 328.5 L476.1 328.6 L474.8 329.3 L472.7 328.0 L470.6 327.1 L466.2 325.9 L459.2 325.6 L449.8 318.5 L447.1 314.6 L448.5 309.4 L454.5 308.8 L456.5 309.4 L459.2 311.7 L459.7 312.6 L459.8 313.7 L460.0 314.7 L460.4 315.4 L461.1 315.7 L471.0 317.0 L472.2 316.7 L474.2 315.3 L475.3 314.9 L476.0 315.2 L477.7 316.5 L478.5 317.0 L479.8 316.3 L487.8 313.8 L498.9 313.6Z" fill="#9BC7CF"/><path class="pico" d="M271.0 255.3 L274.6 255.7 L275.9 256.7 L276.4 259.1 L275.3 260.1 L272.9 260.2 L266.8 259.3 L265.1 259.4 L263.5 260.0 L260.6 262.2 L259.7 261.7 L259.0 260.5 L258.1 259.4 L256.3 258.9 L245.2 258.6 L243.6 259.4 L238.4 254.6 L236.6 251.6 L236.6 247.1 L239.0 245.0 L241.6 244.2 L247.1 244.4 L250.3 245.0 L258.1 249.8 L260.9 251.0 L261.0 251.2 L261.9 251.6 L263.4 252.9 L264.2 253.2 L265.9 253.5 L271.0 255.3Z" fill="#D9762B"/><path class="ilha" style="--d:0.27s" d="M231.8 240.3 L232.9 244.7 L232.4 244.9 L229.9 245.9 L229.2 246.5 L229.6 247.1 L229.8 247.4 L230.1 247.6 L230.8 247.8 L229.8 248.4 L228.9 248.4 L227.0 247.8 L226.0 247.9 L223.7 248.5 L222.7 248.5 L220.9 247.6 L218.9 244.6 L217.3 243.0 L213.7 240.9 L213.6 240.1 L216.3 239.6 L218.5 239.5 L219.6 239.3 L220.6 238.8 L221.3 238.1 L222.5 236.1 L223.2 235.5 L230.1 238.6 L231.8 240.3Z" fill="#9BC7CF"/><path class="ilha" style="--d:0.25s" d="M288.1 239.6 L293.9 241.7 L296.9 243.3 L298.3 245.1 L297.0 245.6 L295.5 245.8 L292.4 245.7 L291.1 245.3 L288.6 243.9 L286.2 243.5 L284.9 243.0 L283.6 242.2 L282.5 241.3 L281.4 240.7 L279.3 241.1 L277.9 240.3 L276.9 241.0 L276.1 240.6 L274.7 238.8 L273.7 238.2 L265.6 235.5 L264.2 234.4 L262.7 231.8 L262.1 231.4 L261.5 231.5 L261.2 231.7 L260.9 231.7 L260.2 231.4 L260.0 231.0 L260.1 230.6 L260.1 230.2 L259.4 230.0 L258.8 229.7 L255.1 226.5 L254.9 225.8 L254.9 224.5 L256.3 225.1 L258.9 226.8 L260.0 227.2 L261.4 227.4 L276.9 233.4 L288.1 239.6Z" fill="#9BC7CF"/><path class="ilha" style="--d:0.37s" d="M356.3 230.6 L355.8 231.0 L354.1 231.7 L353.6 232.1 L353.4 232.9 L353.8 234.6 L353.6 235.5 L353.1 235.9 L350.9 236.9 L348.9 236.1 L343.6 236.1 L341.8 234.7 L340.8 235.9 L340.0 235.9 L338.0 234.7 L336.0 234.3 L334.0 234.1 L332.2 233.4 L330.2 231.6 L328.6 229.3 L327.8 227.2 L327.2 224.1 L329.0 221.7 L331.9 220.2 L334.5 219.6 L346.5 220.4 L348.8 221.4 L352.0 223.3 L354.5 225.6 L354.9 227.6 L354.6 228.6 L355.3 229.1 L356.0 229.7 L356.3 230.6Z" fill="#9BC7CF"/><path class="ilha" style="--d:0.33s" d="M280.9 198.5 L279.3 198.4 L277.6 198.1 L276.0 197.4 L274.7 196.4 L273.9 194.7 L274.0 193.2 L275.3 190.2 L276.1 189.7 L276.9 189.5 L277.7 189.7 L278.5 190.2 L279.0 189.5 L280.2 191.2 L282.8 193.4 L284.1 194.7 L284.6 196.4 L283.7 197.6 L282.2 198.3 L280.9 198.5Z" fill="#9BC7CF"/><path class="ilha" style="--d:0.73s" d="M28.5 149.1 L29.2 149.8 L30.2 150.3 L31.3 150.5 L32.3 149.8 L33.8 151.7 L34.4 153.4 L34.5 157.7 L33.9 160.0 L32.5 162.7 L30.9 164.4 L29.6 163.5 L28.2 164.2 L26.4 164.4 L24.8 164.2 L23.7 163.5 L23.0 162.2 L22.5 160.2 L22.5 158.4 L23.2 157.4 L22.8 155.7 L23.2 154.3 L23.9 152.8 L24.2 150.8 L24.8 149.3 L26.1 148.2 L27.6 147.8 L29.1 147.8 L28.5 149.1Z" fill="#9BC7CF"/><path class="ilha" style="--d:0.73s" d="M35.6 127.2 L38.3 127.7 L38.5 130.7 L37.0 133.6 L34.5 134.1 L34.4 133.5 L33.1 130.4 L32.8 129.9 L33.1 128.9 L33.7 127.9 L34.7 127.3 L35.6 127.2Z" fill="#9BC7CF"/></g>
 <g class="orbita"><circle cx="260" cy="260" r="250" fill="none" stroke="#9BC7CF" stroke-width="1.2" stroke-dasharray="2 10"/></g>
 <circle class="anel a1" pathLength="1" cx="260" cy="260" r="214" fill="none" stroke="#9BC7CF" stroke-width="1.5" transform="rotate(-90 260 260)"/>
 <circle class="anel a2" pathLength="1" cx="260" cy="260" r="164" fill="none" stroke="#005B67" stroke-width="2" transform="rotate(-90 260 260)"/>
@@ -471,7 +471,7 @@ html{scroll-behavior:auto}
 <li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M4 20h16"/><path pathLength="1" d="M6 20v-5h3v5"/><path pathLength="1" d="M10.5 20v-8.5h3V20"/><path pathLength="1" d="M15 20V8h3v12"/><circle class="pt" cx="16.5" cy="4.6" r="1.7"/></svg></span><span class="n">03</span><h3>Implementação</h3><p>Trabalho ao lado da liderança e com a equipa até a transformação funcionar no dia a dia. Pode ser direção a tempo parcial, um programa para as chefias, coaching ou tudo junto: decide o diagnóstico, não um pacote.</p></li>
 <li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M12 20.5V10.5"/><path pathLength="1" d="M12 14c-4.2 0-6.5-2.3-6.5-6.5 4.2 0 6.5 2.3 6.5 6.5z"/><path pathLength="1" d="M12 11c0-4.2 2.3-6.5 6.5-6.5 0 4.2-2.3 6.5-6.5 6.5z"/><path pathLength="1" d="M6.5 20.5h11"/><circle class="pt" cx="12" cy="20.5" r="1.7"/></svg></span><span class="n">04</span><h3>Autonomia</h3><p>Cada etapa termina com a equipa capaz de manter o que se construiu. Depois decidimos juntos qual é o passo seguinte.</p></li>
 </ol>
-<p class="ia rv"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="none" stroke="#005B67" stroke-width="2"/><circle cx="14" cy="14" r="4" fill="#B87333"/></svg><span>Uso inteligência artificial em todo o trabalho, na análise, nos relatórios e na automatização do que é repetitivo. É isso que me permite entregar um resultado ao nível de um profissional a tempo inteiro, ou de uma equipa, a um preço que uma organização da sua dimensão consegue pagar.</span></p>
+<p class="ia rv"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="none" stroke="#005B67" stroke-width="2"/><circle cx="14" cy="14" r="4" fill="#D9762B"/></svg><span>Uso inteligência artificial em todo o trabalho, na análise, nos relatórios e na automatização do que é repetitivo. É isso que me permite entregar um resultado ao nível de um profissional a tempo inteiro, ou de uma equipa, a um preço que uma organização da sua dimensão consegue pagar.</span></p>
 </section>
 
 <section id="para-quem" class="fit">
@@ -485,7 +485,7 @@ html{scroll-behavior:auto}
 <li>Quer mudar e está disposto a fazer diferente: largar algumas decisões e entregar processos a outras pessoas, desde que fiquem em boas mãos.</li>
 <li>Quer resultados que se possam verificar, não relatórios elegantes que acabam na gaveta.</li>
 </ul></div>
-<div class="nao rv"><h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="12" fill="#985820"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span>Não é para si se:</h3><ul>
+<div class="nao rv"><h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="12" fill="#D9762B"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span>Não é para si se:</h3><ul>
 <li>Procura alguém disponível a qualquer hora para resolver o que é urgente.</li>
 <li>Quer alguém que execute sem questionar.</li>
 <li>Quer comprar horas de consultoria.</li>
@@ -540,8 +540,8 @@ html{scroll-behavior:auto}
 </div>
 <footer class="rodape">
 <div class="wrap">
-<div class="ass"><img src="img/goalart_horizontal_negativo.svg" alt="GOALart" width="130" height="45"><span class="slogan">A arte de cumprir objetivos</span></div>
-<div class="end"><nav class="redes" aria-label="Redes sociais"><a href="https://www.linkedin.com/in/avilagoulart/" target="_blank" rel="noopener" aria-label="LinkedIn (abre noutra janela)"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6v5.4h-4v-4.8c0-1.2 0-2.6-1.6-2.6s-1.9 1.3-1.9 2.5v4.9h-4z"/></svg></a><a href="https://www.instagram.com/hugo.avilagoulart" target="_blank" rel="noopener" aria-label="Instagram (abre noutra janela)"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a><!-- FACEBOOK: <a href="URL" target="_blank" rel="noopener" aria-label="Facebook (abre noutra janela)"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21z"/></svg></a> --></nav><span>Uma marca do Grupo</span><a class="grupo" href="https://avilagoulart.pt/" target="_blank" rel="noopener" aria-label="Grupo Ávila Goulart (abre noutra janela)"><img src="img/avilagoulart_horizontal_negativo.svg" alt="Grupo Ávila Goulart" width="100" height="25"></a></div>
+<div class="ass"><img src="img/goalart_horizontal_negativo.svg" alt="GOALart" width="127" height="45"><span class="slogan">A arte de cumprir objetivos</span></div>
+<div class="end"><nav class="redes" aria-label="Redes sociais"><a href="https://www.linkedin.com/in/avilagoulart/" target="_blank" rel="noopener" aria-label="LinkedIn (abre noutra janela)"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6v5.4h-4v-4.8c0-1.2 0-2.6-1.6-2.6s-1.9 1.3-1.9 2.5v4.9h-4z"/></svg></a><a href="https://www.instagram.com/hugo.avilagoulart" target="_blank" rel="noopener" aria-label="Instagram (abre noutra janela)"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a><!-- FACEBOOK: <a href="URL" target="_blank" rel="noopener" aria-label="Facebook (abre noutra janela)"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21z"/></svg></a> --></nav><span>Uma marca do Grupo</span><a class="grupo" href="https://avilagoulart.pt/" target="_blank" rel="noopener" aria-label="Grupo Ávila Goulart (abre noutra janela)"><img src="img/avilagoulart_horizontal_negativo.svg" alt="Grupo Ávila Goulart" width="89" height="25"></a></div>
 </div>
 <div class="wrap legal"><p>ÁVILA GOULART, UNIPESSOAL LDA · Sede: Rua Dr. Machado Serpa, n.º 9, 9930-146 Lajes do Pico</p><p>Capital social: 5.000,00 € · NIPC e matrícula na Conservatória do Registo Comercial: 513484132</p><p><a href="privacidade.html">Política de privacidade</a> · <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener">Livro de Reclamações Eletrónico</a> · Resolução alternativa de litígios: <a href="https://www.consumidor.gov.pt/" target="_blank" rel="noopener">Portal do Consumidor</a></p></div>
 </footer>
