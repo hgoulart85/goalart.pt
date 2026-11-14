@@ -329,6 +329,9 @@ html{scroll-behavior:auto}
 .cursor{display:inline-block;width:.06em;min-width:3px;height:.82em;margin-left:.03em;background:var(--cv);vertical-align:-.04em;animation:piscar 1s steps(1) infinite}
 .cursor.fim{opacity:0;transition:opacity .5s ease;animation:none}
 @keyframes piscar{50%{opacity:0}}
+.a-escrever{pointer-events:none;user-select:none;-webkit-user-select:none}
+.cursor{margin-right:-.09em!important}
+
 .escreve-titulo [data-escrever]:not([data-feito]){visibility:hidden}
 .escreve-titulo .d2{animation-delay:2.1s}.escreve-titulo .d3{animation-delay:2.4s}.escreve-titulo .d4{animation-delay:2.6s}
 </style>
