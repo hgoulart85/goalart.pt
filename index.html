@@ -184,6 +184,11 @@ html{scroll-behavior:auto}
 
 /* abertura (título mais longo) */
 .hero h1{font-size:clamp(40px,4.4vw,68px);line-height:1.02;letter-spacing:-.03em;font-weight:600}
+.hero .hero-res{font-size:clamp(40px,4.4vw,68px);line-height:1.02;letter-spacing:-.03em;font-weight:600;color:var(--pet);margin:0}
+.hero{row-gap:.12em}
+.hero .hero-q{grid-column:1/-1;align-self:end}
+.hero > div:first-of-type{align-self:start}
+@media (max-width:900px){.hero > div:last-child{margin-top:34px}}
 .apoio{margin-top:22px;font-size:16px;line-height:1.5;max-width:34em}
 /* situações */
 .sit{padding:128px 0 120px}
@@ -438,11 +443,11 @@ h1 > [data-escrever] .cursor{background:var(--cv)!important}
 
 <main id="conteudo">
 <section id="topo" class="wrap hero">
+<h1 class="pet hero-q"><span data-escrever="300">Sabe que algo tem de mudar...
+Mas o quê? E como?</span></h1>
 <div>
-<h1 class="pet"><span data-escrever="300">Sabe que algo tem de mudar...
-Mas o quê?
-E como?</span><span class="hl d2 c2">Ajudo a encontrar as respostas e a <span style="display:inline;white-space:nowrap">pô-las</span> em prática.</span></h1>
-<p class="lead hl d3">Talvez já tenha tentado várias coisas. Melhorou pouco, ou durou pouco? É&nbsp;provável que tenha procurado resolver os sintomas sem compreender a verdadeira origem do problema. <span class="lead-res">É aí que entro: pessoas, números e operações alinhados.</span></p>
+<p class="pet hero-res hl d2">Ajudo a encontrar<br>as respostas e a<br><span style="white-space:nowrap">pô-las</span> em prática.</p>
+<p class="lead hl d3">Talvez já tenha tentado várias coisas. Melhorou pouco, ou durou pouco? É&nbsp;comum procurarmos resolver os sintomas antes de compreender a verdadeira origem do problema. <span class="lead-res">É aí que entro: pessoas, números e operações alinhados.</span></p>
 <div class="acoes hl d4">
 <a class="btn btn-c" href="#contacto">Marcar uma reunião de diagnóstico</a>
 <a class="lk" href="#situacoes">Ver o que resolvo</a>
@@ -467,7 +472,7 @@ E como?</span><span class="hl d2 c2">Ajudo a encontrar as respostas e a <span st
 
 <section class="portas" aria-label="Duas situações, o mesmo trabalho">
 <div class="wrap">
-<div><h2>Quando falta quem dirija</h2><p>Não há ninguém entre quem lidera e a equipa? A organização não tem dimensão para um diretor-geral a tempo inteiro, ou não justifica esse investimento? Assumo a direção a tempo parcial: o rigor de uma gestão profissional, a um preço proporcional à sua dimensão.</p><a href="direcao-tempo-parcial.html">Ver a direção a tempo parcial</a></div>
+<div><h2>Quando falta quem dirija</h2><p>Não há ninguém entre quem lidera e a equipa? A organização ainda não tem dimensão para um diretor-geral a tempo inteiro, ou não justifica esse investimento? Assumo a direção a tempo parcial: o rigor de uma gestão profissional, a um preço proporcional à sua dimensão.</p><a href="direcao-tempo-parcial.html">Ver a direção a tempo parcial</a></div>
 <div><h2>Quando há estrutura, mas falta liderança</h2><p>As coisas acontecem, mas só porque as chefias as fazem sozinhas? A equipa espera por instruções em vez de assumir o trabalho? Preparo as suas chefias para liderar, com programas de desenvolvimento de lideranças e coaching executivo: equipas com mais autonomia e responsabilidade, e melhores resultados.</p><a href="coaching-executivo.html">Ver o coaching executivo</a></div>
 </div>
 </section>
@@ -485,6 +490,7 @@ E como?</span><span class="hl d2 c2">Ajudo a encontrar as respostas e a <span st
 <div class="linha rv"><h3>«Passo o dia a apagar fogos.»</h3><div><p>Tudo chega a si? Não há tempo para planear, os planos que existem não se cumprem e o importante fica sempre para depois?</p></div></div>
 <!-- Página futura: organizacao-e-processos.html (entrada «qualidade») -->
 <div class="linha rv"><h3>«Crescemos, mas a qualidade baixou.»</h3><div><p>Mais trabalho, mais pessoas, mais erros? O que funcionava com poucas pessoas já não funciona com muitas?</p></div></div>
+<div class="linha rv"><h3>«Quero crescer, sem perder o que funciona.»</h3><div><p>Tem planos para dar o próximo passo, mas sabe que a estrutura atual não o aguenta? Prefere preparar a casa antes a corrigir depois?</p></div></div>
 <div class="linha rv"><h3>«Faltam-me ferramentas para gerir pessoas e tempo.»</h3><div><p>Sabe o que quer da equipa, mas não tem método para o pedir, acompanhar e corrigir? As tarefas multiplicam-se e o tempo não chega?</p></div></div>
 <div class="linha rv"><h3>«Decido tudo sozinho.»</h3><div><p>Não tem com quem conversar para tomar melhores decisões? Falta-lhe uma segunda opinião externa, independente e experiente?</p></div></div>
 </div>
@@ -501,19 +507,20 @@ E como?</span><span class="hl d2 c2">Ajudo a encontrar as respostas e a <span st
 <li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M4 20h16"/><path pathLength="1" d="M6 20v-5h3v5"/><path pathLength="1" d="M10.5 20v-8.5h3V20"/><path pathLength="1" d="M15 20V8h3v12"/><circle class="pt" cx="16.5" cy="4.6" r="1.7"/></svg></span><span class="n">03</span><h3>Implementação</h3><p>Trabalho ao lado da liderança e com a equipa até a transformação funcionar no dia a dia. Pode ser direção a tempo parcial, um programa para as chefias, coaching ou tudo junto: depende do que a sua organização realmente precisa.</p></li>
 <li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M12 20.5V10.5"/><path pathLength="1" d="M12 14c-4.2 0-6.5-2.3-6.5-6.5 4.2 0 6.5 2.3 6.5 6.5z"/><path pathLength="1" d="M12 11c0-4.2 2.3-6.5 6.5-6.5 0 4.2-2.3 6.5-6.5 6.5z"/><path pathLength="1" d="M6.5 20.5h11"/><circle class="pt" cx="12" cy="20.5" r="1.7"/></svg></span><span class="n">04</span><h3>Continuidade</h3><p>Cada etapa termina com a organização capaz de manter o que se construiu. Depois decidimos, em conjunto, qual é o passo seguinte.</p></li>
 </ol>
-<p class="ia rv"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="none" stroke="#005B67" stroke-width="2"/><circle cx="14" cy="14" r="4" fill="#D9762B"/></svg><span>Uso inteligência artificial em todo o trabalho, na análise, nos relatórios e na automatização do que é repetitivo. É isso que me permite entregar um resultado ao nível de um profissional a tempo inteiro, ou de uma equipa, a um preço que uma organização da sua dimensão consegue pagar.</span></p>
+<p class="ia rv"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="none" stroke="#005B67" stroke-width="2"/><circle cx="14" cy="14" r="4" fill="#D9762B"/></svg><span>Uso inteligência artificial em todo o trabalho, na análise, nos relatórios e na automatização do que é repetitivo. É isso que me permite fazer muito mais em menos tempo, com qualidade, a um preço que uma organização da sua dimensão consegue pagar.</span></p>
 </section>
 
 <section id="para-quem" class="fit">
 <div class="wrap">
 <h2 class="t-l pet rv">Trabalho com um <span class="marca">número restrito</span> de organizações, e nunca com duas empresas concorrentes.</h2>
-<p class="lead promessa rv">Só avanço com um projeto quando sei que posso fazer a diferença. Não acompanho ao mesmo tempo duas empresas do mesmo setor na mesma área geográfica. Exclusividade e confidencialidade são regras inegociáveis do meu trabalho.</p>
+<p class="lead promessa rv">Só avanço com um projeto quando acredito que o meu trabalho pode fazer diferença. Não acompanho ao mesmo tempo duas empresas do mesmo setor na mesma área geográfica. Exclusividade e confidencialidade são regras inegociáveis do meu trabalho.</p>
 <div class="colunas">
 <div class="sim rv"><h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="12" fill="#005B67"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>É para si se:</h3><ul>
 <li>A gestão depende demasiado de si, haja ou não chefias entre si e a equipa.</li>
 <li>A sua organização ainda não tem uma direção profissional, ou tem chefias que precisam de aprender a liderar.</li>
+<li>A sua organização está a crescer e quer preparar a estrutura antes de os problemas aparecerem.</li>
 <li>Quer transformar a sua organização e está disposto a fazer diferente: otimizar processos e delegar decisões, entregando-os em boas mãos.</li>
-<li>Quer resultados que se possam verificar, não relatórios elegantes que acabam na gaveta.</li>
+<li>Quer resultados que se possam verificar no dia a dia.</li>
 </ul></div>
 <div class="nao rv"><h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="12" fill="#D9762B"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span>Não é para si se:</h3><ul>
 <li>Procura alguém disponível a qualquer hora para resolver o que é urgente.</li>
