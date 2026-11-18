@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GOALart — Gestão e liderança | Hugo Ávila Goulart, Açores</title>
-<meta name="description" content="Sabe que algo tem de mudar... Mas o quê? E como? Gestão e liderança para empresas e IPSS, a partir dos Açores: pessoas, números e operações alinhados. Hugo Ávila Goulart, Lajes do Pico.">
+<meta name="description" content="Sabe que algo tem de mudar... Mas o quê? E como? Gestão e liderança para empresas e IPSS, a partir dos Açores: pessoas, operações e números alinhados. Hugo Ávila Goulart, Lajes do Pico.">
 <link rel="canonical" href="https://goalart.pt/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_PT">
 <meta property="og:site_name" content="GOALart">
 <meta property="og:title" content="Sabe que algo tem de mudar... Mas o quê? E como? Ajudo a encontrar as respostas e a pô-las em prática.">
-<meta property="og:description" content="Pessoas, números e operações alinhados. GOALart, Hugo Ávila Goulart, Açores.">
+<meta property="og:description" content="Pessoas, operações e números alinhados. GOALart, Hugo Ávila Goulart, Açores.">
 <meta property="og:url" content="https://goalart.pt/">
 <meta property="og:image" content="https://goalart.pt/img/partilha.jpg">
 <meta property="og:image:width" content="1200">
@@ -374,6 +374,14 @@ html{scroll-behavior:auto}
 .canais-grid{grid-template-columns:repeat(4,minmax(0,180px));gap:12px}
 @media (max-width:640px){.canais-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .canal{padding:12px 16px}
+.ct-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:32px 72px;align-items:start}
+.ct-grid .lead{margin-top:0;max-width:none}
+.ct-grid .canais-grid{grid-template-columns:repeat(4,minmax(0,1fr));max-width:none}
+@media (min-width:981px){.ct-grid .canal{padding:12px 12px;gap:10px}.ct-grid .canal .ic{width:32px;height:32px}}
+@media (max-width:980px){.ct-grid{grid-template-columns:1fr}.ct-grid .lead{margin-top:0}}
+@media (max-width:640px){.ct-grid .canais-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.contacto>.wrap{padding-top:120px;padding-bottom:96px}
+@media (min-width:981px) and (max-width:1240px){.ct-grid .canais-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .canal b{font-size:16px}
 /* alvo ancorado na grelha do texto */
 .hero > div:last-child{align-self:end}
@@ -401,6 +409,68 @@ h1 > [data-escrever] .cursor{background:var(--cv)!important}
 @media (prefers-reduced-motion:reduce){.marca{background-size:100% .07em;transition:none}}
 .btn-c{background:var(--cv);color:#fff;font-weight:700;font-size:19px}.btn-c:hover{background:var(--pet);color:#fff}
 .lead-res{display:block;margin-top:.7em}
+
+/* situações em acordeão */
+.sit details.linha{display:block;padding:0;cursor:pointer}
+.sit details.linha summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:30px 0}
+.sit details.linha summary::-webkit-details-marker{display:none}
+.sit details.linha summary:focus-visible{outline:2px solid var(--champ);outline-offset:4px}
+.sit .mais{flex:none;position:relative;width:22px;height:22px}
+.sit .mais::before,.sit .mais::after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;background:var(--champ);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.sit .mais::after{transform:rotate(90deg)}
+.sit details[open] .mais::after{transform:rotate(0deg)}
+.sit .resp{padding:0 46px 32px 0;cursor:auto}
+.sit .resp p{max-width:36em}
+.sit details.linha::before{top:30px;bottom:30px}
+.sit details[open]::before{transform:scaleY(1)}
+@media (prefers-reduced-motion:no-preference){.sit details[open] .resp{animation:abrir .45s cubic-bezier(.2,.7,.2,1)}}
+@keyframes abrir{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+/* ligação às portas */
+.portas{padding-top:56px}
+.portas .portas-etq{grid-column:1/-1;margin:0 0 4px}
+/* faixa números e pessoas */
+.linguas{padding:120px 0}
+.linguas h2{font-size:clamp(34px,3.6vw,52px);line-height:1.1;max-width:18em}
+.receios{list-style:none;margin:48px 0 0;padding:0;max-width:40em}
+.receios li{position:relative;padding:18px 0 18px 44px;border-top:1px solid rgba(155,199,207,.35);font-size:clamp(20px,1.9vw,26px);line-height:1.4;color:rgba(255,255,255,.82)}
+.receios li:last-child{border-bottom:1px solid rgba(155,199,207,.35)}
+.receios li::before{content:"";position:absolute;left:0;top:calc(18px + .7em);width:24px;height:2px;background:var(--cv)}
+.receios strong{font-weight:600;color:#fff}
+.receios .ch{opacity:1}
+.receios.a-escrever .ch{opacity:0}.receios.a-escrever .ch.on{opacity:1}
+.resposta{margin-top:64px}
+.linguas .ling-txt{margin:0;font-size:clamp(20px,1.8vw,24px);line-height:1.4;color:var(--agua)}
+.ling-grande{margin:6px 0 0;font-size:clamp(46px,6.4vw,96px);line-height:1;font-weight:600;letter-spacing:-.025em;color:var(--champ)}
+.linguas.espera .resposta{opacity:0;transform:translateY(16px)}
+.linguas .resposta{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.linguas .ling-dados{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.linguas.dados-espera:not(.dados-on) .ling-dados{opacity:0;transform:translateY(16px)}
+.ling-dados{margin-top:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 48px;border-top:1px solid rgba(155,199,207,.5);padding-top:32px}
+@media (max-width:760px){.ling-dados{grid-template-columns:1fr}}
+.ling-dados em{display:block;font-style:normal;font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--agua);margin-bottom:14px}
+.ling-dados b{display:block;font-size:clamp(44px,4vw,60px);line-height:1;font-weight:600;color:var(--champ);letter-spacing:-.02em}
+.ling-dados b small{display:block;font-size:13px;line-height:1.2;font-weight:600;letter-spacing:.01em;color:var(--champ);margin-bottom:4px}
+@media (max-width:760px){.ling-dados b small.vazio{display:none}}
+.ling-dados b .num{display:inline-block;font-variant-numeric:tabular-nums}
+.ling-dados>div>span{display:block;margin-top:10px;font-size:17px;line-height:1.4}
+.linguas .ling-fim{margin-top:48px;font-size:clamp(20px,1.8vw,24px);font-weight:600;color:var(--agua)}
+.ia-2{display:block;margin-top:14px}
+.ia-destaque{font-weight:600;color:var(--pet)}
+.ia-2 .ia-oferta{font-weight:600;color:var(--cv)}
+/* percurso completo */
+.percurso{margin-top:24px}
+.percurso summary{display:inline-flex;align-items:center;gap:.5em;cursor:pointer;list-style:none;font-weight:600;font-size:17px;color:var(--pet);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+.percurso summary::-webkit-details-marker{display:none}
+.percurso summary::after{content:"\2193";display:inline-block;transition:transform .3s ease}
+.percurso[open] summary::after{transform:rotate(180deg)}
+.percurso[open] summary{margin-bottom:4px}
+.percurso .cred{margin-top:28px}
+@media (prefers-reduced-motion:no-preference){.percurso[open] .percurso-txt{animation:abrir .45s cubic-bezier(.2,.7,.2,1)}}
+
+/* título da exclusividade: texto de ligação leve, ideias-chave em destaque */
+.tit-fit{font-weight:400;letter-spacing:-.015em}
+.tit-fit strong{font-weight:600}
+.tit-fit .enf-cobre{color:#B87333}
 </style>
 <script>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('escreve-titulo');</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://goalart.pt/#goalart", "name": "GOALart", "slogan": "A arte de transformar objetivos em resultados", "url": "https://goalart.pt/", "image": "https://goalart.pt/img/partilha.jpg", "logo": "https://goalart.pt/img/goalart_horizontal_positivo.svg", "description": "Gestão e liderança a partir dos Açores: direção a tempo parcial, coaching executivo, desenvolvimento de lideranças, formação e palestras, para empresas, IPSS e entidades públicas.", "email": "geral@goalart.pt", "telephone": "+351919534748", "address": {"@type": "PostalAddress", "streetAddress": "Rua Dr. Machado Serpa, 9", "postalCode": "9930-146", "addressLocality": "Lajes do Pico", "addressRegion": "Açores", "addressCountry": "PT"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Açores"}, {"@type": "Country", "name": "Portugal"}], "founder": {"@id": "https://goalart.pt/#hugo"}, "parentOrganization": {"@type": "Organization", "name": "Ávila Goulart, Unipessoal Lda", "url": "https://avilagoulart.pt/"}, "knowsAbout": ["Gestão de PME", "Direção financeira", "Desenvolvimento de lideranças", "Organização e processos", "Coaching executivo", "Coaching de equipa", "Gestão de IPSS", "Gestão autárquica", "Inteligência artificial na gestão"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Serviços", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Direção a tempo parcial", "url": "https://goalart.pt/direcao-tempo-parcial.html"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Coaching executivo", "url": "https://goalart.pt/coaching-executivo.html"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Formação, palestras e projetos", "url": "https://goalart.pt/formacao-palestras.html"}}]}}, {"@type": "Person", "@id": "https://goalart.pt/#hugo", "name": "Hugo Ávila Goulart", "jobTitle": "Consultor de gestão e coach executivo", "worksFor": {"@id": "https://goalart.pt/#goalart"}, "homeLocation": {"@type": "Place", "name": "Lajes do Pico, Açores"}, "description": "Consultor de gestão, coach executivo certificado e formador. Mais de 15 anos em funções de direção nos Açores, incluindo 12 anos como Secretário-Geral e Diretor Financeiro da Santa Casa da Misericórdia das Lajes do Pico.", "sameAs": ["https://www.linkedin.com/in/avilagoulart/", "https://www.instagram.com/hugo.avilagoulart"]}]}</script>
@@ -447,7 +517,7 @@ h1 > [data-escrever] .cursor{background:var(--cv)!important}
 Mas o quê? E como?</span></h1>
 <div>
 <p class="pet hero-res hl d2">Ajudo a encontrar<br>as respostas e a<br><span style="white-space:nowrap">pô-las</span> em prática.</p>
-<p class="lead hl d3">Talvez já tenha tentado várias coisas. Melhorou pouco, ou durou pouco? É&nbsp;comum procurarmos resolver os sintomas antes de compreender a verdadeira origem do problema. <span class="lead-res">É aí que entro: pessoas, números e operações alinhados.</span></p>
+<p class="lead hl d3">Talvez já tenha tentado várias coisas. Melhorou pouco, ou durou pouco? É&nbsp;comum procurarmos resolver os sintomas antes de compreender a verdadeira origem do problema. <span class="lead-res">É aí que entro: pessoas, operações e números alinhados.</span></p>
 <div class="acoes hl d4">
 <a class="btn btn-c" href="#contacto">Marcar uma reunião de diagnóstico</a>
 <a class="lk" href="#situacoes">Ver o que resolvo</a>
@@ -470,31 +540,18 @@ Mas o quê? E como?</span></h1>
 </div>
 </section>
 
-<section class="portas" aria-label="Duas situações, o mesmo trabalho">
-<div class="wrap">
-<div><h2>Quando falta quem dirija</h2><p>Não há ninguém entre quem lidera e a equipa? A organização ainda não tem dimensão para um diretor-geral a tempo inteiro, ou não justifica esse investimento? Assumo a direção a tempo parcial: o rigor de uma gestão profissional, a um preço proporcional à sua dimensão.</p><a href="direcao-tempo-parcial.html">Ver a direção a tempo parcial</a></div>
-<div><h2>Quando há estrutura, mas falta liderança</h2><p>As coisas acontecem, mas só porque as chefias as fazem sozinhas? A equipa espera por instruções em vez de assumir o trabalho? Preparo as suas chefias para liderar, com programas de desenvolvimento de lideranças e coaching executivo: equipas com mais autonomia e responsabilidade, e melhores resultados.</p><a href="coaching-executivo.html">Ver o coaching executivo</a></div>
-</div>
-</section>
-
 <section id="situacoes" class="esc sit">
 <div class="wrap">
 <h2 class="t-l rv">Reconhece alguma das seguintes situações?</h2>
 <p class="lead intro rv">Raramente aparecem sozinhas e quase sempre têm a mesma origem:<br>a organização cresceu e a forma de gerir e de liderar não acompanhou.</p>
 <div class="linhas">
-<!-- Página futura: equipas-e-chefias.html -->
-<div class="linha rv"><h3>«Não consigo tirar o melhor da minha equipa.»</h3><div><p>Tem pessoas capazes, mas o resultado fica aquém? Ninguém assume responsabilidades além de si? As chefias executam, mas não lideram?</p></div></div>
-<!-- Página futura: numeros-e-decisao.html -->
-<div class="linha rv"><h3>«Tenho dados, mas não me ajudam a decidir.»</h3><div><p>Há números, relatórios e mapas, mas chegam tarde, soltos ou por trabalhar? Na hora de decidir, falta saber ao certo quanto custa, quanto sobra e onde está a perder?</p></div></div>
-<!-- Página futura: organizacao-e-processos.html (entrada «apagar fogos») -->
-<div class="linha rv"><h3>«Passo o dia a apagar fogos.»</h3><div><p>Tudo chega a si? Não há tempo para planear, os planos que existem não se cumprem e o importante fica sempre para depois?</p></div></div>
-<!-- Página futura: organizacao-e-processos.html (entrada «qualidade») -->
-<div class="linha rv"><h3>«Crescemos, mas a qualidade baixou.»</h3><div><p>Mais trabalho, mais pessoas, mais erros? O que funcionava com poucas pessoas já não funciona com muitas?</p></div></div>
-<div class="linha rv"><h3>«Quero crescer, sem perder o que funciona.»</h3><div><p>Tem planos para dar o próximo passo, mas sabe que a estrutura atual não o aguenta? Prefere preparar a casa antes a corrigir depois?</p></div></div>
-<div class="linha rv"><h3>«Faltam-me ferramentas para gerir pessoas e tempo.»</h3><div><p>Sabe o que quer da equipa, mas não tem método para o pedir, acompanhar e corrigir? As tarefas multiplicam-se e o tempo não chega?</p></div></div>
-<div class="linha rv"><h3>«Decido tudo sozinho.»</h3><div><p>Não tem com quem conversar para tomar melhores decisões? Falta-lhe uma segunda opinião externa, independente e experiente?</p></div></div>
+<details class="linha rv"><summary><h3>«Não consigo tirar o melhor da minha equipa.»</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Tem pessoas capazes, mas o resultado não é o que deseja? Ninguém assume responsabilidades além de si? Sabe o que quer da equipa, mas falta-lhe método para o pedir, acompanhar e corrigir?</p></div></details>
+<details class="linha rv"><summary><h3>«Tenho dados, mas não me ajudam a decidir.»</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Há números, relatórios e mapas, mas chegam tarde, soltos ou por trabalhar? Na hora de decidir, falta saber ao certo quanto custa, quanto sobra e onde está a perder?</p></div></details>
+<details class="linha rv"><summary><h3>«Passo o dia a apagar fogos.»</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Tudo chega a si e as tarefas multiplicam-se? Não há tempo para planear, os planos que existem não se cumprem e o importante fica sempre para depois?</p></div></details>
+<details class="linha rv"><summary><h3>«Quero crescer, mas a estrutura não está preparada.»</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Mais trabalho, mais pessoas, mais erros? O que funcionava com poucas pessoas já não funciona com muitas? Ou quer dar o próximo passo e prefere preparar a casa antes a corrigir depois?</p></div></details>
+<details class="linha rv"><summary><h3>«Decido tudo sozinho.»</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Não tem com quem conversar para tomar melhores decisões? Falta-lhe uma segunda opinião externa, independente e experiente?</p></div></details>
 </div>
-<div class="sit-fim rv"><p>Cada caso pede a sua resposta. É para isso que serve o diagnóstico.</p><a class="btn btn-ch" href="#contacto">Marcar uma reunião de diagnóstico</a></div>
+<div class="sit-fim rv"><p>Para situações diferentes, respostas diferentes.<br>É para isso que serve o diagnóstico.</p><a class="btn btn-ch" href="#contacto">Marcar uma reunião de diagnóstico</a></div>
 </div>
 </section>
 
@@ -507,12 +564,20 @@ Mas o quê? E como?</span></h1>
 <li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M4 20h16"/><path pathLength="1" d="M6 20v-5h3v5"/><path pathLength="1" d="M10.5 20v-8.5h3V20"/><path pathLength="1" d="M15 20V8h3v12"/><circle class="pt" cx="16.5" cy="4.6" r="1.7"/></svg></span><span class="n">03</span><h3>Implementação</h3><p>Trabalho ao lado da liderança e com a equipa até a transformação funcionar no dia a dia. Pode ser direção a tempo parcial, um programa para as chefias, coaching ou tudo junto: depende do que a sua organização realmente precisa.</p></li>
 <li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M12 20.5V10.5"/><path pathLength="1" d="M12 14c-4.2 0-6.5-2.3-6.5-6.5 4.2 0 6.5 2.3 6.5 6.5z"/><path pathLength="1" d="M12 11c0-4.2 2.3-6.5 6.5-6.5 0 4.2-2.3 6.5-6.5 6.5z"/><path pathLength="1" d="M6.5 20.5h11"/><circle class="pt" cx="12" cy="20.5" r="1.7"/></svg></span><span class="n">04</span><h3>Continuidade</h3><p>Cada etapa termina com a organização capaz de manter o que se construiu. Depois decidimos, em conjunto, qual é o passo seguinte.</p></li>
 </ol>
-<p class="ia rv"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="none" stroke="#005B67" stroke-width="2"/><circle cx="14" cy="14" r="4" fill="#D9762B"/></svg><span>Uso inteligência artificial em todo o trabalho, na análise, nos relatórios e na automatização do que é repetitivo. É isso que me permite fazer muito mais em menos tempo, com qualidade, a um preço que uma organização da sua dimensão consegue pagar.</span></p>
+<p class="ia rv"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="none" stroke="#005B67" stroke-width="2"/><circle cx="14" cy="14" r="4" fill="#D9762B"/></svg><span>Uso <b class="ia-destaque">inteligência artificial</b> em todo o trabalho, na análise, nos relatórios e na automatização do que é repetitivo. É isso que me permite fazer muito mais em menos tempo, com qualidade, a um preço que uma organização da sua dimensão consegue pagar.<span class="ia-2"><b class="ia-oferta">Posso ajudá-lo a fazer o mesmo:</b> perceber onde a inteligência artificial poupa tempo e melhora os resultados, e pô-la a funcionar no dia a dia da equipa.</span></span></p>
+</section>
+
+<section class="portas" aria-label="Duas situações, o mesmo trabalho">
+<div class="wrap">
+<p class="etq portas-etq">Depois do diagnóstico, o caminho pode ser um destes dois.</p>
+<div><h2>Quando falta quem dirija</h2><p>Não há ninguém entre quem lidera e a equipa? A organização ainda não tem dimensão para um diretor-geral a tempo inteiro, ou não justifica esse investimento? Assumo a direção a tempo parcial: o rigor de uma gestão profissional, a um preço proporcional à sua dimensão.</p><a href="direcao-tempo-parcial.html">Ver a direção a tempo parcial</a></div>
+<div><h2>Quando há estrutura, mas falta liderança</h2><p>As coisas acontecem, mas só porque as chefias as fazem sozinhas? A equipa espera por instruções em vez de assumir o trabalho? Preparo as suas chefias para liderar, com programas de desenvolvimento de lideranças e coaching executivo: equipas com mais autonomia e responsabilidade, e melhores resultados.</p><a href="coaching-executivo.html">Ver o coaching executivo</a></div>
+</div>
 </section>
 
 <section id="para-quem" class="fit">
 <div class="wrap">
-<h2 class="t-l pet rv">Trabalho com um <span class="marca">número restrito</span> de organizações, e nunca com duas empresas concorrentes.</h2>
+<h2 class="t-l pet rv tit-fit">Trabalho com um <strong class="enf-cobre">número restrito</strong> de organizações, e <strong>nunca com duas empresas concorrentes.</strong></h2>
 <p class="lead promessa rv">Só avanço com um projeto quando acredito que o meu trabalho pode fazer diferença. Não acompanho ao mesmo tempo duas empresas do mesmo setor na mesma área geográfica. Exclusividade e confidencialidade são regras inegociáveis do meu trabalho.</p>
 <div class="colunas">
 <div class="sim rv"><h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="12" fill="#005B67"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>É para si se:</h3><ul>
@@ -525,11 +590,32 @@ Mas o quê? E como?</span></h1>
 <div class="nao rv"><h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="12" fill="#D9762B"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span>Não é para si se:</h3><ul>
 <li>Procura alguém disponível a qualquer hora para resolver o que é urgente.</li>
 <li>Quer alguém que execute à sua maneira, sem questionar.</li>
+<li>Acredita que só a equipa e a estrutura têm de mudar, e que não tem de mudar rigorosamente nada em si.</li>
 <li>Quer comprar horas de coaching ou de consultoria.</li>
 <li>Precisa apenas de cumprir obrigações fiscais e contabilísticas. Para isso, o seu contabilista é a pessoa certa.</li>
 </ul></div>
 </div>
 
+</div>
+</section>
+
+<section class="esc linguas" aria-label="Números, pessoas e terreno">
+<div class="wrap">
+<h2 class="t-l rv">O que mais receia ao trabalhar com alguém de fora?</h2>
+<ul class="receios">
+<li>Alguém muito bom com os <strong>números</strong>, mas que não perceba de <strong>pessoas</strong>.</li>
+<li>Alguém que compreenda bem as <strong>pessoas</strong>, mas não entenda a importância e o equilíbrio dos <strong>números</strong>.</li>
+<li>Alguém que domine a <strong>teoria</strong>, mas não conheça o <strong>terreno</strong>.</li>
+</ul>
+<div class="resposta">
+<p class="ling-txt">Domino duas linguagens que raramente andam juntas:</p>
+<p class="ling-grande">números e pessoas.</p>
+</div>
+<div class="ling-dados">
+<div><em>Números</em><b><small class="vazio" aria-hidden="true">&nbsp;</small><span class="num" style="width:2ch">12</span></b><span>anos como Diretor Financeiro</span></div>
+<div><em>Pessoas</em><b><small>mais de</small><span class="num" style="width:3ch">500</span></b><span>horas de coaching executivo, individual e de equipa</span></div>
+<div><em>Terreno</em><b><small>mais de</small><span class="num" style="width:2ch">15</span></b><span>anos em funções de direção nos Açores</span></div>
+</div>
 </div>
 </section>
 
@@ -539,16 +625,17 @@ Mas o quê? E como?</span></h1>
 <div class="txt">
 <p class="etq">Quem sou?</p>
 <h2 class="t-l pet" style="margin-top:14px">Já estive no seu lugar.</h2>
-<p class="corpo">Sou o Hugo Ávila Goulart, natural das Lajes do Pico. Durante doze anos fui Secretário-Geral e Diretor Financeiro da Santa Casa da Misericórdia das Lajes do Pico: tesouraria, orçamentos, obras, pessoas e um sistema de qualidade ISO 9001. Quando saí, fiquei mais ano e meio como consultor, a preparar a instituição para funcionar sem mim. Fui vereador na Câmara Municipal das Lajes do Pico, em regime de não permanência, eleito por um movimento independente. Como Diretor de Pessoas e Operações na AZx, criei programas de desenvolvimento de pessoas e a primeira estrutura de carreiras da empresa, e desenvolvi várias iniciativas de cultura, comportamento e liderança que marcaram a forma como a empresa trabalha. Quando decidi seguir com a minha empresa, a minha saída foi preparada ao longo de mais de seis meses, para que tudo continuasse a funcionar bem.</p>
-<p class="corpo">Sou empresário desde 2015, consultor de gestão, coach executivo certificado e formador. Fiz consultoria e coaching executivo com empresários de setores muito diferentes, da construção à distribuição alimentar, dos eventos ao turismo. Fiz consultoria a IPSS e projetos para entidades públicas da região. Hoje acompanho líderes, executivos, chefias e quadros superiores nos setores privado, público e social.</p>
-<p class="frase">Domino duas linguagens que raramente andam juntas: a dos números e a das pessoas. E o que proponho, já o fiz no terreno.</p>
-<div class="dados rv">
-<div><b><small>mais de</small><span class="num um">15</span></b><span>anos em funções de direção nos Açores</span></div>
-<div><b><small>mais de</small><span class="num um">10</span></b><span>anos como empresário</span></div>
-<div><b><small class="vazio" aria-hidden="true">&nbsp;</small><span class="num um">12</span></b><span>anos como Diretor Financeiro no setor social</span></div>
-<div><b><small>mais de</small><span class="num">500</span></b><span>horas de coaching executivo, individual e de equipa</span></div>
-</div>
+<p class="corpo">Sou o Hugo Ávila Goulart, natural das Lajes do Pico. Sou empresário desde 2015, consultor de gestão, coach executivo certificado e formador. Durante doze anos fui Secretário-Geral e Diretor Financeiro da Santa Casa da Misericórdia das Lajes do Pico, fui vereador na Câmara Municipal das Lajes do Pico e fui Diretor de Pessoas e Operações na AZx. Em todos os projetos em que participei, preparei sempre a saída para que tudo continuasse a funcionar sem mim.</p>
+<p class="corpo">Hoje acompanho líderes, executivos, chefias e quadros superiores nos setores privado, público e social. Nas sessões, costumo propor que nos tratemos por tu: trabalhamos melhor quando falamos ao mesmo nível.</p>
+<details class="percurso">
+<summary>Conhecer o percurso completo</summary>
+<div class="percurso-txt">
+<p class="corpo">Na Santa Casa da Misericórdia das Lajes do Pico tive a meu cargo a tesouraria, os orçamentos, as obras, as pessoas e um sistema de qualidade ISO 9001. Quando saí, fiquei mais ano e meio como consultor, a preparar a instituição para funcionar sem mim. Na Câmara Municipal das Lajes do Pico fui vereador em regime de não permanência, eleito por um movimento independente.</p>
+<p class="corpo">Como Diretor de Pessoas e Operações na AZx, criei programas de desenvolvimento de pessoas e a primeira estrutura de carreiras da empresa, e desenvolvi várias iniciativas de cultura, comportamento e liderança que marcaram a forma como a empresa trabalha. Quando decidi seguir com a minha empresa, a minha saída foi preparada ao longo de mais de seis meses, para que tudo continuasse a funcionar bem.</p>
+<p class="corpo">Fiz consultoria e coaching executivo com empresários de setores muito diferentes, da construção à distribuição alimentar, dos eventos ao turismo. Fiz consultoria a IPSS e projetos para entidades públicas da região.</p>
 <p class="cred"><b>Formação</b> · Engenharia Informática · Pós-graduação em Gestão de Empresas · Pós-graduação em Gestão Autárquica e Modernização · MBA em Felicidade Organizacional · Certificação internacional em coaching executivo · Certificação em análise comportamental · Certificação internacional em programação neurolinguística · Formador certificado · Auditor interno ISO 9001</p>
+</div>
+</details>
 </div>
 </div>
 </section>
@@ -568,12 +655,16 @@ Mas o quê? E como?</span></h1>
 
 <section id="contacto" class="esc contacto">
 <div class="wrap">
+<div class="ct-grid">
 <h2 class="t-l rv">Por onde começa a transformação na sua organização?</h2>
-<p class="lead">Uma reunião de 45 minutos, gratuita e sem compromisso. Olhamos para a sua situação e percebemos, em conjunto, se faz sentido trabalharmos juntos. Se não fizer, digo-lho com franqueza. Respondo pessoalmente em 48 horas.</p>
+<div class="ct-dir">
+<p class="lead">Uma reunião de 45 minutos, gratuita e sem compromisso, sempre comigo. Olhamos para a sua situação e percebemos, em conjunto, se faz sentido trabalharmos&nbsp;juntos.<br>Se não fizer, digo-lho com franqueza.<br>Todas as mensagens têm resposta em 48 horas.</p>
 <div class="acoes">
 <a class="btn btn-ch" href="https://calendar.app.google/sAL11MT9BZyRDrzg7" target="_blank" rel="noopener" data-marcacao>Marcar uma reunião de diagnóstico</a>
 </div>
 <div class="canais-grid"><a class="canal" href="https://wa.me/351919534748?text=Ol%C3%A1%20Hugo%2C%20tenho%20interesse%20nos%20seus%20servi%C3%A7os%20e%20gostava%20de%20conversar.%20Quando%20podemos%20falar%3F" target="_blank" rel="noopener" aria-label="WhatsApp (abre noutra janela)"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.7 16.9L2.4 21.6l4.8-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 19.9zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1l-.5-.3z"/></svg></span><span class="tx"><b>WhatsApp</b></span></a><a class="canal" title="geral@goalart.pt" href="mailto:geral@goalart.pt"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.8 7l8.2 6 8.2-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span class="tx"><b>Email</b></span></a><a class="canal" href="https://www.linkedin.com/in/avilagoulart/" target="_blank" rel="noopener" aria-label="LinkedIn (abre noutra janela)"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6v5.4h-4v-4.8c0-1.2 0-2.6-1.6-2.6s-1.9 1.3-1.9 2.5v4.9h-4z"/></svg></span><span class="tx"><b>LinkedIn</b></span></a><a class="canal" href="https://www.instagram.com/hugo.avilagoulart" target="_blank" rel="noopener" aria-label="Instagram (abre noutra janela)"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></span><span class="tx"><b>Instagram</b></span></a></div>
+</div>
+</div>
 </div>
 <footer class="rodape">
 <div class="wrap">
@@ -599,7 +690,7 @@ Mas o quê? E como?</span></h1>
 </script>
 <script>
 (function(){
-  var nums=[].slice.call(document.querySelectorAll('.dados .num'));
+  var nums=[].slice.call(document.querySelectorAll('.num'));
   if(!nums.length || !('IntersectionObserver' in window)) return;
   if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   function animar(el){
@@ -614,7 +705,7 @@ Mas o quê? E como?</span></h1>
   }
   nums=nums.filter(function(el){ el.setAttribute('data-valor',el.textContent.trim()); if(el.getBoundingClientRect().top>window.innerHeight){ el.textContent='0'; return true; } return false; });
   var io=new IntersectionObserver(function(ent){
-    ent.forEach(function(x){ if(x.isIntersecting){ io.unobserve(x.target); animar(x.target); } });
+    ent.forEach(function(x){ if(x.isIntersecting){ io.unobserve(x.target); var sec=x.target.closest('.linguas'); if(sec && sec.classList.contains('espera')){ sec.addEventListener('linguas:pronta',function(){ animar(x.target); },{once:true}); } else animar(x.target); } });
   },{threshold:0.6});
   nums.forEach(function(el){ io.observe(el); });
 })();
@@ -668,5 +759,32 @@ Mas o quê? E como?</span></h1>
 })();
 </script>
 <script src="escrita.js"></script>
+<script>
+(function(){
+  var sec=document.querySelector('.linguas'); if(!sec) return;
+  if(!('IntersectionObserver' in window) || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  var ul=sec.querySelector('.receios'); if(ul.getBoundingClientRect().top<window.innerHeight*0.8) return;
+  var letras=[];
+  [].slice.call(ul.querySelectorAll('li')).forEach(function(li){
+    var linha=[];
+    (function walk(n){ [].slice.call(n.childNodes).forEach(function(x){
+      if(x.nodeType===3){ var fr=document.createDocumentFragment(); x.textContent.split('').forEach(function(c){ var sp=document.createElement('span'); sp.className='ch'; sp.textContent=c; fr.appendChild(sp); linha.push(sp); }); x.parentNode.replaceChild(fr,x); }
+      else walk(x);
+    }); })(li);
+    letras.push(linha);
+  });
+  ul.classList.add('a-escrever'); sec.classList.add('espera','dados-espera');
+  var cursor=document.createElement('span'); cursor.className='cursor'; cursor.setAttribute('aria-hidden','true');
+  function escrever(l,i){
+    if(l>=letras.length){ setTimeout(function(){ cursor.classList.add('fim'); setTimeout(function(){cursor.remove();},600); sec.classList.remove('espera'); setTimeout(function(){ sec.classList.add('dados-on'); setTimeout(function(){ sec.dispatchEvent(new Event('linguas:pronta')); },500); },900); },500); return; }
+    var linha=letras[l];
+    if(i>=linha.length){ setTimeout(function(){ escrever(l+1,0); },400); return; }
+    var ch=linha[i]; ch.classList.add('on'); ch.parentNode.insertBefore(cursor,ch.nextSibling);
+    setTimeout(function(){ escrever(l,i+1); }, /[,.]/.test(ch.textContent)?160:18+Math.random()*8);
+  }
+  var io=new IntersectionObserver(function(e){ if(e[0].isIntersecting){ io.disconnect(); setTimeout(function(){escrever(0,0);},200); } },{threshold:0.5});
+  io.observe(ul);
+})();
+</script>
 </body>
 </html>

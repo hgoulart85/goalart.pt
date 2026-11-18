@@ -309,6 +309,68 @@ html{scroll-behavior:auto}
 .ver .marca{background-size:100% .07em}
 @media (prefers-reduced-motion:reduce){.marca{background-size:100% .07em;transition:none}}
 .btn-c{background:var(--cv);color:#fff;font-weight:700;font-size:19px}.btn-c:hover{background:var(--pet);color:#fff}
+
+/* áreas em acordeão */
+.manif details.linha{display:block;padding:0;cursor:pointer}
+.manif details.linha summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:30px 0}
+.manif details.linha summary::-webkit-details-marker{display:none}
+.manif details.linha summary:focus-visible{outline:2px solid var(--champ);outline-offset:4px}
+.manif .mais{flex:none;position:relative;width:22px;height:22px}
+.manif .mais::before,.manif .mais::after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;background:var(--champ);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.manif .mais::after{transform:rotate(90deg)}
+.manif details[open] .mais::after{transform:rotate(0deg)}
+.manif .resp{padding:0 46px 32px 0;cursor:auto}
+.manif .resp p{max-width:36em}
+.manif details.linha::before{top:30px;bottom:30px}
+.manif details[open]::before{transform:scaleY(1)}
+@media (prefers-reduced-motion:no-preference){.manif details[open] .resp{animation:abrir .45s cubic-bezier(.2,.7,.2,1)}}
+@keyframes abrir{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+
+/* gráficos das páginas: mesma linguagem do alvo da página inicial */
+@keyframes surgir{to{opacity:1}}
+.hero.hero-sub{min-height:0;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px 56px;align-items:center;padding-bottom:96px}
+@media (max-width:900px){.hero.hero-sub{grid-template-columns:1fr}.sub-graf .alvo{max-width:240px}}
+.sub-graf{margin:0}
+.sub-graf figcaption{margin-top:16px;font-size:16px;line-height:1.5;font-weight:500;color:var(--pet)}
+/* coaching: percurso em espiral */
+.caminho{opacity:0;animation:surgir 1.2s ease 2.2s forwards}
+.centro-c,.centro-d,.centro-f{transform-box:fill-box;transform-origin:center;opacity:0;animation:aparecer .6s cubic-bezier(.3,1.6,.5,1) 2.5s forwards}
+.viajante{offset-rotate:0deg;offset-distance:0%;opacity:0;animation:percurso 7s cubic-bezier(.45,0,.25,1) 3s infinite}
+@keyframes percurso{0%{offset-distance:0%;opacity:0}6%{opacity:1}78%{offset-distance:100%;opacity:1}90%,100%{offset-distance:100%;opacity:0}}
+/* direção: peças que se alinham */
+.peca{transform-box:view-box;transform-origin:260px 260px;transform:rotate(var(--de));opacity:0;animation:alinhar 2.2s cubic-bezier(.5,0,.15,1) forwards}
+.p1{animation-delay:2.2s}.p2{animation-delay:2.5s}.p3{animation-delay:2.8s}
+@keyframes alinhar{0%{opacity:0;transform:rotate(var(--de))}15%{opacity:1}100%{opacity:1;transform:rotate(0deg)}}
+.rot{opacity:0;animation:surgir .8s ease forwards}.r1{animation-delay:4.4s}.r2{animation-delay:4.7s}.r3{animation-delay:5s}
+.centro-d{animation-delay:5.2s}
+/* formação: ondas do centro para os pontos */
+.onda{transform-box:fill-box;transform-origin:center;opacity:0;animation:onda 3.6s ease-out 2.8s infinite}
+.o2{animation-delay:4.6s}
+@keyframes onda{0%{opacity:0;transform:scale(.08)}10%{opacity:.7}70%{opacity:0;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.ponto{opacity:0;animation:surgir .6s ease 2s forwards,luzp 3.6s ease-out 2.8s infinite}
+.pt1{animation-delay:2s,4.9s}.pt2{animation-delay:2s,4.4s}
+@keyframes luzp{0%,100%{fill:#9BC7CF}8%{fill:#D9762B}40%{fill:#9BC7CF}}
+@media (prefers-reduced-motion:reduce){.caminho,.centro-c,.centro-d,.centro-f,.rot,.ponto{animation:none!important;opacity:1!important}.viajante{display:none}.peca{animation:none!important;opacity:1;transform:none}.onda{display:none}}
+.ct-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:32px 72px;align-items:start}
+.ct-grid .lead{margin-top:0;max-width:none}
+.ct-grid .canais-grid{grid-template-columns:repeat(4,minmax(0,1fr));max-width:none}
+@media (min-width:981px){.ct-grid .canal{padding:12px 12px;gap:10px}.ct-grid .canal .ic{width:32px;height:32px}}
+@media (max-width:980px){.ct-grid{grid-template-columns:1fr}.ct-grid .lead{margin-top:0}}
+@media (max-width:640px){.ct-grid .canais-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:981px) and (max-width:1240px){.ct-grid .canais-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* título em dois tons, como na página inicial */
+.h-duplo{max-width:none}
+.h-duplo .h-forte{display:block;max-width:12ch}
+.h-duplo .h-leve{display:block;margin-top:.14em;font-size:.68em;line-height:1.04;letter-spacing:-.025em;font-weight:400;color:var(--pet-s);max-width:16ch;white-space:pre-line}
+.h-duplo .cursor{background:var(--cv)}
+
+/* legenda centrada com o gráfico e alinhada com os botões */
+.sub-graf{text-align:center}
+.sub-graf .alvo{display:block;margin:0 auto}
+.hero.hero-sub > div:last-child{align-self:end}
+@media (min-width:901px){.sub-graf figcaption{margin-bottom:14px}}
+@media (max-width:900px){.sub-graf .alvo{max-width:320px}}
 </style>
 <script>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('escreve-titulo');</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Service", "@id": "https://goalart.pt/formacao-palestras.html#servico", "name": "Formação, palestras e projetos", "serviceType": "Formação e palestras", "description": "Formação para chefias e equipas, palestras para eventos e projetos de consultoria em liderança e gestão de equipas, comunicação, gestão de tempo e produtividade, e pessoas e cultura.", "url": "https://goalart.pt/formacao-palestras.html", "provider": {"@type": "ProfessionalService", "@id": "https://goalart.pt/#goalart", "name": "GOALart", "url": "https://goalart.pt/"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Açores"}, {"@type": "Country", "name": "Portugal"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GOALart", "item": "https://goalart.pt/"}, {"@type": "ListItem", "position": 2, "name": "Formação, palestras e projetos", "item": "https://goalart.pt/formacao-palestras.html"}]}]}</script>
@@ -350,23 +412,37 @@ html{scroll-behavior:auto}
 </header>
 
 <main id="conteudo">
-<section class="wrap hero" style="min-height:0;grid-template-columns:1fr;padding-bottom:96px">
+<section class="wrap hero hero-sub">
 <div>
 <p class="etq hl d1">Formação, palestras e projetos</p>
-<h1 class="t-xl pet" style="margin-top:16px;max-width:16ch"><span data-escrever="300">O mesmo trabalho, noutros formatos.</span></h1>
-<p class="lead hl d3">Gestão e liderança levadas a salas de formação, a palcos e a projetos de consultoria especializados. Para equipas e chefias, para organizadores de eventos e para quem procura um parceiro num projeto.</p>
+<h1 class="t-xl pet h-duplo" style="margin-top:16px"><span class="h-forte">O mesmo trabalho,</span> <span class="h-leve" data-escrever="700">noutros formatos.</span></h1>
+<p class="lead hl d3">Gestão e liderança em contexto de formação, palestras e projetos de consultoria especializados. Para equipas e chefias, para organizadores de eventos e para quem procura um parceiro num projeto.</p>
 <div class="acoes hl d4"><a class="btn btn-c" href="#contacto">Pedir uma proposta</a><a class="lk" href="#temas">Ver as áreas de especialização</a></div>
 </div>
+<div>
+<figure class="mapa sub-graf"><svg class="alvo" viewBox="0 0 520 520" role="img" aria-label="Alvo da GOALart com ondas que partem do centro e acendem os pontos à volta" focusable="false">
+<g class="ondas"><circle class="onda o1" cx="260" cy="260" r="214" fill="none" stroke="#D9762B" stroke-width="3"/><circle class="onda o2" cx="260" cy="260" r="214" fill="none" stroke="#D9762B" stroke-width="3"/></g>
+<g class="orbita"><circle cx="260" cy="260" r="250" fill="none" stroke="#9BC7CF" stroke-width="1.2" stroke-dasharray="2 10"/></g>
+<circle class="anel a1" pathLength="1" cx="260" cy="260" r="214" fill="none" stroke="#9BC7CF" stroke-width="1.5" transform="rotate(-90 260 260)"/>
+<circle class="anel a2" pathLength="1" cx="260" cy="260" r="164" fill="none" stroke="#005B67" stroke-width="2" transform="rotate(-90 260 260)"/>
+<circle class="anel a3" pathLength="1" cx="260" cy="260" r="112" fill="none" stroke="#005B67" stroke-width="4" transform="rotate(-90 260 260)"/>
+<circle class="anel a4" pathLength="1" cx="260" cy="260" r="58" fill="none" stroke="#9BC7CF" stroke-width="1.5" transform="rotate(-90 260 260)"/>
+<g class="mira"><path class="vetor" pathLength="1" d="M 260 6 L 260 186" fill="none" stroke="#005B67" stroke-width="2.5" stroke-linecap="round"/><path class="vetor" pathLength="1" d="M 260 514 L 260 334" fill="none" stroke="#005B67" stroke-width="2.5" stroke-linecap="round"/><path class="vetor" pathLength="1" d="M 6 260 L 186 260" fill="none" stroke="#005B67" stroke-width="2.5" stroke-linecap="round"/><path class="vetor" pathLength="1" d="M 514 260 L 334 260" fill="none" stroke="#005B67" stroke-width="2.5" stroke-linecap="round"/></g>
+<circle class="ponto pt1" cx="260.0" cy="46.0" r="7" fill="#9BC7CF"/><circle class="ponto pt1" cx="341.9" cy="62.3" r="7" fill="#9BC7CF"/><circle class="ponto pt1" cx="411.3" cy="108.7" r="7" fill="#9BC7CF"/><circle class="ponto pt1" cx="457.7" cy="178.1" r="7" fill="#9BC7CF"/><circle class="ponto pt1" cx="474.0" cy="260.0" r="7" fill="#9BC7CF"/><circle class="ponto pt1" cx="457.7" cy="341.9" r="7" fill="#9BC7CF"/><circle class="ponto pt1" cx="411.3" cy="411.3" r="7" fill="#9BC7CF"/><circle class="ponto pt1" cx="341.9" cy="457.7" r="7" fill="#9BC7CF"/><circle class="ponto pt1" cx="260.0" cy="474.0" r="7" fill="#9BC7CF"/><circle class="ponto pt1" cx="178.1" cy="457.7" r="7" fill="#9BC7CF"/><circle class="ponto pt1" cx="108.7" cy="411.3" r="7" fill="#9BC7CF"/><circle class="ponto pt1" cx="62.3" cy="341.9" r="7" fill="#9BC7CF"/><circle class="ponto pt1" cx="46.0" cy="260.0" r="7" fill="#9BC7CF"/><circle class="ponto pt1" cx="62.3" cy="178.1" r="7" fill="#9BC7CF"/><circle class="ponto pt1" cx="108.7" cy="108.7" r="7" fill="#9BC7CF"/><circle class="ponto pt1" cx="178.1" cy="62.3" r="7" fill="#9BC7CF"/><circle class="ponto pt2" cx="302.4" cy="101.6" r="6" fill="#9BC7CF"/><circle class="ponto pt2" cx="376.0" cy="144.0" r="6" fill="#9BC7CF"/><circle class="ponto pt2" cx="418.4" cy="217.6" r="6" fill="#9BC7CF"/><circle class="ponto pt2" cx="418.4" cy="302.4" r="6" fill="#9BC7CF"/><circle class="ponto pt2" cx="376.0" cy="376.0" r="6" fill="#9BC7CF"/><circle class="ponto pt2" cx="302.4" cy="418.4" r="6" fill="#9BC7CF"/><circle class="ponto pt2" cx="217.6" cy="418.4" r="6" fill="#9BC7CF"/><circle class="ponto pt2" cx="144.0" cy="376.0" r="6" fill="#9BC7CF"/><circle class="ponto pt2" cx="101.6" cy="302.4" r="6" fill="#9BC7CF"/><circle class="ponto pt2" cx="101.6" cy="217.6" r="6" fill="#9BC7CF"/><circle class="ponto pt2" cx="144.0" cy="144.0" r="6" fill="#9BC7CF"/><circle class="ponto pt2" cx="217.6" cy="101.6" r="6" fill="#9BC7CF"/><circle class="centro-f" cx="260" cy="260" r="16" fill="#985820"/>
+</svg>
+<figcaption>Diferentes formas de levar o mesmo conhecimento a mais pessoas.</figcaption></figure>
+</div>
+
 </section>
 
 <section id="temas" class="esc manif">
 <div class="wrap">
 <h2 class="t-l rv">Áreas de especialização</h2>
 <div class="linhas">
-<div class="linha rv"><h3>Liderança e gestão de equipas</h3><p>Da chefia que executa à chefia que lidera: delegar, dar feedback, acompanhar e conduzir a equipa. Inclui autoconhecimento com análise comportamental.</p></div>
-<div class="linha rv"><h3>Comunicação</h3><p>Comunicar para decidir e para mobilizar: reuniões que concluem, conversas difíceis e mensagens claras.</p></div>
-<div class="linha rv"><h3>Gestão de tempo e produtividade</h3><p>Planear, priorizar e cumprir. Ferramentas práticas para sair do modo de apagar fogos.</p></div>
-<div class="linha rv"><h3>Pessoas e cultura</h3><p>Felicidade no trabalho, motivação e clima de equipa, ligados ao que dá resultado na gestão.</p></div>
+<details class="linha rv"><summary><h3>Liderança e gestão de equipas</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Da chefia que executa à chefia que lidera: delegar, dar feedback, acompanhar e conduzir a equipa. Inclui autoconhecimento com análise comportamental.</p></div></details>
+<details class="linha rv"><summary><h3>Comunicação</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Comunicar para decidir e para mobilizar: reuniões que concluem, conversas difíceis e mensagens claras.</p></div></details>
+<details class="linha rv"><summary><h3>Gestão de tempo e produtividade</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Planear, priorizar e cumprir. Ferramentas práticas para sair do modo de apagar fogos.</p></div></details>
+<details class="linha rv"><summary><h3>Pessoas e cultura</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Felicidade no trabalho, motivação e clima de equipa, ligados ao que dá resultado na gestão.</p></div></details>
 </div>
 </div>
 </section>
@@ -384,12 +460,16 @@ html{scroll-behavior:auto}
 
 <section id="contacto" class="esc contacto">
 <div class="wrap">
+<div class="ct-grid">
 <h2 class="t-l rv" style="max-width:20ch">Tem uma equipa, um evento ou um projeto em mente?</h2>
-<p class="lead">Diga-me o público, o tema e a data. Respondo pessoalmente em 48 horas, com uma proposta ou com as perguntas que faltam.</p>
+<div class="ct-dir">
+<p class="lead">Diga-me qual é o público, o tema e a data.<br>Respondo em 48 horas com uma proposta ou com as perguntas que&nbsp;faltam.</p>
 <div class="acoes">
 <a class="btn btn-ch" href="mailto:geral@goalart.pt?subject=Forma%C3%A7%C3%A3o%2C%20palestra%20ou%20projeto">Enviar um pedido por email</a>
 </div>
 <div class="canais-grid"><a class="canal" href="https://wa.me/351919534748?text=Ol%C3%A1%20Hugo%2C%20tenho%20interesse%20nos%20seus%20servi%C3%A7os%20e%20gostava%20de%20conversar.%20Quando%20podemos%20falar%3F" target="_blank" rel="noopener" aria-label="WhatsApp (abre noutra janela)"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.7 16.9L2.4 21.6l4.8-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 19.9zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1l-.5-.3z"/></svg></span><span class="tx"><b>WhatsApp</b></span></a><a class="canal" title="geral@goalart.pt" href="mailto:geral@goalart.pt"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.8 7l8.2 6 8.2-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span class="tx"><b>Email</b></span></a><a class="canal" href="https://www.linkedin.com/in/avilagoulart/" target="_blank" rel="noopener" aria-label="LinkedIn (abre noutra janela)"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6v5.4h-4v-4.8c0-1.2 0-2.6-1.6-2.6s-1.9 1.3-1.9 2.5v4.9h-4z"/></svg></span><span class="tx"><b>LinkedIn</b></span></a><a class="canal" href="https://www.instagram.com/hugo.avilagoulart" target="_blank" rel="noopener" aria-label="Instagram (abre noutra janela)"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></span><span class="tx"><b>Instagram</b></span></a></div>
+</div>
+</div>
 </div>
 <footer class="rodape">
 <div class="wrap">
