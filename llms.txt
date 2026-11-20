@@ -1,6 +1,6 @@
 # GOALart
 
-> Gestão e liderança a partir dos Açores. Direção a tempo parcial, coaching executivo, desenvolvimento de lideranças, formação e palestras, para empresas, IPSS e Misericórdias, e entidades públicas. Uma marca do Grupo Ávila Goulart (Ávila Goulart, Unipessoal Lda), com sede nas Lajes do Pico, ilha do Pico, Açores.
+> Gestão e liderança a partir dos Açores. Coaching executivo, desenvolvimento de lideranças, direção a tempo parcial, formação e palestras, para empresas, IPSS e Misericórdias, e entidades públicas. Uma marca do Grupo Ávila Goulart (Ávila Goulart, Unipessoal Lda), com sede nas Lajes do Pico, ilha do Pico, Açores.
 
 Slogan: A arte de transformar objetivos em resultados.
 
@@ -8,8 +8,8 @@ Slogan: A arte de transformar objetivos em resultados.
 Hugo Ávila Goulart, consultor de gestão, coach executivo certificado e formador, natural das Lajes do Pico. Mais de 15 anos em funções de direção nos Açores, incluindo 12 anos como Secretário-Geral e Diretor Financeiro da Santa Casa da Misericórdia das Lajes do Pico e 3 anos como Diretor de Pessoas e Operações na AZx. Empresário desde 2015. Mais de 500 horas de coaching executivo, individual e de equipa. Combina coaching executivo e consultoria: assume o papel de consultor quando falta saber como fazer, e o de coach executivo quando o cliente já sabe o que fazer, mas a execução não acontece.
 
 ## Serviços
-- [Direção a tempo parcial](https://goalart.pt/direcao-tempo-parcial.html): direção profissional para empresas e IPSS que ainda não têm dimensão para um diretor-geral a tempo inteiro. Direção financeira, organização e processos, pessoas e chefias, transformação digital.
 - [Coaching executivo](https://goalart.pt/coaching-executivo.html): coaching executivo, de equipa e de negócio, e programas de liderança, para empresários, direções de IPSS e Misericórdias, chefias e entidades públicas.
+- [Direção a tempo parcial](https://goalart.pt/direcao-tempo-parcial.html): direção profissional para empresas e IPSS que ainda não têm dimensão para um diretor-geral a tempo inteiro. Direção financeira, organização e processos, pessoas e chefias, transformação digital.
 - [Formação, palestras e projetos](https://goalart.pt/formacao-palestras.html): liderança e gestão de equipas, comunicação, gestão de tempo e produtividade, pessoas e cultura.
 
 ## Como trabalha
