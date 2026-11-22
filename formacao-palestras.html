@@ -373,6 +373,13 @@ html{scroll-behavior:auto}
 @media (min-width:901px){.sub-graf figcaption{margin-bottom:14px}}
 @media (max-width:900px){.sub-graf .alvo{max-width:320px}}
 .manif .linha h3{font-size:clamp(22px,1.9vw,27px);line-height:1.2}
+
+/* afinação 22/11: três passos, submenu com porta discreta, núcleo */
+.passos.p3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:980px){.passos.p3{grid-template-columns:1fr}}
+.subm .subm-t{margin:8px 14px 0;padding-top:10px;border-top:1px solid var(--linha);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--pet-s)}
+.subm a.subm-2{padding:8px 14px}
+.subm a.subm-2 b{font-size:16px;font-weight:500}
 </style>
 <script>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('escreve-titulo');</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Service", "@id": "https://goalart.pt/formacao-palestras.html#servico", "name": "Formação, palestras e projetos", "serviceType": "Formação e palestras", "description": "Formação para chefias e equipas, palestras para eventos e projetos de consultoria em liderança e gestão de equipas, comunicação, gestão de tempo e produtividade, e pessoas e cultura.", "url": "https://goalart.pt/formacao-palestras.html", "provider": {"@type": "ProfessionalService", "@id": "https://goalart.pt/#goalart", "name": "GOALart", "url": "https://goalart.pt/"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Açores"}, {"@type": "Country", "name": "Portugal"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GOALart", "item": "https://goalart.pt/"}, {"@type": "ListItem", "position": 2, "name": "Formação, palestras e projetos", "item": "https://goalart.pt/formacao-palestras.html"}]}]}</script>
@@ -387,14 +394,15 @@ html{scroll-behavior:auto}
 <a class="nl" href="index.html#situacoes">O que resolvo</a>
 <details class="sub"><summary class="nl ativo">O que faço</summary>
 <div class="subm">
-<a href="coaching-executivo.html"><b>Coaching executivo</b><span>Quando há estrutura, mas falta liderança</span></a>
-<a href="direcao-tempo-parcial.html"><b>Direção a tempo parcial</b><span>Quando falta quem dirija</span></a>
-<a href="formacao-palestras.html" aria-current="page"><b>Formação, palestras e projetos</b><span>Para equipas, eventos e parcerias</span></a>
+<a href="coaching-executivo.html"><b>Coaching executivo</b><span>Com quem lidera, com a equipa e com a organização</span></a>
+<p class="subm-t">Outras formas de trabalharmos</p>
+<a class="subm-2" href="direcao-tempo-parcial.html"><b>Direção a tempo parcial</b></a>
+<a class="subm-2" href="formacao-palestras.html" aria-current="page"><b>Formação, palestras e projetos</b></a>
 </div>
 </details>
 <a class="nl" href="index.html#como">Como trabalho</a>
 <a class="nl" href="index.html#hugo">Quem sou</a>
-<a class="btn btn-c btn-s" href="#contacto">Reunião de diagnóstico</a>
+<a class="btn btn-c btn-s" href="#contacto">Reunião inicial</a>
 </nav>
 <details class="menu">
 <summary><span class="barras" aria-hidden="true"></span>Menu</summary>
@@ -402,12 +410,13 @@ html{scroll-behavior:auto}
 <a href="index.html#situacoes">O que resolvo</a>
 <p class="m-grupo">O que faço</p>
 <a class="m-sub" href="coaching-executivo.html">Coaching executivo</a>
+<p class="m-grupo">Outras formas de trabalharmos</p>
 <a class="m-sub" href="direcao-tempo-parcial.html">Direção a tempo parcial</a>
 <a class="m-sub" href="formacao-palestras.html" aria-current="page">Formação, palestras e projetos</a>
 <a href="index.html#como">Como trabalho</a>
 <a href="index.html#para-quem">Para quem é</a>
 <a href="index.html#hugo">Quem sou</a>
-<a class="btn btn-c btn-s" href="#contacto">Reunião de diagnóstico</a>
+<a class="btn btn-c btn-s" href="#contacto">Reunião inicial</a>
 </nav>
 </details>
 </div>
@@ -454,9 +463,9 @@ html{scroll-behavior:auto}
 <div class="tres3">
 <div class="rv"><h3>Formação</h3><p>Programas para chefias e equipas, desenhados para o contexto de cada organização, presenciais ou à distância. Diretamente ou em parceria com entidades formadoras certificadas. Com avaliações dos formandos no topo da escala.</p></div>
 <div class="rv"><h3>Palestras</h3><p>Para congressos, encontros e eventos internos. Os mesmos temas, com a experiência de quem dirigiu organizações nos Açores.</p></div>
-<div class="rv"><h3>Projetos e parcerias</h3><p>Projetos de consultoria especializados, como diagnóstico organizacional, modernização de serviços ou implementação de inteligência artificial. Sozinho ou em parceria com outros consultores e entidades.</p></div>
+<div class="rv"><h3>Projetos e parcerias</h3><p>Projetos de consultoria especializados, como diagnóstico organizacional ou modernização de serviços. Sozinho ou em parceria com outros consultores e entidades.</p></div>
 </div>
-<p class="nota rv">Quando uma formação ou uma palestra mostra que a transformação tem de ir mais longe, o trabalho continua na organização, com <a href="coaching-executivo.html">coaching executivo</a> ou <a href="direcao-tempo-parcial.html">direção a tempo parcial</a>.</p>
+<p class="nota rv">Quando uma formação ou uma palestra mostra que a transformação tem de ir mais longe, o trabalho continua na organização, com <a href="coaching-executivo.html">coaching executivo</a>.</p>
 </section>
 </main>
 

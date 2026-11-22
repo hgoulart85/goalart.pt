@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>GOALart — Gestão, liderança e coaching executivo nos Açores</title>
-<meta name="description" content="Coaching executivo, consultoria de gestão e direção a tempo parcial para empresas, IPSS e entidades públicas. Hugo Ávila Goulart, Pico. Diagnóstico gratuito de 45 minutos.">
+<title>GOALart — Coaching executivo para quem lidera, nos Açores</title>
+<meta name="description" content="Coaching executivo feito por quem já esteve no seu lugar, para empresários, IPSS e organizações nos Açores. Hugo Ávila Goulart, ilha do Pico. Reunião inicial gratuita de 60 minutos.">
 <link rel="canonical" href="https://goalart.pt/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_PT">
 <meta property="og:site_name" content="GOALart">
 <meta property="og:title" content="GOALart — A arte de transformar objetivos em resultados">
-<meta property="og:description" content="Gestão e liderança para empresas, IPSS e entidades públicas. Comece por um diagnóstico gratuito de 45 minutos.">
+<meta property="og:description" content="Coaching executivo feito por quem já esteve no seu lugar. Comece por uma reunião inicial gratuita de 60 minutos.">
 <meta property="og:url" content="https://goalart.pt/">
 <meta property="og:image" content="https://goalart.pt/img/partilha.jpg">
 <meta property="og:image:width" content="1200">
@@ -484,9 +484,27 @@ h1 > [data-escrever] .cursor{background:var(--cv)!important}
 .tit-fit{font-weight:400;letter-spacing:-.015em}
 .tit-fit strong{font-weight:600}
 .tit-fit .enf-cobre{color:#B87333}
+
+/* afinação 22/11: três passos, submenu com porta discreta, núcleo */
+.passos.p3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:980px){.passos.p3{grid-template-columns:1fr}}
+.subm .subm-t{margin:8px 14px 0;padding-top:10px;border-top:1px solid var(--linha);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--pet-s)}
+.subm a.subm-2{padding:8px 14px}
+.subm a.subm-2 b{font-size:16px;font-weight:500}
+.nucleo{border-top:1px solid var(--linha);padding:64px 0 72px}
+.nucleo h2{margin-top:12px;font-size:clamp(26px,2.6vw,34px);line-height:1.2;letter-spacing:-.01em;font-weight:600;color:var(--pet);max-width:24ch}
+.nucleo .nucleo-lead{margin-top:16px;font-size:19px;line-height:1.55;max-width:40em}
+.nucleo .tres3{margin-top:36px}
+.nucleo .tres3 h3{font-size:21px;font-weight:600;color:var(--pet);margin-bottom:8px}
+.nucleo .tres3 p{font-size:17px;line-height:1.55}
+.nucleo .en{color:var(--pet-s)}
+.nucleo-lk{display:inline-block;margin-top:28px;font-weight:600;font-size:17px;text-underline-offset:5px;text-decoration-thickness:1px}
+.nucleo-lk::after{content:"\2192";display:inline-block;margin-left:.4em;transition:transform .3s ease}
+.nucleo-lk:hover::after{transform:translateX(5px)}
+.outros-faixa a{font-weight:600}
 </style>
 <script>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('escreve-titulo');</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://goalart.pt/#goalart", "name": "GOALart", "slogan": "A arte de transformar objetivos em resultados", "url": "https://goalart.pt/", "image": "https://goalart.pt/img/partilha.jpg", "logo": "https://goalart.pt/img/goalart_horizontal_positivo.svg", "description": "Gestão e liderança a partir dos Açores: coaching executivo, desenvolvimento de lideranças, direção a tempo parcial, formação e palestras, para empresas, IPSS e entidades públicas.", "email": "geral@goalart.pt", "telephone": "+351919534748", "address": {"@type": "PostalAddress", "streetAddress": "Rua Dr. Machado Serpa, 9", "postalCode": "9930-146", "addressLocality": "Lajes do Pico", "addressRegion": "Açores", "addressCountry": "PT"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Açores"}, {"@type": "Country", "name": "Portugal"}], "founder": {"@id": "https://goalart.pt/#hugo"}, "parentOrganization": {"@type": "Organization", "name": "Ávila Goulart, Unipessoal Lda", "url": "https://avilagoulart.pt/"}, "knowsAbout": ["Gestão de PME", "Direção financeira", "Desenvolvimento de lideranças", "Organização e processos", "Coaching executivo", "Coaching de equipa", "Gestão de IPSS", "Gestão autárquica", "Inteligência artificial na gestão"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Serviços", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Direção a tempo parcial", "url": "https://goalart.pt/direcao-tempo-parcial.html"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Coaching executivo", "url": "https://goalart.pt/coaching-executivo.html"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Formação, palestras e projetos", "url": "https://goalart.pt/formacao-palestras.html"}}]}}, {"@type": "Person", "@id": "https://goalart.pt/#hugo", "name": "Hugo Ávila Goulart", "jobTitle": "Consultor de gestão e coach executivo", "worksFor": {"@id": "https://goalart.pt/#goalart"}, "homeLocation": {"@type": "Place", "name": "Lajes do Pico, Açores"}, "description": "Consultor de gestão, coach executivo certificado e formador. Mais de 15 anos em funções de direção nos Açores, incluindo 12 anos como Secretário-Geral e Diretor Financeiro da Santa Casa da Misericórdia das Lajes do Pico e 3 anos como Diretor de Pessoas e Operações na AZx. Combina coaching executivo e consultoria.", "sameAs": ["https://www.linkedin.com/in/avilagoulart/", "https://www.instagram.com/hugo.avilagoulart"]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://goalart.pt/#goalart", "name": "GOALart", "slogan": "A arte de transformar objetivos em resultados", "url": "https://goalart.pt/", "image": "https://goalart.pt/img/partilha.jpg", "logo": "https://goalart.pt/img/goalart_horizontal_positivo.svg", "description": "Coaching executivo feito por quem já esteve no seu lugar: transforma organizações a partir de quem as lidera e entra nos processos e nos números quando é preciso saber como fazer. A partir dos Açores, para empresários, IPSS e organizações.", "email": "geral@goalart.pt", "telephone": "+351919534748", "address": {"@type": "PostalAddress", "streetAddress": "Rua Dr. Machado Serpa, 9", "postalCode": "9930-146", "addressLocality": "Lajes do Pico", "addressRegion": "Açores", "addressCountry": "PT"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Açores"}, {"@type": "Country", "name": "Portugal"}], "founder": {"@id": "https://goalart.pt/#hugo"}, "parentOrganization": {"@type": "Organization", "name": "Ávila Goulart, Unipessoal Lda", "url": "https://avilagoulart.pt/"}, "knowsAbout": ["Gestão de PME", "Direção financeira", "Desenvolvimento de lideranças", "Organização e processos", "Coaching executivo", "Coaching de equipa", "Gestão de IPSS", "Gestão autárquica", "Inteligência artificial na gestão"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Serviços", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Coaching executivo", "url": "https://goalart.pt/coaching-executivo.html"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Direção a tempo parcial", "url": "https://goalart.pt/direcao-tempo-parcial.html"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Formação, palestras e projetos", "url": "https://goalart.pt/formacao-palestras.html"}}]}}, {"@type": "Person", "@id": "https://goalart.pt/#hugo", "name": "Hugo Ávila Goulart", "jobTitle": "Coach executivo e consultor de gestão", "worksFor": {"@id": "https://goalart.pt/#goalart"}, "homeLocation": {"@type": "Place", "name": "Lajes do Pico, Açores"}, "description": "Consultor de gestão, coach executivo certificado e formador. Mais de 15 anos em funções de direção nos Açores, incluindo 12 anos como Secretário-Geral e Diretor Financeiro da Santa Casa da Misericórdia das Lajes do Pico e 3 anos como Diretor de Pessoas e Operações na AZx. Combina coaching executivo e consultoria.", "sameAs": ["https://www.linkedin.com/in/avilagoulart/", "https://www.instagram.com/hugo.avilagoulart"]}]}</script>
 </head>
 <body>
 <a class="saltar" href="#conteudo">Saltar para o conteúdo</a>
@@ -498,14 +516,15 @@ h1 > [data-escrever] .cursor{background:var(--cv)!important}
 <a class="nl" href="#situacoes">O que resolvo</a>
 <details class="sub"><summary class="nl">O que faço</summary>
 <div class="subm">
-<a href="coaching-executivo.html"><b>Coaching executivo</b><span>Quando há estrutura, mas falta liderança</span></a>
-<a href="direcao-tempo-parcial.html"><b>Direção a tempo parcial</b><span>Quando falta quem dirija</span></a>
-<a href="formacao-palestras.html"><b>Formação, palestras e projetos</b><span>Para equipas, eventos e parcerias</span></a>
+<a href="coaching-executivo.html"><b>Coaching executivo</b><span>Com quem lidera, com a equipa e com a organização</span></a>
+<p class="subm-t">Outras formas de trabalharmos</p>
+<a class="subm-2" href="direcao-tempo-parcial.html"><b>Direção a tempo parcial</b></a>
+<a class="subm-2" href="formacao-palestras.html"><b>Formação, palestras e projetos</b></a>
 </div>
 </details>
 <a class="nl" href="#como">Como trabalho</a>
 <a class="nl" href="#hugo">Quem sou</a>
-<a class="btn btn-c btn-s" href="#contacto">Reunião de diagnóstico</a>
+<a class="btn btn-c btn-s" href="#contacto">Reunião inicial</a>
 </nav>
 <details class="menu">
 <summary><span class="barras" aria-hidden="true"></span>Menu</summary>
@@ -513,12 +532,13 @@ h1 > [data-escrever] .cursor{background:var(--cv)!important}
 <a href="#situacoes">O que resolvo</a>
 <p class="m-grupo">O que faço</p>
 <a class="m-sub" href="coaching-executivo.html">Coaching executivo</a>
+<p class="m-grupo">Outras formas de trabalharmos</p>
 <a class="m-sub" href="direcao-tempo-parcial.html">Direção a tempo parcial</a>
 <a class="m-sub" href="formacao-palestras.html">Formação, palestras e projetos</a>
 <a href="#como">Como trabalho</a>
 <a href="#para-quem">Para quem é</a>
 <a href="#hugo">Quem sou</a>
-<a class="btn btn-c btn-s" href="#contacto">Reunião de diagnóstico</a>
+<a class="btn btn-c btn-s" href="#contacto">Reunião inicial</a>
 </nav>
 </details>
 </div>
@@ -530,12 +550,12 @@ h1 > [data-escrever] .cursor{background:var(--cv)!important}
 Mas o quê? E como?</span></h1>
 <div>
 <p class="pet hero-res hl d2">Ajudo a encontrar<br>as respostas e a<br><span style="white-space:nowrap">pô-las</span> em prática.</p>
-<p class="lead hl d3">Talvez já tenha tentado várias coisas. Melhorou pouco, ou durou pouco? É&nbsp;comum procurarmos resolver os sintomas antes de compreender a verdadeira origem do problema. <span class="lead-res">É aí que entro: pessoas, processos e números alinhados.</span></p>
+<p class="lead hl d3">Talvez já tenha tentado várias coisas. Melhorou pouco, ou durou pouco? É&nbsp;comum procurarmos resolver os sintomas antes de compreender a verdadeira origem do problema. <span class="lead-res">É aí que entro: pôr pessoas, processos e números a puxar para o mesmo lado.</span></p>
 <div class="acoes hl d4">
-<a class="btn btn-c" href="#contacto">Marcar uma reunião de diagnóstico</a>
+<a class="btn btn-c" href="#contacto">Marcar reunião inicial</a>
 <a class="lk" href="#situacoes">Ver o que resolvo</a>
 </div>
-<p class="apoio hl d4">45 minutos, gratuita e sem compromisso.</p>
+<p class="apoio hl d4">Uma hora, gratuita e sem compromisso.</p>
 </div>
 <div>
 <figure class="mapa"><svg class="alvo" viewBox="0 0 520 520" role="img" aria-label="Mapa dos Açores, com a ilha do Pico em destaque no centro da mira da GOALart" focusable="false">
@@ -564,18 +584,17 @@ Mas o quê? E como?</span></h1>
 <details class="linha rv"><summary><h3>«Quero crescer, mas a estrutura não está preparada.»</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Mais trabalho, mais pessoas, mais erros? O que funcionava com poucas pessoas já não funciona com muitas? Ou quer dar o próximo passo e prefere preparar a casa antes a corrigir depois?</p></div></details>
 <details class="linha rv"><summary><h3>«Decido tudo sozinho.»</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Não tem com quem conversar para tomar melhores decisões? Falta-lhe uma segunda opinião externa, independente e experiente?</p></div></details>
 </div>
-<div class="sit-fim rv"><p>Para situações diferentes, respostas diferentes.<br>É para isso que serve o diagnóstico.</p><a class="btn btn-ch" href="#contacto">Marcar uma reunião de diagnóstico</a></div>
+<div class="sit-fim rv"><p>Para situações diferentes, respostas diferentes.<br>É para isso que serve o diagnóstico.</p><a class="btn btn-ch" href="#contacto">Marcar reunião inicial</a></div>
 </div>
 </section>
 
 <section id="como" class="wrap metodo">
 <h2 class="t-l pet rv"><span class="obs">O que contrata não é o meu tempo.</span> É a minha experiência, o meu conhecimento e os objetivos cumpridos.</h2>
 <div class="trilho" aria-hidden="true"><div></div></div>
-<ol class="passos">
-<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><circle pathLength="1" cx="10" cy="10" r="6.5"/><path pathLength="1" d="M15 15l5.5 5.5"/><circle class="pt" cx="10" cy="10" r="1.7"/></svg></span><span class="n">01</span><h3>Diagnóstico</h3><p>Analiso a organização por inteiro: pessoas e liderança, processos, números, e onde a tecnologia e a inteligência artificial podem poupar tempo ou melhorar os resultados. Converso com a liderança e com quem está no terreno.</p></li>
-<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M6 3h9l4 4v14H6z"/><path pathLength="1" d="M15 3v4h4"/><path pathLength="1" d="M9 13h7"/><path pathLength="1" d="M9 16.5h5"/><path class="ac" pathLength="1" d="M9 8.6l1.5 1.5 2.8-2.8"/></svg></span><span class="n">02</span><h3>Acordo por escrito</h3><p>Definimos o que tem de mudar, o que vai ser entregue, os prazos e o preço. Sabe à partida o que me compete fazer e como vai ser verificado.</p></li>
-<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M4 20h16"/><path pathLength="1" d="M6 20v-5h3v5"/><path pathLength="1" d="M10.5 20v-8.5h3V20"/><path pathLength="1" d="M15 20V8h3v12"/><circle class="pt" cx="16.5" cy="4.6" r="1.7"/></svg></span><span class="n">03</span><h3>Implementação</h3><p>Trabalho ao lado da liderança e com a equipa até a transformação funcionar no dia a dia. Pode ser coaching executivo, um programa para as chefias, direção a tempo parcial ou tudo junto: depende do que a sua organização realmente precisa.</p></li>
-<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M12 20.5V10.5"/><path pathLength="1" d="M12 14c-4.2 0-6.5-2.3-6.5-6.5 4.2 0 6.5 2.3 6.5 6.5z"/><path pathLength="1" d="M12 11c0-4.2 2.3-6.5 6.5-6.5 0 4.2-2.3 6.5-6.5 6.5z"/><path pathLength="1" d="M6.5 20.5h11"/><circle class="pt" cx="12" cy="20.5" r="1.7"/></svg></span><span class="n">04</span><h3>Continuidade</h3><p>Cada etapa termina com a organização capaz de manter o que se construiu. Depois decidimos, em conjunto, qual é o passo seguinte.</p></li>
+<ol class="passos p3">
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M4 5h16v11H9l-5 4z"/><path pathLength="1" d="M8 9.5h8"/><circle class="pt" cx="9" cy="12.6" r="1.4"/></svg></span><span class="n">01</span><h3>Reunião inicial</h3><p>Uma hora, gratuita e sem compromisso. Conta-me onde está, o que o preocupa e o que quer alcançar; eu faço sobretudo perguntas. No fim, percebemos os dois se faz sentido continuarmos.</p></li>
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><circle pathLength="1" cx="10" cy="10" r="6.5"/><path pathLength="1" d="M15 15l5.5 5.5"/><circle class="pt" cx="10" cy="10" r="1.7"/></svg></span><span class="n">02</span><h3>Diagnóstico</h3><p>Quando faz sentido, olho para a organização por dentro: pessoas e liderança, processos, números e tecnologia. Ouço a liderança e quem está no terreno. O que a equipa me diz fica confidencial; à liderança chegam padrões, não nomes. O resultado é um plano de ação que fica consigo, quer continuemos juntos ou não.</p></li>
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M4 20h16"/><path pathLength="1" d="M6 20v-5h3v5"/><path pathLength="1" d="M10.5 20v-8.5h3V20"/><path pathLength="1" d="M15 20V8h3v12"/><circle class="pt" cx="16.5" cy="4.6" r="1.7"/></svg></span><span class="n">03</span><h3>Pôr o plano em prática</h3><p>Trabalho feito à medida, a partir do plano de ação, ao lado da liderança e com a equipa, até a transformação funcionar no dia a dia. Objetivos e entregas ficam por escrito. Preço fechado e combinado antes de começarmos.</p></li>
 </ol>
 <div class="papeis rv">
 <h3>Coach executivo ou consultor? Depende do que está a travar.</h3>
@@ -583,16 +602,22 @@ Mas o quê? E como?</span></h1>
 <div><em>Papel de consultor</em><p class="q">Falta saber como fazer?</p><p>Partilho o que aprendi: ferramentas, experiência, caminhos que já vi funcionar.</p></div>
 <div><em>Papel de coach executivo</em><p class="q">Já sabe o que tem de fazer, mas não está a acontecer?</p><p>Ajudo-o a perceber o que trava a execução e a pôr as coisas a andar.</p></div>
 </div>
-<p class="papeis-fim">Muitas vezes mudo de papel na mesma conversa, e digo-lhe sempre quando o faço.</p>
+<p class="papeis-fim">Muitas vezes mudo de papel na mesma conversa, e digo-lhe sempre quando o faço. Em qualquer dos papéis, a regra é a mesma: explicar sem humilhar, expor sem impor, corrigir sem ferir.</p>
 </div>
-<p class="ia rv"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="none" stroke="#005B67" stroke-width="2"/><circle cx="14" cy="14" r="4" fill="#D9762B"/></svg><span>Uso <b class="ia-destaque">inteligência artificial</b> em todo o trabalho, na análise, nos relatórios e na automatização do que é repetitivo. É isso que me permite fazer muito mais em menos tempo, com qualidade, a um preço que uma organização da sua dimensão consegue pagar.<span class="ia-2"><b class="ia-oferta">Posso ajudá-lo a fazer o mesmo:</b> perceber onde a inteligência artificial poupa tempo e melhora os resultados, e pô-la a funcionar no dia a dia da equipa.</span></span></p>
+<p class="ia rv"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="none" stroke="#005B67" stroke-width="2"/><circle cx="14" cy="14" r="4" fill="#D9762B"/></svg><span>Uso <b class="ia-destaque">inteligência artificial</b> em todo o trabalho, na análise, nos relatórios e na automatização do que é repetitivo. É isso que me permite fazer muito mais em menos tempo, e com qualidade.<span class="ia-2"><b class="ia-oferta">Posso ajudá-lo a fazer o mesmo:</b> perceber onde a inteligência artificial poupa tempo e melhora os resultados, e pô-la a funcionar no dia a dia da equipa.</span></span></p>
 </section>
 
-<section class="portas" aria-label="Duas situações, o mesmo trabalho">
+<section class="nucleo" aria-label="Coaching executivo">
 <div class="wrap">
-<p class="etq portas-etq">Depois do diagnóstico, o caminho pode ser um destes dois.</p>
-<div><h2>Quando há estrutura, mas falta liderança</h2><p>As coisas acontecem, mas só porque as chefias as fazem sozinhas? A equipa espera por instruções em vez de assumir o trabalho? Preparo as suas chefias para liderar, com programas de desenvolvimento de lideranças e coaching executivo: equipas com mais autonomia e responsabilidade, e melhores resultados.</p><a href="coaching-executivo.html">Ver o coaching executivo</a></div>
-<div><h2>Quando falta quem dirija</h2><p>Não há ninguém entre quem lidera e a equipa? A organização ainda não tem dimensão para um diretor-geral a tempo inteiro, ou não justifica esse investimento? Assumo a direção a tempo parcial: o rigor de uma gestão profissional, a um preço proporcional à sua dimensão.</p><a href="direcao-tempo-parcial.html">Ver a direção a tempo parcial</a></div>
+<p class="etq rv">O meu trabalho</p>
+<h2 class="rv">Coaching executivo feito por quem já esteve no seu lugar.</h2>
+<p class="nucleo-lead rv">Transformo organizações a partir de quem as lidera, e entro nos processos e nos números quando é preciso saber como fazer. É o mesmo trabalho, em três formas.</p>
+<div class="tres3">
+<div class="rv"><h3>Com o empresário, sobre o negócio</h3><p>Para quem lidera e decide quase sempre sozinho: estratégia, pessoas, processos, números e crescimento. É o coaching de negócio <span class="en">(business coaching)</span>.</p></div>
+<div class="rv"><h3>Com a equipa de liderança</h3><p>Para alinhar prioridades, responsabilidades e a forma de decidir e de comunicar em conjunto. É o coaching de equipa <span class="en">(team coaching)</span>.</p></div>
+<div class="rv"><h3>Programas para organizações</h3><p>Juntam coaching executivo, coaching de equipa e formação, para desenvolver a liderança de uma organização inteira. Nas organizações públicas, em parceria.</p></div>
+</div>
+<a class="nucleo-lk rv" href="coaching-executivo.html">Ver o coaching executivo</a>
 </div>
 </section>
 
@@ -629,7 +654,7 @@ Mas o quê? E como?</span></h1>
 <li>Alguém que domine a <strong>teoria</strong>, mas não conheça o <strong>terreno</strong>.</li>
 </ul>
 <div class="resposta">
-<p class="ling-txt">Domino duas linguagens que raramente andam juntas:</p>
+<p class="ling-txt">Falo duas linguagens que raramente andam juntas:</p>
 <p class="ling-grande">números e pessoas.</p>
 </div>
 <div class="ling-dados q4">
@@ -638,7 +663,7 @@ Mas o quê? E como?</span></h1>
 <div><em>Liderança</em><b><small>mais de</small><span class="num" style="width:3ch">500</span></b><span>horas de coaching executivo, individual e de equipa</span></div>
 <div><em>Terreno</em><b><small>mais de</small><span class="num" style="width:2ch">15</span></b><span>anos em funções de direção nos Açores</span></div>
 </div>
-<p class="ling-fim">Antes de aconselhar quem dirige, dirigi. Não lhe peço que acredite em palavras: na reunião de diagnóstico, pergunte-me o que já fiz.</p>
+<p class="ling-fim">Antes de aconselhar quem dirige, dirigi. Não lhe peço que acredite em palavras: na reunião inicial, pergunte-me o que já fiz.</p>
 </div>
 </section>
 
@@ -648,6 +673,7 @@ Mas o quê? E como?</span></h1>
 <div class="txt">
 <p class="etq">Quem sou?</p>
 <h2 class="t-l pet" style="margin-top:14px">Já estive no seu lugar.</h2>
+<p class="corpo">Cresci numa família de ferreiros. Aprendi cedo que o ferro só se trabalha quente: frio, não dobra, e quem o força arrisca-se a parti-lo. Com as pessoas e as organizações acontece o mesmo. A transformação precisa de calor, de paciência e de tempo.</p>
 <p class="corpo">Sou o Hugo Ávila Goulart, natural das Lajes do Pico. Sou empresário desde 2015, consultor de gestão, coach executivo certificado e formador. Durante doze anos fui Secretário-Geral e Diretor Financeiro da Santa Casa da Misericórdia das Lajes do Pico, fui vereador na Câmara Municipal das Lajes do Pico e fui Diretor de Pessoas e Operações na AZx. Em todos os projetos em que participei, preparei sempre a saída para que tudo continuasse a funcionar sem mim.</p>
 <p class="corpo">Hoje acompanho líderes, executivos, chefias e quadros superiores nos setores privado, público e social. Nas sessões, costumo propor que nos tratemos por tu: trabalhamos melhor quando falamos ao mesmo nível.</p>
 <details class="percurso">
@@ -671,8 +697,8 @@ Mas o quê? E como?</span></h1>
 <p class="onde2 rv"><b>Com quem já trabalhei:</b> empresas de construção, distribuição alimentar e comércio grossista, logística, turismo, eventos e espetáculos, intermediação de crédito, consultoria e intermediação imobiliária, arquitetura, marketing e design. Misericórdias, autarquias e outras entidades públicas. Empresários, líderes e chefias a quem dei formação, em várias ilhas e no continente.</p>
 </div>
 </section>
-<section class="outros-faixa">
-<div class="wrap"><p class="rv">Também trabalho em formação, palestras e projetos de consultoria, em liderança, comunicação, gestão de tempo e produtividade, e pessoas e cultura.<br><a class="lk" href="formacao-palestras.html">Ver formação, palestras e projetos</a></p></div>
+<section class="outros-faixa" aria-label="Outras formas de trabalharmos">
+<div class="wrap"><p class="rv"><b>Outras formas de trabalharmos.</b> Quando falta quem dirija, posso assumir a <a href="direcao-tempo-parcial.html">direção a tempo parcial</a>. Também trabalho em <a href="formacao-palestras.html">formação, palestras e projetos</a>, em liderança, comunicação, gestão de tempo e produtividade, e pessoas e cultura.</p></div>
 </section>
 </main>
 
@@ -681,9 +707,9 @@ Mas o quê? E como?</span></h1>
 <div class="ct-grid">
 <h2 class="t-l rv">Por onde começa a transformação na sua organização?</h2>
 <div class="ct-dir">
-<p class="lead">Uma reunião de 45 minutos, gratuita e sem compromisso, sempre comigo. Olhamos para a sua situação e percebemos, em conjunto, se faz sentido trabalharmos&nbsp;juntos.<br>Se não fizer, digo-lho com franqueza.<br>Todas as mensagens têm resposta em 48 horas.</p>
+<p class="lead">Uma reunião inicial de uma hora, gratuita e sem compromisso, sempre comigo. Olhamos para a sua situação e percebemos, em conjunto, se faz sentido trabalharmos&nbsp;juntos.<br>Se não fizer, digo-lho com franqueza.<br>Todas as mensagens têm resposta em 48 horas.</p>
 <div class="acoes">
-<a class="btn btn-ch" href="https://calendar.app.google/sAL11MT9BZyRDrzg7" target="_blank" rel="noopener" data-marcacao>Marcar uma reunião de diagnóstico</a>
+<a class="btn btn-ch" href="https://calendar.app.google/sAL11MT9BZyRDrzg7" target="_blank" rel="noopener" data-marcacao>Marcar reunião inicial</a>
 </div>
 <div class="canais-grid"><a class="canal" href="https://wa.me/351919534748?text=Ol%C3%A1%20Hugo%2C%20tenho%20interesse%20nos%20seus%20servi%C3%A7os%20e%20gostava%20de%20conversar.%20Quando%20podemos%20falar%3F" target="_blank" rel="noopener" aria-label="WhatsApp (abre noutra janela)"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.7 16.9L2.4 21.6l4.8-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 19.9zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1l-.5-.3z"/></svg></span><span class="tx"><b>WhatsApp</b></span></a><a class="canal" title="geral@goalart.pt" href="mailto:geral@goalart.pt"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.8 7l8.2 6 8.2-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span class="tx"><b>Email</b></span></a><a class="canal" href="https://www.linkedin.com/in/avilagoulart/" target="_blank" rel="noopener" aria-label="LinkedIn (abre noutra janela)"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6v5.4h-4v-4.8c0-1.2 0-2.6-1.6-2.6s-1.9 1.3-1.9 2.5v4.9h-4z"/></svg></span><span class="tx"><b>LinkedIn</b></span></a><a class="canal" href="https://www.instagram.com/hugo.avilagoulart" target="_blank" rel="noopener" aria-label="Instagram (abre noutra janela)"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></span><span class="tx"><b>Instagram</b></span></a></div>
 </div>
