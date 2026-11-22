@@ -494,9 +494,18 @@ h1 > [data-escrever] .cursor{background:var(--cv)!important}
 .nucleo{border-top:1px solid var(--linha);padding:64px 0 72px}
 .nucleo h2{margin-top:12px;font-size:clamp(26px,2.6vw,34px);line-height:1.2;letter-spacing:-.01em;font-weight:600;color:var(--pet);max-width:24ch}
 .nucleo .nucleo-lead{margin-top:16px;font-size:19px;line-height:1.55;max-width:40em}
-.nucleo .tres3{margin-top:36px}
-.nucleo .tres3 h3{font-size:21px;font-weight:600;color:var(--pet);margin-bottom:8px}
-.nucleo .tres3 p{font-size:17px;line-height:1.55}
+.nucleo-grid{margin-top:40px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:start}
+@media (max-width:860px){.nucleo-grid{grid-template-columns:1fr;gap:36px}}
+.nucleo .etq-c{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cobre)}
+.nucleo-centro{background:var(--pet);color:#E6F0F2;padding:36px 36px 34px;border-radius:3px}
+.nucleo-centro .etq-c{color:var(--champ)}
+.nucleo-centro h3{margin-top:10px;font-size:clamp(24px,2.3vw,30px);line-height:1.2;font-weight:600;color:#fff}
+.nucleo-centro p:not(.etq-c){margin-top:14px;font-size:18px;line-height:1.55}
+.nucleo-centro .nucleo-lk{color:var(--champ)}
+.nucleo-centro .nucleo-lk:hover{color:#fff}
+.nucleo-aneis>div{margin-top:22px;padding:2px 0 2px 20px;border-left:3px solid var(--agua)}
+.nucleo-aneis h4{margin:0;font-size:20px;font-weight:600;color:var(--pet)}
+.nucleo-aneis p{margin-top:6px;font-size:17px;line-height:1.55}
 .nucleo .en{color:var(--pet-s)}
 .nucleo-lk{display:inline-block;margin-top:28px;font-weight:600;font-size:17px;text-underline-offset:5px;text-decoration-thickness:1px}
 .nucleo-lk::after{content:"\2192";display:inline-block;margin-left:.4em;transition:transform .3s ease}
@@ -611,13 +620,15 @@ Mas o quê? E como?</span></h1>
 <div class="wrap">
 <p class="etq rv">O meu trabalho</p>
 <h2 class="rv">Coaching executivo feito por quem já esteve no seu lugar.</h2>
-<p class="nucleo-lead rv">Transformo organizações a partir de quem as lidera, e entro nos processos e nos números quando é preciso saber como fazer. É o mesmo trabalho, em três formas.</p>
-<div class="tres3">
-<div class="rv"><h3>Com o empresário, sobre o negócio</h3><p>Para quem lidera e decide quase sempre sozinho: estratégia, pessoas, processos, números e crescimento. É o coaching de negócio <span class="en">(business coaching)</span>.</p></div>
-<div class="rv"><h3>Com a equipa de liderança</h3><p>Para alinhar prioridades, responsabilidades e a forma de decidir e de comunicar em conjunto. É o coaching de equipa <span class="en">(team coaching)</span>.</p></div>
-<div class="rv"><h3>Programas para organizações</h3><p>Juntam coaching executivo, coaching de equipa e formação, para desenvolver a liderança de uma organização inteira. Nas organizações públicas, em parceria.</p></div>
+<p class="nucleo-lead rv">Transformo organizações a partir de quem as lidera, numa empresa, numa IPSS ou numa organização pública, e entro nos processos e nos números quando é preciso saber como fazer.</p>
+<div class="nucleo-grid">
+<div class="nucleo-centro rv"><p class="etq-c">No centro</p><h3>Coaching executivo, um para um</h3><p>Com quem decide: as decisões difíceis, as prioridades, a comunicação, a forma de liderar, e as dúvidas e os receios perante a incerteza. É aqui que tudo começa.</p><a class="nucleo-lk" href="coaching-executivo.html">Ver o coaching executivo</a></div>
+<div class="nucleo-aneis rv"><p class="etq-c">Quando o trabalho o pede, chega mais longe</p>
+<div><h4>Ao negócio</h4><p>Com o empresário, sobre estratégia, pessoas, processos, números e crescimento. <span class="en">Coaching de negócio (business coaching).</span></p></div>
+<div><h4>À equipa</h4><p>Com a equipa de liderança, para alinhar prioridades, responsabilidades e a forma de decidir em conjunto. <span class="en">Coaching de equipa (team coaching).</span></p></div>
+<div><h4>À organização</h4><p>Programas que juntam coaching executivo, coaching de equipa e formação. Nas organizações públicas, em parceria.</p></div>
 </div>
-<a class="nucleo-lk rv" href="coaching-executivo.html">Ver o coaching executivo</a>
+</div>
 </div>
 </section>
 
