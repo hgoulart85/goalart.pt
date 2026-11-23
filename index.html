@@ -531,6 +531,24 @@ h1 > [data-escrever] .cursor{background:var(--cv)!important}
 .decisao-fim{margin:64px 0 0;padding:4px 0 4px 22px;border-left:3px solid var(--cv);max-width:38em}
 .decisao-fim p{margin:0;font-size:clamp(20px,1.8vw,24px);line-height:1.45;font-weight:500;color:var(--pet)}
 .decisao-lk{margin-top:32px}
+/* testemunhos em carrossel (23/11) */
+.depos{margin-top:40px;max-width:52em}
+.depos-pista{display:grid}
+.depos-pista>.depo{grid-area:1/1;margin:0;opacity:0;visibility:hidden;transition:opacity .7s ease,visibility 0s linear .7s}
+.depos-pista>.depo.ativo{opacity:1;visibility:visible;transition:opacity .7s ease,visibility 0s}
+.depos-ctl{margin-top:18px;display:flex;align-items:center;gap:10px}
+.depos-bt{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:1px solid var(--linha);border-radius:50%;background:#fff;color:var(--pet);cursor:pointer;transition:border-color .25s ease,background-color .25s ease}
+.depos-bt:hover{border-color:var(--pet)}
+.depos-bt:focus-visible,.depos-pt:focus-visible{outline:2px solid var(--cv);outline-offset:3px}
+.depos-bt svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.depos-pausa{margin-left:auto}
+.depos-pausa .i-play{display:none}
+.depos.parado .depos-pausa .i-pausa{display:none}
+.depos.parado .depos-pausa .i-play{display:block;fill:currentColor;stroke:none}
+.depos-pts{display:flex;gap:8px;padding:0 4px}
+.depos-pt{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:var(--linha);cursor:pointer;transition:background-color .25s ease,transform .25s ease}
+.depos-pt[aria-current="true"]{background:var(--cv);transform:scale(1.15)}
+@media (prefers-reduced-motion:reduce){.depos-pista>.depo{transition:none}}
 </style>
 <script>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('escreve-titulo');</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://goalart.pt/#goalart", "name": "GOALart", "slogan": "A arte de transformar objetivos em resultados", "url": "https://goalart.pt/", "image": "https://goalart.pt/img/partilha.jpg", "logo": "https://goalart.pt/img/goalart_horizontal_positivo.svg", "description": "Coaching executivo feito por quem conhece bem o terreno: transforma organizações a partir de quem as lidera e, quando é preciso, trabalha também com o cliente os processos e os números. A partir dos Açores, para empresários, IPSS e organizações.", "email": "geral@goalart.pt", "telephone": "+351919534748", "address": {"@type": "PostalAddress", "streetAddress": "Rua Dr. Machado Serpa, 9", "postalCode": "9930-146", "addressLocality": "Lajes do Pico", "addressRegion": "Açores", "addressCountry": "PT"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Açores"}, {"@type": "Country", "name": "Portugal"}], "founder": {"@id": "https://goalart.pt/#hugo"}, "parentOrganization": {"@type": "Organization", "name": "Ávila Goulart, Unipessoal Lda", "url": "https://avilagoulart.pt/"}, "knowsAbout": ["Gestão de PME", "Direção financeira", "Desenvolvimento de lideranças", "Organização e processos", "Coaching executivo", "Coaching de equipa", "Gestão de IPSS", "Gestão autárquica", "Inteligência artificial na gestão"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Serviços", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Coaching executivo", "url": "https://goalart.pt/coaching-executivo.html"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Direção a tempo parcial", "url": "https://goalart.pt/direcao-tempo-parcial.html"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Formação, palestras e projetos", "url": "https://goalart.pt/formacao-palestras.html"}}]}}, {"@type": "Person", "@id": "https://goalart.pt/#hugo", "name": "Hugo Ávila Goulart", "jobTitle": "Coach executivo e consultor de gestão", "worksFor": {"@id": "https://goalart.pt/#goalart"}, "homeLocation": {"@type": "Place", "name": "Lajes do Pico, Açores"}, "description": "Consultor de gestão, coach executivo certificado e formador. Mais de 15 anos em funções de direção nos Açores, incluindo 12 anos como Secretário-Geral e Diretor Financeiro da Santa Casa da Misericórdia das Lajes do Pico e 3 anos como Diretor de Pessoas e Operações na AZx. Combina coaching executivo e consultoria.", "sameAs": ["https://www.linkedin.com/in/avilagoulart/", "https://www.instagram.com/hugo.avilagoulart"]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quanto custa?", "acceptedAnswer": {"@type": "Answer", "text": "Preço fechado e combinado antes de começarmos, definido depois da reunião inicial e do diagnóstico, em função do que é preciso fazer. Não cobro à hora nem à sessão."}}, {"@type": "Question", "name": "Quanto tempo dura?", "acceptedAnswer": {"@type": "Answer", "text": "Depende do que for preciso. A reunião inicial dura uma hora. O diagnóstico e o trabalho seguinte têm âmbito e prazo combinados à partida, por escrito."}}, {"@type": "Question", "name": "É presencial ou à distância?", "acceptedAnswer": {"@type": "Answer", "text": "Por regra, a maior parte do trabalho é feita à distância. As sessões presenciais acontecem quando o contexto o justifica."}}, {"@type": "Question", "name": "É só para empresas?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Trabalho com quem lidera, numa empresa, numa IPSS ou numa organização pública."}}, {"@type": "Question", "name": "O que acontece ao que lhe conto?", "acceptedAnswer": {"@type": "Answer", "text": "Fica entre nós. No coaching executivo, o que me diz nas sessões individuais nunca é partilhado com a organização; à liderança chegam objetivos, progressos e padrões gerais."}}]}]}</script>
@@ -741,8 +759,20 @@ Mas o quê? E como?</span></h1>
 <section class="prova">
 <div class="wrap">
 <h2 class="t-l pet rv">O que dizem do meu trabalho?</h2>
+<div class="depos rv" data-depos aria-roledescription="carrossel" aria-label="Testemunhos de clientes">
+<div class="depos-pista" aria-live="off">
+<!-- Testemunho autorizado por escrito (WhatsApp) a 23/11/2026, com a atribuição «Miguel, Empresário» -->
+<figure class="depo ativo" role="group" aria-roledescription="testemunho" aria-label="1 de 2"><blockquote><p>«Serviu para pensar de forma diferente e ver outros pontos de vista. Mudou a minha postura e o meu discurso, e otimizou a forma como penso.»</p></blockquote><figcaption>Miguel · Empresário</figcaption></figure>
 <!-- Testemunho autorizado por escrito pelo cliente a 23/11/2026, com atribuição a Sketch and Build -->
-<figure class="depo rv"><blockquote><p>«O trabalho que temos desenvolvido tem sido fundamental para o nosso crescimento, abrindo novos horizontes e permitindo visualizar com clareza os patamares que queremos alcançar. As minhas expectativas foram totalmente superadas.»</p></blockquote><figcaption>Sketch and Build · Construção e projetos</figcaption></figure>
+<figure class="depo" role="group" aria-roledescription="testemunho" aria-label="2 de 2" aria-hidden="true"><blockquote><p>«O trabalho que temos desenvolvido tem sido fundamental para o nosso crescimento, abrindo novos horizontes e permitindo visualizar com clareza os patamares que queremos alcançar. As minhas expectativas foram totalmente superadas.»</p></blockquote><figcaption>Sketch and Build · Construção e projetos</figcaption></figure>
+</div>
+<div class="depos-ctl">
+<button type="button" class="depos-bt depos-ant" aria-label="Testemunho anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6l-6 6 6 6"/></svg></button>
+<div class="depos-pts"><button type="button" class="depos-pt" aria-label="Testemunho 1" aria-current="true"></button><button type="button" class="depos-pt" aria-label="Testemunho 2"></button></div>
+<button type="button" class="depos-bt depos-seg" aria-label="Testemunho seguinte"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 6l6 6-6 6"/></svg></button>
+<button type="button" class="depos-bt depos-pausa" aria-label="Pausar a rotação dos testemunhos"><svg class="i-pausa" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7v10M15 7v10"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6.5l9 5.5-9 5.5z"/></svg></button>
+</div>
+</div>
 <p class="onde2 rv"><b>Com quem já trabalhei:</b> empresas de construção, distribuição alimentar e comércio grossista, logística, turismo, eventos e espetáculos, intermediação de crédito, consultoria e intermediação imobiliária, arquitetura, marketing e design. Misericórdias, autarquias e outras entidades públicas. Empresários, líderes e chefias a quem dei formação, em várias ilhas e no continente.</p>
 </div>
 </section>
@@ -893,6 +923,38 @@ Mas o quê? E como?</span></h1>
   }
   var io=new IntersectionObserver(function(e){ if(e[0].isIntersecting){ io.disconnect(); setTimeout(function(){escrever(0,0);},200); } },{threshold:0.5});
   io.observe(ul);
+})();
+</script>
+<script>
+(function(){
+  [].slice.call(document.querySelectorAll('[data-depos]')).forEach(function(box){
+    var itens=[].slice.call(box.querySelectorAll('.depo')), pts=[].slice.call(box.querySelectorAll('.depos-pt'));
+    var pausa=box.querySelector('.depos-pausa'), atual=0, t=null, INTERVALO=8000;
+    if(itens.length<2){ box.querySelector('.depos-ctl').hidden=true; return; }
+    var calmo=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var parado=calmo, suspenso=false;
+    function mostrar(i){
+      atual=(i+itens.length)%itens.length;
+      itens.forEach(function(f,k){ var on=k===atual; f.classList.toggle('ativo',on); if(on){f.removeAttribute('aria-hidden');}else{f.setAttribute('aria-hidden','true');} });
+      pts.forEach(function(p,k){ if(k===atual){p.setAttribute('aria-current','true');}else{p.removeAttribute('aria-current');} });
+    }
+    function parar(){ if(t){clearInterval(t);t=null;} }
+    function arrancar(){ parar(); if(!parado && !suspenso && !document.hidden){ t=setInterval(function(){mostrar(atual+1);},INTERVALO); } }
+    function estado(){ box.classList.toggle('parado',parado); pausa.setAttribute('aria-label',parado?'Retomar a rotação dos testemunhos':'Pausar a rotação dos testemunhos'); box.querySelector('.depos-pista').setAttribute('aria-live',parado?'polite':'off'); }
+    box.querySelector('.depos-ant').addEventListener('click',function(){ mostrar(atual-1); arrancar(); });
+    box.querySelector('.depos-seg').addEventListener('click',function(){ mostrar(atual+1); arrancar(); });
+    pts.forEach(function(p,k){ p.addEventListener('click',function(){ mostrar(k); arrancar(); }); });
+    pausa.addEventListener('click',function(){ parado=!parado; estado(); arrancar(); });
+    box.addEventListener('mouseenter',function(){ suspenso=true; parar(); });
+    box.addEventListener('mouseleave',function(){ suspenso=false; arrancar(); });
+    box.addEventListener('focusin',function(){ suspenso=true; parar(); });
+    box.addEventListener('focusout',function(e){ if(!box.contains(e.relatedTarget)){ suspenso=false; arrancar(); } });
+    document.addEventListener('visibilitychange',arrancar);
+    var x0=null;
+    box.addEventListener('touchstart',function(e){ x0=e.touches[0].clientX; },{passive:true});
+    box.addEventListener('touchend',function(e){ if(x0===null)return; var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40){ mostrar(atual+(dx<0?1:-1)); arrancar(); } x0=null; },{passive:true});
+    estado(); arrancar();
+  });
 })();
 </script>
 </body>

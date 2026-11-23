@@ -423,6 +423,33 @@ html{scroll-behavior:auto}
 .decisao-fim{margin:64px 0 0;padding:4px 0 4px 22px;border-left:3px solid var(--cv);max-width:38em}
 .decisao-fim p{margin:0;font-size:clamp(20px,1.8vw,24px);line-height:1.45;font-weight:500;color:var(--pet)}
 .decisao-lk{margin-top:32px}
+/* abertura: título em duas linhas, a toda a largura (23/11, igual à direção a tempo parcial) */
+.hero-dir .dir-tit{grid-column:1/-1}
+.hero-dir .h-duplo{font-size:clamp(42px,5.4vw,78px)}
+.hero-dir .h-duplo .h-forte,.hero-dir .h-duplo .h-leve{max-width:none}
+.hero-dir .h-duplo .h-leve{font-size:.62em;margin-top:.22em}
+.hero-dir .lead{margin-top:0}
+@media (min-width:901px){.hero-dir .h-duplo .h-forte,.hero-dir .h-duplo .h-leve{white-space:nowrap}.hero-dir .sub-graf .alvo{max-width:340px}}
+/* testemunhos em carrossel (23/11) */
+.depos{margin-top:40px;max-width:52em}
+.depos-pista{display:grid}
+.depos-pista>.depo{grid-area:1/1;margin:0;opacity:0;visibility:hidden;transition:opacity .7s ease,visibility 0s linear .7s}
+.depos-pista>.depo.ativo{opacity:1;visibility:visible;transition:opacity .7s ease,visibility 0s}
+.depos-ctl{margin-top:18px;display:flex;align-items:center;gap:10px}
+.depos-bt{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:1px solid var(--linha);border-radius:50%;background:#fff;color:var(--pet);cursor:pointer;transition:border-color .25s ease,background-color .25s ease}
+.depos-bt:hover{border-color:var(--pet)}
+.depos-bt:focus-visible,.depos-pt:focus-visible{outline:2px solid var(--cv);outline-offset:3px}
+.depos-bt svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.depos-pausa{margin-left:auto}
+.depos-pausa .i-play{display:none}
+.depos.parado .depos-pausa .i-pausa{display:none}
+.depos.parado .depos-pausa .i-play{display:block;fill:currentColor;stroke:none}
+.depos-pts{display:flex;gap:8px;padding:0 4px}
+.depos-pt{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:var(--linha);cursor:pointer;transition:background-color .25s ease,transform .25s ease}
+.depos-pt[aria-current="true"]{background:var(--cv);transform:scale(1.15)}
+@media (prefers-reduced-motion:reduce){.depos-pista>.depo{transition:none}}
+.depos-c{margin-top:0}
+.depos-c .depo{background:var(--nevoa)}
 </style>
 <script>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('escreve-titulo');</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Service", "@id": "https://goalart.pt/coaching-executivo.html#servico", "name": "Coaching executivo", "serviceType": "Coaching executivo", "description": "Coaching executivo, estratégico e de equipa, e programas de liderança para empresários, direções de IPSS e Misericórdias e chefias, e para organizações públicas em parceria. Trabalho à medida, com objetivos definidos e preço fechado, sobretudo à distância.", "url": "https://goalart.pt/coaching-executivo.html", "provider": {"@type": "ProfessionalService", "@id": "https://goalart.pt/#goalart", "name": "GOALart", "url": "https://goalart.pt/"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Açores"}, {"@type": "Country", "name": "Portugal"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GOALart", "item": "https://goalart.pt/"}, {"@type": "ListItem", "position": 2, "name": "Coaching executivo", "item": "https://goalart.pt/coaching-executivo.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quem paga: a própria pessoa ou a organização?", "acceptedAnswer": {"@type": "Answer", "text": "Quem paga é quem contrata. Se for a própria pessoa a contratar o coaching executivo para si, é ela que paga. Se for a organização a contratar para os seus líderes ou equipas, é a organização que paga. Neste caso, os objetivos são acordados a três (eu, a pessoa acompanhada e a organização), e o conteúdo das sessões individuais continua confidencial."}}, {"@type": "Question", "name": "Quanto custa?", "acceptedAnswer": {"@type": "Answer", "text": "Preço fechado e combinado antes de começarmos, definido depois do diagnóstico, em função dos objetivos. Não cobro à hora nem à sessão."}}, {"@type": "Question", "name": "É só para empresas?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Trabalho com empresários, direções de IPSS e Misericórdias, chefias e, em parceria, organizações públicas."}}, {"@type": "Question", "name": "É presencial ou à distância?", "acceptedAnswer": {"@type": "Answer", "text": "Por regra, a maior parte do trabalho é feita à distância. As sessões presenciais são possíveis quando o contexto o justifica, e muitos programas combinam as duas formas."}}, {"@type": "Question", "name": "Qual é a diferença entre coaching executivo e formação?", "acceptedAnswer": {"@type": "Answer", "text": "A formação transmite conhecimento a um grupo. O coaching executivo trabalha as decisões e a forma de liderar de uma ou de várias pessoas, individualmente ou em equipa, no seu contexto e com os seus objetivos."}}, {"@type": "Question", "name": "Qual é a diferença entre coaching executivo e consultoria?", "acceptedAnswer": {"@type": "Answer", "text": "O consultor traz respostas; o coach executivo ajuda a encontrar as suas e a pô-las em prática. Eu combino as duas abordagens e digo-lhe sempre em qual dos papéis estou."}}]}]}</script>
@@ -466,9 +493,11 @@ html{scroll-behavior:auto}
 </header>
 
 <main id="conteudo">
-<section class="wrap hero hero-sub">
-<div>
+<section class="wrap hero hero-sub hero-dir">
+<div class="dir-tit">
 <h1 class="t-xl pet h-duplo"><span class="h-forte">Coaching executivo</span> <span class="h-leve" data-escrever="700">feito por quem conhece bem o terreno.</span></h1>
+</div>
+<div>
 <p class="lead hl d3">Para quem lidera empresas, IPSS ou entidades públicas e quer pensar as decisões difíceis com alguém ao seu lado: não para decidir por si, mas para o ajudar a decidir melhor. As equipas são, muitas vezes, o espelho de quem as lidera. Se quer que a sua equipa pense, decida e execute de outra forma, a transformação começa em si e chega depois às restantes chefias, à equipa e a toda a organização.</p>
 <div class="acoes hl d4"><a class="btn btn-c" href="#contacto">Marcar reunião inicial</a><a class="lk" href="index.html#como">Ver como trabalho</a></div>
 </div>
@@ -556,8 +585,20 @@ html{scroll-behavior:auto}
 </section>
 
 <section class="wrap metodo" style="padding-bottom:0">
+<div class="depos rv depos-c" data-depos aria-roledescription="carrossel" aria-label="Testemunhos de clientes">
+<div class="depos-pista" aria-live="off">
+<!-- Testemunho autorizado por escrito (WhatsApp) a 23/11/2026, com a atribuição «Miguel, Empresário» -->
+<figure class="depo ativo" role="group" aria-roledescription="testemunho" aria-label="1 de 2"><blockquote><p>«Serviu para pensar de forma diferente e ver outros pontos de vista. Mudou a minha postura e o meu discurso, e otimizou a forma como penso.»</p></blockquote><figcaption>Miguel · Empresário</figcaption></figure>
 <!-- Testemunho autorizado por escrito pelo cliente a 23/11/2026, com atribuição a Sketch and Build -->
-<figure class="depo rv" style="background:var(--nevoa);margin-top:0"><blockquote><p>«O trabalho que temos desenvolvido tem sido fundamental para o nosso crescimento, abrindo novos horizontes e permitindo visualizar com clareza os patamares que queremos alcançar. As minhas expectativas foram totalmente superadas.»</p></blockquote><figcaption>Sketch and Build · Construção e projetos</figcaption></figure>
+<figure class="depo" role="group" aria-roledescription="testemunho" aria-label="2 de 2" aria-hidden="true"><blockquote><p>«O trabalho que temos desenvolvido tem sido fundamental para o nosso crescimento, abrindo novos horizontes e permitindo visualizar com clareza os patamares que queremos alcançar. As minhas expectativas foram totalmente superadas.»</p></blockquote><figcaption>Sketch and Build · Construção e projetos</figcaption></figure>
+</div>
+<div class="depos-ctl">
+<button type="button" class="depos-bt depos-ant" aria-label="Testemunho anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6l-6 6 6 6"/></svg></button>
+<div class="depos-pts"><button type="button" class="depos-pt" aria-label="Testemunho 1" aria-current="true"></button><button type="button" class="depos-pt" aria-label="Testemunho 2"></button></div>
+<button type="button" class="depos-bt depos-seg" aria-label="Testemunho seguinte"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 6l6 6-6 6"/></svg></button>
+<button type="button" class="depos-bt depos-pausa" aria-label="Pausar a rotação dos testemunhos"><svg class="i-pausa" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7v10M15 7v10"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6.5l9 5.5-9 5.5z"/></svg></button>
+</div>
+</div>
 </section>
 
 <section class="wrap metodo">
@@ -665,5 +706,37 @@ html{scroll-behavior:auto}
 })();
 </script>
 <script src="escrita.js"></script>
+<script>
+(function(){
+  [].slice.call(document.querySelectorAll('[data-depos]')).forEach(function(box){
+    var itens=[].slice.call(box.querySelectorAll('.depo')), pts=[].slice.call(box.querySelectorAll('.depos-pt'));
+    var pausa=box.querySelector('.depos-pausa'), atual=0, t=null, INTERVALO=8000;
+    if(itens.length<2){ box.querySelector('.depos-ctl').hidden=true; return; }
+    var calmo=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var parado=calmo, suspenso=false;
+    function mostrar(i){
+      atual=(i+itens.length)%itens.length;
+      itens.forEach(function(f,k){ var on=k===atual; f.classList.toggle('ativo',on); if(on){f.removeAttribute('aria-hidden');}else{f.setAttribute('aria-hidden','true');} });
+      pts.forEach(function(p,k){ if(k===atual){p.setAttribute('aria-current','true');}else{p.removeAttribute('aria-current');} });
+    }
+    function parar(){ if(t){clearInterval(t);t=null;} }
+    function arrancar(){ parar(); if(!parado && !suspenso && !document.hidden){ t=setInterval(function(){mostrar(atual+1);},INTERVALO); } }
+    function estado(){ box.classList.toggle('parado',parado); pausa.setAttribute('aria-label',parado?'Retomar a rotação dos testemunhos':'Pausar a rotação dos testemunhos'); box.querySelector('.depos-pista').setAttribute('aria-live',parado?'polite':'off'); }
+    box.querySelector('.depos-ant').addEventListener('click',function(){ mostrar(atual-1); arrancar(); });
+    box.querySelector('.depos-seg').addEventListener('click',function(){ mostrar(atual+1); arrancar(); });
+    pts.forEach(function(p,k){ p.addEventListener('click',function(){ mostrar(k); arrancar(); }); });
+    pausa.addEventListener('click',function(){ parado=!parado; estado(); arrancar(); });
+    box.addEventListener('mouseenter',function(){ suspenso=true; parar(); });
+    box.addEventListener('mouseleave',function(){ suspenso=false; arrancar(); });
+    box.addEventListener('focusin',function(){ suspenso=true; parar(); });
+    box.addEventListener('focusout',function(e){ if(!box.contains(e.relatedTarget)){ suspenso=false; arrancar(); } });
+    document.addEventListener('visibilitychange',arrancar);
+    var x0=null;
+    box.addEventListener('touchstart',function(e){ x0=e.touches[0].clientX; },{passive:true});
+    box.addEventListener('touchend',function(e){ if(x0===null)return; var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40){ mostrar(atual+(dx<0?1:-1)); arrancar(); } x0=null; },{passive:true});
+    estado(); arrancar();
+  });
+})();
+</script>
 </body>
 </html>
