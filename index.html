@@ -522,10 +522,15 @@ h1 > [data-escrever] .cursor{background:var(--cv)!important}
 .nucleo-lk::after{content:"\2192";display:inline-block;margin-left:.4em;transition:transform .3s ease}
 .nucleo-lk:hover::after{transform:translateX(5px)}
 .outros-faixa a{font-weight:600}
-.decisao{margin-top:72px;max-width:46em}
-.decisao-tit{margin-top:8px;font-size:clamp(24px,2.3vw,30px);line-height:1.25;font-weight:600;color:var(--pet)}
-.decisao p:not(.etq){margin-top:14px;font-size:19px;line-height:1.55}
-.decisao .decisao-lk{display:inline-block;margin-top:18px}
+/* secção parceiro de decisão (23/11) */
+.decisao-sec{background:var(--nevoa)}
+.decisao-sec .metodo{padding-top:120px;padding-bottom:112px}
+.decisao-etq{margin:0 0 18px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cobre)}
+.decisao-sec .t-l{max-width:22ch}
+.decisao-sec .t-l .obs{display:block}
+.decisao-fim{margin:64px 0 0;padding:4px 0 4px 22px;border-left:3px solid var(--cv);max-width:38em}
+.decisao-fim p{margin:0;font-size:clamp(20px,1.8vw,24px);line-height:1.45;font-weight:500;color:var(--pet)}
+.decisao-lk{margin-top:32px}
 </style>
 <script>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('escreve-titulo');</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://goalart.pt/#goalart", "name": "GOALart", "slogan": "A arte de transformar objetivos em resultados", "url": "https://goalart.pt/", "image": "https://goalart.pt/img/partilha.jpg", "logo": "https://goalart.pt/img/goalart_horizontal_positivo.svg", "description": "Coaching executivo feito por quem conhece bem o terreno: transforma organizações a partir de quem as lidera e, quando é preciso, trabalha também com o cliente os processos e os números. A partir dos Açores, para empresários, IPSS e organizações.", "email": "geral@goalart.pt", "telephone": "+351919534748", "address": {"@type": "PostalAddress", "streetAddress": "Rua Dr. Machado Serpa, 9", "postalCode": "9930-146", "addressLocality": "Lajes do Pico", "addressRegion": "Açores", "addressCountry": "PT"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Açores"}, {"@type": "Country", "name": "Portugal"}], "founder": {"@id": "https://goalart.pt/#hugo"}, "parentOrganization": {"@type": "Organization", "name": "Ávila Goulart, Unipessoal Lda", "url": "https://avilagoulart.pt/"}, "knowsAbout": ["Gestão de PME", "Direção financeira", "Desenvolvimento de lideranças", "Organização e processos", "Coaching executivo", "Coaching de equipa", "Gestão de IPSS", "Gestão autárquica", "Inteligência artificial na gestão"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Serviços", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Coaching executivo", "url": "https://goalart.pt/coaching-executivo.html"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Direção a tempo parcial", "url": "https://goalart.pt/direcao-tempo-parcial.html"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Formação, palestras e projetos", "url": "https://goalart.pt/formacao-palestras.html"}}]}}, {"@type": "Person", "@id": "https://goalart.pt/#hugo", "name": "Hugo Ávila Goulart", "jobTitle": "Coach executivo e consultor de gestão", "worksFor": {"@id": "https://goalart.pt/#goalart"}, "homeLocation": {"@type": "Place", "name": "Lajes do Pico, Açores"}, "description": "Consultor de gestão, coach executivo certificado e formador. Mais de 15 anos em funções de direção nos Açores, incluindo 12 anos como Secretário-Geral e Diretor Financeiro da Santa Casa da Misericórdia das Lajes do Pico e 3 anos como Diretor de Pessoas e Operações na AZx. Combina coaching executivo e consultoria.", "sameAs": ["https://www.linkedin.com/in/avilagoulart/", "https://www.instagram.com/hugo.avilagoulart"]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quanto custa?", "acceptedAnswer": {"@type": "Answer", "text": "Preço fechado e combinado antes de começarmos, definido depois da reunião inicial e do diagnóstico, em função do que é preciso fazer. Não cobro à hora nem à sessão."}}, {"@type": "Question", "name": "Quanto tempo dura?", "acceptedAnswer": {"@type": "Answer", "text": "Depende do que for preciso. A reunião inicial dura uma hora. O diagnóstico e o trabalho seguinte têm âmbito e prazo combinados à partida, por escrito."}}, {"@type": "Question", "name": "É presencial ou à distância?", "acceptedAnswer": {"@type": "Answer", "text": "Por regra, a maior parte do trabalho é feita à distância. As sessões presenciais acontecem quando o contexto o justifica."}}, {"@type": "Question", "name": "É só para empresas?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Trabalho com quem lidera, numa empresa, numa IPSS ou numa organização pública."}}, {"@type": "Question", "name": "O que acontece ao que lhe conto?", "acceptedAnswer": {"@type": "Answer", "text": "Fica entre nós. No coaching executivo, o que me diz nas sessões individuais nunca é partilhado com a organização; à liderança chegam objetivos, progressos e padrões gerais."}}]}]}</script>
@@ -612,6 +617,22 @@ Mas o quê? E como?</span></h1>
 </div>
 </section>
 
+<section id="decisao" class="nevoa-sec decisao-sec" aria-label="Parceiro de decisão">
+<div class="wrap metodo">
+<p class="decisao-etq rv">Parceiro de decisão</p>
+<h2 class="t-l pet rv"><span class="obs">Liderar é decidir.</span> E as melhores decisões nascem de mais do que um olhar.</h2>
+<p class="lead intro rv">Não decido por si. Ajudo-o a decidir melhor, sobre pessoas, processos e números.</p>
+<div class="trilho" aria-hidden="true"><div></div></div>
+<ol class="passos p3">
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><circle pathLength="1" cx="12" cy="12" r="8.5"/><path pathLength="1" d="M15.2 8.8l-2 4.4-4.4 2 2-4.4z"/><circle class="pt" cx="12" cy="12" r="1.2"/></svg></span><h3>Porque decide como decide?</h3><p>Sem testes nem rótulos. Com conversa, perguntas e uma análise cuidada entre sessões, ajudo-o a conhecer os seus padrões: como decide, como reage sob pressão, como se liga às pessoas à sua volta. Conhecê-los é o primeiro passo para os escolher.</p></li>
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"/><circle pathLength="1" cx="12" cy="12" r="3.2"/><circle class="pt" cx="12" cy="12" r="1.3"/></svg></span><h3>O que ainda não está a ver?</h3><p>O mesmo desafio, visto de outros ângulos. Novas perguntas, novas perspetivas e outras formas de o abordar, para decidir com mais solidez.</p></li>
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><circle pathLength="1" cx="12" cy="12" r="8.5"/><circle pathLength="1" cx="12" cy="12" r="4.5"/><circle class="pt" cx="12" cy="12" r="1.6"/></svg></span><h3>Como transforma isso em resultados?</h3><p>Com um plano, indicadores que acompanho consigo e alguém ao lado até a transformação funcionar no dia a dia.</p></li>
+</ol>
+<blockquote class="decisao-fim rv"><p>Quem trabalha comigo diz-me muitas vezes que passou a olhar para as coisas de outro modo, incluindo para si próprio.</p></blockquote>
+<a class="nucleo-lk decisao-lk rv" href="coaching-executivo.html">Ver o coaching executivo</a>
+</div>
+</section>
+
 <section id="como" class="wrap metodo">
 <h2 class="t-l pet rv"><span class="obs">O que contrata não é o meu tempo.</span> É a minha experiência, o meu conhecimento e os objetivos cumpridos.</h2>
 <div class="trilho" aria-hidden="true"><div></div></div>
@@ -638,12 +659,6 @@ Mas o quê? E como?</span></h1>
 <div><h4>Coaching de equipa <span class="en">(team coaching)</span></h4><p>Com a restante equipa de liderança, para alinhar prioridades, responsabilidades e a forma de decidir em conjunto.</p></div>
 <div><h4>Abordagem integrada</h4><p>Junta coaching executivo, coaching estratégico, coaching de equipa e formação, para promover o desenvolvimento de toda a organização.</p></div>
 </div>
-</div>
-<div class="decisao rv">
-<p class="etq">Parceiro de decisão</p>
-<h3 class="decisao-tit">Liderar é decidir. E as melhores decisões nascem de mais do que um olhar.</h3>
-<p>Não decido por si. Ajudo-o a compreender porque decide como decide, a ver o mesmo desafio de outros ângulos e a transformar o que descobre em resultados. Quem trabalha comigo diz-me muitas vezes que passou a olhar para as coisas de outro modo.</p>
-<a class="nucleo-lk decisao-lk" href="coaching-executivo.html#decisao">Ver como trabalho consigo</a>
 </div>
 <div class="papeis rv">
 <h3>Coach executivo ou consultor? Depende da origem do problema.</h3>
@@ -832,13 +847,14 @@ Mas o quê? E como?</span></h1>
 </script>
 <script>
 (function(){
-  var ol=document.querySelector('.passos'); if(!ol || !ol.querySelector('.ico-wm')) return;
+  [].slice.call(document.querySelectorAll('.passos')).forEach(function(ol){ if(!ol.querySelector('.ico-wm')) return;
   if(!('IntersectionObserver' in window)) return;
   if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if(ol.getBoundingClientRect().top < window.innerHeight*0.85) return;
   ol.classList.add('anim');
   var io=new IntersectionObserver(function(e){ if(e[0].isIntersecting){ ol.classList.add('ver'); io.disconnect(); } },{threshold:0.35});
   io.observe(ol);
+});
 })();
 </script>
 <script>

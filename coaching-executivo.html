@@ -414,8 +414,15 @@ html{scroll-behavior:auto}
 .subm .subm-t{margin:8px 14px 0;padding-top:10px;border-top:1px solid var(--linha);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--pet-s)}
 .subm a.subm-2{padding:8px 14px}
 .subm a.subm-2 b{font-size:16px;font-weight:500}
-.decisao-lead{margin-top:20px;font-size:20px;line-height:1.5;max-width:40em}
-.decisao-fim{margin-top:40px;font-size:19px;line-height:1.5;max-width:40em;font-style:italic;color:var(--pet)}
+/* secção parceiro de decisão (23/11) */
+.decisao-sec{background:var(--nevoa)}
+.decisao-sec .metodo{padding-top:120px;padding-bottom:112px}
+.decisao-etq{margin:0 0 18px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cobre)}
+.decisao-sec .t-l{max-width:22ch}
+.decisao-sec .t-l .obs{display:block}
+.decisao-fim{margin:64px 0 0;padding:4px 0 4px 22px;border-left:3px solid var(--cv);max-width:38em}
+.decisao-fim p{margin:0;font-size:clamp(20px,1.8vw,24px);line-height:1.45;font-weight:500;color:var(--pet)}
+.decisao-lk{margin-top:32px}
 </style>
 <script>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('escreve-titulo');</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Service", "@id": "https://goalart.pt/coaching-executivo.html#servico", "name": "Coaching executivo", "serviceType": "Coaching executivo", "description": "Coaching executivo, estratégico e de equipa, e programas de liderança para empresários, direções de IPSS e Misericórdias e chefias, e para organizações públicas em parceria. Trabalho à medida, com objetivos definidos e preço fechado, sobretudo à distância.", "url": "https://goalart.pt/coaching-executivo.html", "provider": {"@type": "ProfessionalService", "@id": "https://goalart.pt/#goalart", "name": "GOALart", "url": "https://goalart.pt/"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Açores"}, {"@type": "Country", "name": "Portugal"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GOALart", "item": "https://goalart.pt/"}, {"@type": "ListItem", "position": 2, "name": "Coaching executivo", "item": "https://goalart.pt/coaching-executivo.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quem paga: a própria pessoa ou a organização?", "acceptedAnswer": {"@type": "Answer", "text": "Quem paga é quem contrata. Se for a própria pessoa a contratar o coaching executivo para si, é ela que paga. Se for a organização a contratar para os seus líderes ou equipas, é a organização que paga. Neste caso, os objetivos são acordados a três (eu, a pessoa acompanhada e a organização), e o conteúdo das sessões individuais continua confidencial."}}, {"@type": "Question", "name": "Quanto custa?", "acceptedAnswer": {"@type": "Answer", "text": "Preço fechado e combinado antes de começarmos, definido depois do diagnóstico, em função dos objetivos. Não cobro à hora nem à sessão."}}, {"@type": "Question", "name": "É só para empresas?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Trabalho com empresários, direções de IPSS e Misericórdias, chefias e, em parceria, organizações públicas."}}, {"@type": "Question", "name": "É presencial ou à distância?", "acceptedAnswer": {"@type": "Answer", "text": "Por regra, a maior parte do trabalho é feita à distância. As sessões presenciais são possíveis quando o contexto o justifica, e muitos programas combinam as duas formas."}}, {"@type": "Question", "name": "Qual é a diferença entre coaching executivo e formação?", "acceptedAnswer": {"@type": "Answer", "text": "A formação transmite conhecimento a um grupo. O coaching executivo trabalha as decisões e a forma de liderar de uma ou de várias pessoas, individualmente ou em equipa, no seu contexto e com os seus objetivos."}}, {"@type": "Question", "name": "Qual é a diferença entre coaching executivo e consultoria?", "acceptedAnswer": {"@type": "Answer", "text": "O consultor traz respostas; o coach executivo ajuda a encontrar as suas e a pô-las em prática. Eu combino as duas abordagens e digo-lhe sempre em qual dos papéis estou."}}]}]}</script>
@@ -483,16 +490,19 @@ html{scroll-behavior:auto}
 
 </section>
 
-<section id="decisao" class="wrap metodo">
-<p class="etq rv">Parceiro de decisão</p>
-<h2 class="t-l pet rv">Liderar é decidir. E as melhores decisões nascem de mais do que um olhar.</h2>
-<p class="decisao-lead rv">Não decido por si. Ajudo-o a decidir melhor, sobre pessoas, processos e números.</p>
-<div class="tres3">
-<div class="rv"><h3>Porque decide como decide?</h3><p>Sem testes nem rótulos. Com conversa, perguntas e uma análise cuidada entre sessões, ajudo-o a conhecer os seus padrões: como decide, como reage sob pressão, como se liga às pessoas à sua volta. Conhecê-los é o primeiro passo para os escolher.</p></div>
-<div class="rv"><h3>O que ainda não está a ver?</h3><p>O mesmo desafio, visto de outros ângulos. Novas perguntas, novas perspetivas e outras formas de o abordar, para decidir com mais solidez.</p></div>
-<div class="rv"><h3>Como transforma isso em resultados?</h3><p>Com um plano, indicadores que acompanho consigo e alguém ao lado até a transformação funcionar no dia a dia.</p></div>
+<section id="decisao" class="nevoa-sec decisao-sec" aria-label="Parceiro de decisão">
+<div class="wrap metodo">
+<p class="decisao-etq rv">Parceiro de decisão</p>
+<h2 class="t-l pet rv"><span class="obs">Liderar é decidir.</span> E as melhores decisões nascem de mais do que um olhar.</h2>
+<p class="lead intro rv">Não decido por si. Ajudo-o a decidir melhor, sobre pessoas, processos e números.</p>
+<div class="trilho" aria-hidden="true"><div></div></div>
+<ol class="passos p3">
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><circle pathLength="1" cx="12" cy="12" r="8.5"/><path pathLength="1" d="M15.2 8.8l-2 4.4-4.4 2 2-4.4z"/><circle class="pt" cx="12" cy="12" r="1.2"/></svg></span><h3>Porque decide como decide?</h3><p>Sem testes nem rótulos. Com conversa, perguntas e uma análise cuidada entre sessões, ajudo-o a conhecer os seus padrões: como decide, como reage sob pressão, como se liga às pessoas à sua volta. Conhecê-los é o primeiro passo para os escolher.</p></li>
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"/><circle pathLength="1" cx="12" cy="12" r="3.2"/><circle class="pt" cx="12" cy="12" r="1.3"/></svg></span><h3>O que ainda não está a ver?</h3><p>O mesmo desafio, visto de outros ângulos. Novas perguntas, novas perspetivas e outras formas de o abordar, para decidir com mais solidez.</p></li>
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><circle pathLength="1" cx="12" cy="12" r="8.5"/><circle pathLength="1" cx="12" cy="12" r="4.5"/><circle class="pt" cx="12" cy="12" r="1.6"/></svg></span><h3>Como transforma isso em resultados?</h3><p>Com um plano, indicadores que acompanho consigo e alguém ao lado até a transformação funcionar no dia a dia.</p></li>
+</ol>
+<blockquote class="decisao-fim rv"><p>Quem trabalha comigo diz-me muitas vezes que passou a olhar para as coisas de outro modo, incluindo para si próprio.</p></blockquote>
 </div>
-<p class="decisao-fim rv">Quem trabalha comigo diz-me muitas vezes que passou a olhar para as coisas de outro modo, incluindo para si próprio.</p>
 </section>
 
 <section class="esc manif">
@@ -644,13 +654,14 @@ html{scroll-behavior:auto}
 </script>
 <script>
 (function(){
-  var ol=document.querySelector('.passos'); if(!ol || !ol.querySelector('.ico-wm')) return;
+  [].slice.call(document.querySelectorAll('.passos')).forEach(function(ol){ if(!ol.querySelector('.ico-wm')) return;
   if(!('IntersectionObserver' in window)) return;
   if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if(ol.getBoundingClientRect().top < window.innerHeight*0.85) return;
   ol.classList.add('anim');
   var io=new IntersectionObserver(function(e){ if(e[0].isIntersecting){ ol.classList.add('ver'); io.disconnect(); } },{threshold:0.35});
   io.observe(ol);
+});
 })();
 </script>
 <script src="escrita.js"></script>
