@@ -380,6 +380,13 @@ html{scroll-behavior:auto}
 .subm .subm-t{margin:8px 14px 0;padding-top:10px;border-top:1px solid var(--linha);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--pet-s)}
 .subm a.subm-2{padding:8px 14px}
 .subm a.subm-2 b{font-size:16px;font-weight:500}
+/* abertura: título em duas linhas, a toda a largura (23/11, igual às páginas de coaching e direção) */
+.hero-dir .dir-tit{grid-column:1/-1}
+.hero-dir .h-duplo{font-size:clamp(42px,5.4vw,78px)}
+.hero-dir .h-duplo .h-forte,.hero-dir .h-duplo .h-leve{max-width:none}
+.hero-dir .h-duplo .h-leve{font-size:.62em;margin-top:.22em}
+.hero-dir .lead{margin-top:0}
+@media (min-width:901px){.hero-dir .h-duplo .h-forte,.hero-dir .h-duplo .h-leve{white-space:nowrap}.hero-dir .sub-graf .alvo{max-width:340px}}
 </style>
 <script>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('escreve-titulo');</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Service", "@id": "https://goalart.pt/formacao-palestras.html#servico", "name": "Formação, palestras e projetos", "serviceType": "Formação e palestras", "description": "Formação para chefias e equipas, palestras para eventos e projetos de consultoria em liderança e gestão de equipas, comunicação, gestão de tempo e produtividade, e pessoas e cultura.", "url": "https://goalart.pt/formacao-palestras.html", "provider": {"@type": "ProfessionalService", "@id": "https://goalart.pt/#goalart", "name": "GOALart", "url": "https://goalart.pt/"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Açores"}, {"@type": "Country", "name": "Portugal"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GOALart", "item": "https://goalart.pt/"}, {"@type": "ListItem", "position": 2, "name": "Formação, palestras e projetos", "item": "https://goalart.pt/formacao-palestras.html"}]}]}</script>
@@ -423,10 +430,12 @@ html{scroll-behavior:auto}
 </header>
 
 <main id="conteudo">
-<section class="wrap hero hero-sub">
-<div>
+<section class="wrap hero hero-sub hero-dir">
+<div class="dir-tit">
 <p class="etq hl d1">Formação, palestras e projetos</p>
 <h1 class="t-xl pet h-duplo" style="margin-top:16px"><span class="h-forte">O mesmo trabalho,</span> <span class="h-leve" data-escrever="700">noutros formatos.</span></h1>
+</div>
+<div>
 <p class="lead hl d3">Gestão e liderança em contexto de formação, palestras e projetos de consultoria especializados. Para equipas e chefias, para organizadores de eventos e para quem procura um parceiro num projeto.</p>
 <div class="acoes hl d4"><a class="btn btn-c" href="#contacto">Pedir uma proposta</a><a class="lk" href="#temas">Ver as áreas de especialização</a></div>
 </div>
