@@ -229,9 +229,6 @@ html{scroll-behavior:auto}
 .portas p{margin-top:10px;font-size:18px;line-height:1.55;max-width:30em}
 .portas a{display:inline-block;margin-top:12px;font-weight:600;font-size:17px;text-underline-offset:5px;text-decoration-thickness:1px}
 .fit .promessa{margin-top:22px;max-width:36em}
-.outros-faixa{padding:48px 0;border-top:1px solid var(--linha)}
-.outros-faixa p{font-size:19px;max-width:48em}
-.outros-faixa .lk{display:inline-block;margin-top:10px}
 .menu nav a.btn{color:#fff}
 /* submenu O que faço */
 .nav .sub{position:relative}
@@ -521,16 +518,27 @@ h1 > [data-escrever] .cursor{background:var(--cv)!important}
 .nucleo-lk{display:inline-block;margin-top:28px;font-weight:600;font-size:17px;text-underline-offset:5px;text-decoration-thickness:1px}
 .nucleo-lk::after{content:"\2192";display:inline-block;margin-left:.4em;transition:transform .3s ease}
 .nucleo-lk:hover::after{transform:translateX(5px)}
-.outros-faixa a{font-weight:600}
 /* secção parceiro de decisão (23/11) */
 .decisao-sec{background:var(--nevoa)}
+.outros-nucleo{margin-top:48px;padding-top:24px;border-top:1px solid var(--linha);max-width:52em}
+.outros-nucleo p:not(.etq-c){margin:0;font-size:18px;line-height:1.55}
+.outros-nucleo a{font-weight:600;color:var(--pet)}
+.outros-nucleo .etq-c{margin:0 0 10px}
 .decisao-sec .metodo{padding-top:120px;padding-bottom:112px}
 .decisao-etq{margin:0 0 18px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cobre)}
 .decisao-sec .t-l{max-width:22ch}
+/* títulos compactos (23/11): «Liderar é decidir» e «Reconhece algum…» numa linha cada em ecrãs largos */
+@media (min-width:1100px){
+.decisao-sec .t-l{max-width:none;font-size:clamp(34px,3.05vw,46px)}
+.decisao-sec .t-l .obs,.decisao-sec .t-l .resto{display:block;white-space:nowrap}
+.sit .t-l{font-size:clamp(40px,3.9vw,58px);white-space:nowrap}
+.sit .intro{max-width:none}
+}
 .decisao-sec .t-l .obs{display:block}
 .decisao-fim{margin:64px 0 0;padding:4px 0 4px 22px;border-left:3px solid var(--cv);max-width:38em}
 .decisao-fim p{margin:0;font-size:clamp(20px,1.8vw,24px);line-height:1.45;font-weight:500;color:var(--pet)}
 .decisao-lk{margin-top:32px}
+.decisao-sec .papeis{margin-top:72px}
 /* testemunhos em carrossel (23/11) */
 .depos{margin-top:40px;max-width:52em}
 .depos-pista{display:grid}
@@ -623,7 +631,7 @@ Mas o quê? E como?</span></h1>
 <section id="situacoes" class="esc sit">
 <div class="wrap">
 <h2 class="t-l rv">Reconhece algum dos seguintes problemas?</h2>
-<p class="lead intro rv">Raramente aparecem sozinhos e quase sempre têm a mesma origem:<br>a organização cresceu ou o contexto mudou, e a forma de gerir e de liderar não acompanhou.</p>
+<p class="lead intro rv">Raramente aparecem sozinhos e quase sempre têm a mesma origem:<br class="br-l">a organização cresceu ou o contexto mudou, e a forma de gerir e de liderar não acompanhou.</p>
 <div class="linhas">
 <details class="linha rv"><summary><h3>«Não consigo tirar o melhor da minha equipa.»</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Tem pessoas capazes, mas o resultado não é o que deseja? Ninguém assume responsabilidades além de si? Sabe o que quer da equipa, mas falta-lhe método para o pedir, acompanhar e corrigir?</p></div></details>
 <details class="linha rv"><summary><h3>«Tenho dados, mas não me ajudam a decidir.»</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Há números, relatórios e mapas, mas chegam tarde, soltos ou por trabalhar? Na hora de decidir, falta saber ao certo quanto custa, quanto sobra e onde está a perder?</p></div></details>
@@ -638,7 +646,7 @@ Mas o quê? E como?</span></h1>
 <section id="decisao" class="nevoa-sec decisao-sec" aria-label="Parceiro de decisão">
 <div class="wrap metodo">
 <p class="decisao-etq rv">Parceiro de decisão</p>
-<h2 class="t-l pet rv"><span class="obs">Liderar é decidir.</span> E as melhores decisões nascem de mais do que um olhar.</h2>
+<h2 class="t-l pet rv"><span class="obs">Liderar é decidir.</span> <span class="resto">E as melhores decisões nascem de mais do que um olhar.</span></h2>
 <p class="lead intro rv">Não decido por si. Ajudo-o a decidir melhor, sobre pessoas, processos e números.</p>
 <div class="trilho" aria-hidden="true"><div></div></div>
 <ol class="passos p3">
@@ -646,8 +654,15 @@ Mas o quê? E como?</span></h1>
 <li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"/><circle pathLength="1" cx="12" cy="12" r="3.2"/><circle class="pt" cx="12" cy="12" r="1.3"/></svg></span><h3>O que ainda não está a ver?</h3><p>O mesmo desafio, visto de outros ângulos. Novas perguntas, novas perspetivas e outras formas de o abordar, para decidir com mais solidez.</p></li>
 <li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><circle pathLength="1" cx="12" cy="12" r="8.5"/><circle pathLength="1" cx="12" cy="12" r="4.5"/><circle class="pt" cx="12" cy="12" r="1.6"/></svg></span><h3>Como transforma isso em resultados?</h3><p>Com um plano, indicadores que acompanho consigo e alguém ao lado até a transformação funcionar no dia a dia.</p></li>
 </ol>
+<div class="papeis rv">
+<h3>Coach executivo ou consultor? Depende da origem do problema.</h3>
+<div class="papeis-col">
+<div><em>Papel de coach executivo</em><p class="q">Já sabe o que tem de fazer, mas não está a acontecer?</p><p>Ajudo-o a perceber o que impede ou condiciona a execução e a encontrar a melhor alternativa para avançar.</p></div>
+<div><em>Papel de consultor</em><p class="q">Sabe o que quer, mas ainda não sabe como lá chegar?</p><p>Partilho o que aprendi: ferramentas, experiência, caminhos que já vi funcionar.</p></div>
+</div>
+<p class="papeis-fim">Muitas vezes, a minha abordagem combina os dois papéis, conforme a situação concreta.</p>
+</div>
 <blockquote class="decisao-fim rv"><p>Quem trabalha comigo diz-me muitas vezes que passou a olhar para as coisas de outro modo, incluindo para si próprio.</p></blockquote>
-<a class="nucleo-lk decisao-lk rv" href="coaching-executivo.html">Ver o coaching executivo</a>
 </div>
 </section>
 
@@ -678,14 +693,7 @@ Mas o quê? E como?</span></h1>
 <div><h4>Abordagem integrada</h4><p>Junta coaching executivo, coaching estratégico, coaching de equipa e formação, para promover o desenvolvimento de toda a organização.</p></div>
 </div>
 </div>
-<div class="papeis rv">
-<h3>Coach executivo ou consultor? Depende da origem do problema.</h3>
-<div class="papeis-col">
-<div><em>Papel de coach executivo</em><p class="q">Já sabe o que tem de fazer, mas não está a acontecer?</p><p>Ajudo-o a perceber o que impede ou condiciona a execução e a encontrar a melhor alternativa para avançar.</p></div>
-<div><em>Papel de consultor</em><p class="q">Sabe o que quer, mas ainda não sabe como lá chegar?</p><p>Partilho o que aprendi: ferramentas, experiência, caminhos que já vi funcionar.</p></div>
-</div>
-<p class="papeis-fim">Muitas vezes, a minha abordagem combina os dois papéis, conforme a situação concreta.</p>
-</div>
+<div class="outros-nucleo rv"><p class="etq-c">Outras formas de trabalharmos</p><p>Quando falta quem dirija, posso assumir a <a href="direcao-tempo-parcial.html">direção a tempo parcial</a>. Também trabalho em <a href="formacao-palestras.html">formação, palestras e projetos</a>, em liderança, comunicação, gestão de tempo e produtividade, e pessoas e cultura.</p></div>
 <p class="ia rv"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="none" stroke="#005B67" stroke-width="2"/><circle cx="14" cy="14" r="4" fill="#D9762B"/></svg><span>Uso <b class="ia-destaque">inteligência artificial</b> em todo o trabalho, na análise, nos relatórios e na automatização do que é repetitivo. É isso que me permite fazer muito mais em menos tempo, e com qualidade.<span class="ia-2"><b class="ia-oferta">Posso ajudá-lo a fazer o mesmo:</b> perceber onde a inteligência artificial poupa tempo e melhora os resultados.</span></span></p>
 </div>
 </section>
@@ -696,9 +704,9 @@ Mas o quê? E como?</span></h1>
 <p class="lead promessa rv">Só avanço com um projeto quando acredito que o meu trabalho pode fazer diferença. Não acompanho ao mesmo tempo duas empresas do mesmo setor na mesma área geográfica. Exclusividade e confidencialidade são regras inegociáveis do meu trabalho.</p>
 <div class="colunas">
 <div class="sim rv"><h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="12" fill="#005B67"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>É para si se:</h3><ul>
-<li>Lidera uma organização e quase tudo passa por si, haja ou não chefias entre si e a equipa.</li>
+<li>Lidera uma organização e quase tudo passa por si.</li>
 <li>Tem pessoas capazes, mas a equipa espera por instruções em vez de assumir o trabalho.</li>
-<li>A organização cresceu ou o contexto mudou, e quer preparar a forma de liderar antes de os problemas aparecerem.</li>
+
 <li>Quer transformar a sua organização e está disposto a fazer diferente, a começar por si.</li>
 <li>Quer resultados que se possam verificar no dia a dia.</li>
 </ul></div>
@@ -740,7 +748,7 @@ Mas o quê? E como?</span></h1>
 <div class="txt">
 <p class="etq">Quem sou?</p>
 <h2 class="t-l pet" style="margin-top:14px">Conheço bem o peso de decidir.</h2>
-<p class="corpo">Cresci numa família de ferreiros. Aprendi cedo que o ferro só se trabalha quente: frio, não dobra, e quem o força arrisca-se a parti-lo. Com as pessoas e as organizações acontece o mesmo. A transformação precisa de calor, de paciência e de tempo.</p>
+<p class="corpo">Cresci numa família de ferreiros. Aprendi cedo que o ferro só se trabalha quente: frio, não dobra, e quem o força arrisca-se a parti-lo. Com as pessoas e as organizações acontece o mesmo. A transformação precisa da temperatura certa, de paciência e do tempo necessário para acontecer.</p>
 <p class="corpo">Sou o Hugo Ávila Goulart, natural das Lajes do Pico. Sou empresário desde 2015, consultor de gestão, coach executivo certificado e formador. Durante doze anos fui Secretário-Geral e Diretor Financeiro da Santa Casa da Misericórdia das Lajes do Pico, fui vereador na Câmara Municipal das Lajes do Pico e fui Diretor de Pessoas e Operações na AZx. Em todos os projetos em que participei, preparei sempre a saída para que tudo continuasse a funcionar sem mim.</p>
 <p class="corpo">Hoje acompanho líderes, executivos, chefias e quadros superiores nos setores privado, público e social. Nas sessões, costumo propor que nos tratemos por tu: trabalhamos melhor quando falamos ao mesmo nível.</p>
 <details class="percurso">
@@ -775,9 +783,6 @@ Mas o quê? E como?</span></h1>
 </div>
 <p class="onde2 rv"><b>Com quem já trabalhei:</b> empresas de construção, distribuição alimentar e comércio grossista, logística, turismo, eventos e espetáculos, intermediação de crédito, consultoria e intermediação imobiliária, arquitetura, marketing e design. Misericórdias, autarquias e outras entidades públicas. Empresários, líderes e chefias a quem dei formação, em várias ilhas e no continente.</p>
 </div>
-</section>
-<section class="outros-faixa" aria-label="Outras formas de trabalharmos">
-<div class="wrap"><p class="rv"><b>Outras formas de trabalharmos.</b> Quando falta quem dirija, posso assumir a <a href="direcao-tempo-parcial.html">direção a tempo parcial</a>. Também trabalho em <a href="formacao-palestras.html">formação, palestras e projetos</a>, em liderança, comunicação, gestão de tempo e produtividade, e pessoas e cultura.</p></div>
 </section>
 <section class="wrap metodo faq-sec" aria-label="Perguntas frequentes">
 <h2 class="t-l pet rv">Perguntas frequentes</h2>
