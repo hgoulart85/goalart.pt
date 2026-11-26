@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Coaching executivo nos Açores — GOALart | Hugo Ávila Goulart</title>
-<meta name="description" content="Coaching executivo, estratégico e de equipa, feito por quem conhece bem o terreno. Para empresários, direções de IPSS e chefias nos Açores, e organizações públicas em parceria. Mais de 500 horas de prática.">
+<meta name="description" content="Coaching executivo nos Açores: um parceiro de reflexão para quem lidera, com mais de 500 horas de prática individual e de equipa. Reunião inicial gratuita.">
 <link rel="canonical" href="https://goalart.pt/coaching-executivo.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_PT">
@@ -460,6 +460,49 @@ h3,h4{line-height:1.25}
 .faq summary{align-items:baseline}
 .contacto .t-l{max-width:20ch;font-size:clamp(34px,3.6vw,50px);line-height:1.06}
 .decisao-fim p{font-weight:600}
+.decisao-sec .decisao-bast{margin:28px 0 0}
+.decisao-sec .t-l .resto{display:block}
+/* botão fixo no telemóvel (26/11) */
+.cta-fixo{display:none}
+@media (max-width:760px){
+.cta-fixo{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:40;min-height:52px;align-items:center;justify-content:center;background:var(--cv);color:#fff;font-weight:700;font-size:17px;text-decoration:none;border-radius:2px;box-shadow:0 6px 20px rgba(0,40,46,.25);transform:translateY(140%);transition:transform .35s ease}
+.cta-fixo.on{transform:none}
+body{padding-bottom:76px}
+}
+@media (prefers-reduced-motion:reduce){.cta-fixo{transition:none}}
+
+/* contacto: retrato pequeno (26/11) */
+.ct-quem{display:flex;align-items:center;gap:16px}
+.ct-quem img{width:72px;height:72px;border-radius:50%;object-fit:cover;display:block}
+.ct-quem p{margin:0;font-size:16px;line-height:1.4;color:#fff}
+.ct-quem b{display:block;font-weight:600}
+.ct-quem span{color:var(--agua)}
+.ct-dir .ct-quem+.lead{margin-top:28px}
+/* fotografia em duotone nas secções escuras: «estou, mas não estou» (26/11) */
+.com-foto{position:relative;overflow:hidden}
+.com-foto>.wrap{position:relative;z-index:1}
+.foto-esc{margin:0}
+.foto-esc img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--fp,50% 20%)}
+@media (min-width:901px){
+.foto-esc{position:absolute;top:0;right:0;bottom:0;width:var(--fw,46%);-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 38%),linear-gradient(to bottom,#000 78%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0%,#000 38%),linear-gradient(to bottom,#000 78%,transparent 100%);mask-composite:intersect}
+.com-foto>.wrap>*{max-width:min(100%,var(--tw,58%))}}
+@media (max-width:900px){.foto-esc{aspect-ratio:4/3;-webkit-mask-image:linear-gradient(to bottom,#000 60%,transparent 100%);mask-image:linear-gradient(to bottom,#000 60%,transparent 100%);margin-bottom:-40px}}
+/* papéis, vindos da página inicial (26/11) */
+.papeis{margin-top:80px;border-top:1px solid var(--linha);padding-top:40px;max-width:60em}
+.papeis h3{margin:0;font-size:clamp(24px,2.4vw,32px);line-height:1.2;font-weight:600;letter-spacing:-.015em;color:var(--pet)}
+.papeis-col{margin-top:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 56px}
+.papeis-col{grid-template-columns:1fr}
+.papeis em{display:block;font-style:normal;font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cv);margin-bottom:10px}
+.papeis p{margin:0;font-size:18px;line-height:1.55}
+.papeis p.q{font-size:21px;font-weight:600;line-height:1.35;margin-bottom:8px}
+.papeis-fim{margin-top:28px!important;font-weight:600;color:var(--pet)}
+.decisao-sec .papeis{margin-top:72px}
+.papeis h3,.medir h3,.fit h3,.nucleo-centro h3{font-size:clamp(22px,1.95vw,26px);line-height:1.2;letter-spacing:-.01em}
+.papeis em{font-size:13px;color:var(--cobre)}
+@media (max-width:760px){.papeis-col{grid-template-columns:1fr}}
+/* retrato pequeno na abertura, só no telemóvel (26/11) */
+.apoio-m{display:none}
+@media (max-width:900px){.apoio-m{display:flex;align-items:center;gap:10px;margin:18px 0 0;font-size:15px;color:var(--tinta)}.apoio-m img{width:36px;height:36px;border-radius:50%;object-fit:cover}}
 </style>
 <script>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('escreve-titulo');</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Service", "@id": "https://goalart.pt/coaching-executivo.html#servico", "name": "Coaching executivo", "serviceType": "Coaching executivo", "description": "Coaching executivo, estratégico e de equipa, e programas de liderança para empresários, direções de IPSS e Misericórdias e chefias, e para organizações públicas em parceria. Trabalho à medida, com objetivos definidos e preço fechado, sobretudo à distância.", "url": "https://goalart.pt/coaching-executivo.html", "provider": {"@type": "ProfessionalService", "@id": "https://goalart.pt/#goalart", "name": "GOALart", "url": "https://goalart.pt/"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Açores"}, {"@type": "Country", "name": "Portugal"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GOALart", "item": "https://goalart.pt/"}, {"@type": "ListItem", "position": 2, "name": "Coaching executivo", "item": "https://goalart.pt/coaching-executivo.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quem paga: a própria pessoa ou a organização?", "acceptedAnswer": {"@type": "Answer", "text": "Quem paga é quem contrata. Se for a própria pessoa a contratar o coaching executivo para si, é ela que paga. Se for a organização a contratar para os seus líderes ou equipas, é a organização que paga. Neste caso, os objetivos são acordados a três (eu, a pessoa acompanhada e a organização), e o conteúdo das sessões individuais continua confidencial."}}, {"@type": "Question", "name": "Quanto custa?", "acceptedAnswer": {"@type": "Answer", "text": "Preço fechado e combinado antes de começarmos, definido depois do diagnóstico, em função dos objetivos. Não cobro à hora nem à sessão."}}, {"@type": "Question", "name": "É só para empresas?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Trabalho com empresários, direções de IPSS e Misericórdias, chefias e, em parceria, organizações públicas."}}, {"@type": "Question", "name": "É presencial ou à distância?", "acceptedAnswer": {"@type": "Answer", "text": "Por regra, a maior parte do trabalho é feita à distância. As sessões presenciais são possíveis quando o contexto o justifica, e muitos programas combinam as duas formas."}}, {"@type": "Question", "name": "Qual é a diferença entre coaching executivo e formação?", "acceptedAnswer": {"@type": "Answer", "text": "A formação transmite conhecimento a um grupo. O coaching executivo trabalha as decisões e a forma de liderar de uma ou de várias pessoas, individualmente ou em equipa, no seu contexto e com os seus objetivos."}}, {"@type": "Question", "name": "Qual é a diferença entre coaching executivo e consultoria?", "acceptedAnswer": {"@type": "Answer", "text": "O consultor traz respostas; o coach executivo ajuda a encontrar as suas e a pô-las em prática. Eu combino as duas abordagens e digo-lhe sempre em qual dos papéis estou."}}]}]}</script>
@@ -477,7 +520,7 @@ h3,h4{line-height:1.25}
 <a href="coaching-executivo.html" aria-current="page"><b>Coaching executivo</b><span>Com quem lidera, com a equipa e com a organização</span></a>
 <p class="subm-t">Outras formas de trabalharmos</p>
 <a class="subm-2" href="direcao-tempo-parcial.html"><b>Direção a tempo parcial</b></a>
-<a class="subm-2" href="formacao-palestras.html"><b>Formação, palestras e projetos</b></a>
+<a class="subm-2" href="formacao-palestras.html"><b>Projetos, formação e palestras</b></a>
 </div>
 </details>
 <a class="nl" href="index.html#como">Como trabalho</a>
@@ -492,7 +535,7 @@ h3,h4{line-height:1.25}
 <a class="m-sub" href="coaching-executivo.html" aria-current="page">Coaching executivo</a>
 <p class="m-grupo">Outras formas de trabalharmos</p>
 <a class="m-sub" href="direcao-tempo-parcial.html">Direção a tempo parcial</a>
-<a class="m-sub" href="formacao-palestras.html">Formação, palestras e projetos</a>
+<a class="m-sub" href="formacao-palestras.html">Projetos, formação e palestras</a>
 <a href="index.html#como">Como trabalho</a>
 <a href="index.html#para-quem">Para quem é</a>
 <a href="index.html#hugo">Quem sou</a>
@@ -510,6 +553,7 @@ h3,h4{line-height:1.25}
 <div>
 <p class="lead hl d3">Para quem lidera empresas, IPSS ou entidades públicas e quer pensar as decisões difíceis com alguém ao seu lado: não para decidir por si, mas para o ajudar a decidir melhor. As equipas são, muitas vezes, o espelho de quem as lidera. Se quer que a sua equipa pense, decida e execute de outra forma, a transformação começa em si e chega depois às restantes chefias, à equipa e a toda a organização.</p>
 <div class="acoes hl d4"><a class="btn btn-c" href="#contacto">Marcar reunião inicial</a><a class="lk" href="index.html#como">Ver como trabalho</a></div>
+<p class="apoio-m hl d4"><img src="img/hugo-contacto.jpg" alt="" width="160" height="160" decoding="async">Uma hora, gratuita e sem compromisso.</p>
 </div>
 <div>
 <figure class="mapa sub-graf"><svg class="alvo" viewBox="0 0 520 520" role="img" aria-label="Alvo da GOALart com um percurso em espiral que parte do centro e se alarga até ao anel exterior" focusable="false">
@@ -532,26 +576,33 @@ h3,h4{line-height:1.25}
 <section id="decisao" class="nevoa-sec decisao-sec" aria-label="Parceiro de reflexão">
 <div class="wrap metodo">
 <p class="decisao-etq rv">Parceiro de reflexão</p>
-<h2 class="t-l pet rv"><span class="obs">Liderar é decidir.</span> E as melhores decisões nascem de mais do que um olhar.</h2>
-<p class="lead intro rv">Não decido por si. Crio as condições para refletir com clareza e decidir melhor, sobre pessoas, processos e números.</p>
+<h2 class="t-l pet rv"><span class="obs">Liderar é decidir.</span> <span class="resto">E as melhores decisões moldam-se com quem as desafia.</span></h2>
+<p class="lead intro rv">Não decido por si. Trago um olhar de fora e as perguntas que raramente ouve, para que possa refletir com clareza e decidir melhor.</p>
+<div class="decisao-fim decisao-bast rv"><p>Trabalho nos bastidores, para que quem lidera seja o protagonista.</p></div>
 <div class="trilho" aria-hidden="true"><div></div></div>
 <ol class="passos p3">
-<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><circle pathLength="1" cx="12" cy="12" r="8.5"/><path pathLength="1" d="M15.2 8.8l-2 4.4-4.4 2 2-4.4z"/><circle class="pt" cx="12" cy="12" r="1.2"/></svg></span><h3>Porque decide como decide?</h3><p>Sem testes nem rótulos. Com conversa, perguntas e uma análise cuidada entre sessões, ajudo-o a conhecer os seus padrões: como decide, como reage sob pressão, como se liga às pessoas à sua volta. Conhecê-los é o primeiro passo para os escolher.</p></li>
-<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"/><circle pathLength="1" cx="12" cy="12" r="3.2"/><circle class="pt" cx="12" cy="12" r="1.3"/></svg></span><h3>O que ainda não está a ver?</h3><p>O mesmo desafio, visto de outros ângulos. Novas perguntas, novas perspetivas e outras formas de o abordar, para decidir com mais solidez.</p></li>
-<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><circle pathLength="1" cx="12" cy="12" r="8.5"/><circle pathLength="1" cx="12" cy="12" r="4.5"/><circle class="pt" cx="12" cy="12" r="1.6"/></svg></span><h3>Como transforma isso em resultados?</h3><p>Com um plano, indicadores que acompanho consigo e alguém ao lado até a transformação funcionar no dia a dia.</p></li>
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><circle pathLength="1" cx="12" cy="12" r="8.5"/><path pathLength="1" d="M15.2 8.8l-2 4.4-4.4 2 2-4.4z"/><circle class="pt" cx="12" cy="12" r="1.2"/></svg></span><h3>Porque decide como decide?</h3><p>Sem testes nem rótulos. Com conversa, perguntas e uma análise cuidada entre sessões, ajudo-o a perceber o que está por trás das suas decisões. Como decide? Como reage sob pressão? Como se liga às pessoas à sua volta?</p></li>
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"/><circle pathLength="1" cx="12" cy="12" r="3.2"/><circle class="pt" cx="12" cy="12" r="1.3"/></svg></span><h3>O que ainda não está a ver?</h3><p>O mesmo desafio, visto com outros olhos. Novas perguntas, novas perspetivas e outras formas de o abordar, para decidir com mais solidez.</p></li>
+<li class="rv"><span class="ico-wm" aria-hidden="true"><svg viewBox="0 0 24 24"><circle pathLength="1" cx="12" cy="12" r="8.5"/><circle pathLength="1" cx="12" cy="12" r="4.5"/><circle class="pt" cx="12" cy="12" r="1.6"/></svg></span><h3>Como transformamos isso em resultados?</h3><p>Com um plano e um parceiro ao seu lado, até a transformação acontecer e os resultados aparecerem.</p></li>
 </ol>
-<div class="decisao-fim rv"><p>Trabalho nos bastidores. Quem brilha é quem lidera.</p></div>
+<div class="papeis rv">
+<h3>Coach executivo ou consultor? Depende da origem do problema.</h3>
+<div class="papeis-col">
+<div><em>Papel de coach executivo</em><p class="q">Já sabe o que tem de fazer, mas não está a acontecer?</p><p>Ajudo-o a perceber o que impede ou condiciona a execução e a encontrar a melhor alternativa para avançar.</p></div>
+<div><em>Papel de consultor</em><p class="q">Sabe o que quer, mas ainda não sabe como lá chegar?</p><p>Partilho o que aprendi: ferramentas, experiência, caminhos que já vi funcionar.</p></div>
+</div>
+</div>
 </div>
 </section>
 
-<section class="esc manif">
+<section class="esc manif com-foto" style="--fw:46%;--fp:35% 30%">
+<figure class="foto-esc" aria-hidden="false"><picture><source srcset="img/esc-sessao.webp" type="image/webp"><img src="img/esc-sessao.jpg" loading="lazy" alt="Hugo Ávila Goulart, a sorrir, ao portátil numa sessão de trabalho" width="1100" height="908" decoding="async"></picture></figure>
 <div class="wrap">
 <h2 class="t-l rv">O que me distingue?</h2>
 <div class="linhas">
 <details class="linha rv"><summary><h3>Experiência real</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Mais de quinze anos em funções de direção, no setor social, na administração local e no contexto empresarial. Conheço de perto muitos dos desafios de quem decide.</p></div></details>
 <details class="linha rv"><summary><h3>Percurso e formação</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Mais de 500 horas de coaching executivo conduzidas, em sessões individuais e de equipa. Certificações internacionais em coaching executivo e profissional, análise comportamental e programação neurolinguística.</p></div></details>
 <details class="linha rv"><summary><h3>Da reflexão à ação</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Cada programa combina reflexão, análise e planeamento, e deixa ferramentas concretas para gerir pessoas, tempo e prioridades. E cada pessoa tem um plano de desenvolvimento individual, com objetivos definidos no início e revistos ao longo do programa.</p></div></details>
-<details class="linha rv"><summary><h3>Ao mesmo nível</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Nas sessões, costumo propor que nos tratemos por tu. Trabalhamos melhor quando falamos ao mesmo nível, sem barreiras que nos afastem ou dificultem o alinhamento.</p></div></details>
 <details class="linha rv"><summary><h3>Visão sistémica</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>Muitas vezes, o coaching executivo mostra que o problema não está numa pessoa, mas na forma como a organização funciona. Quando isso acontece, pode ser preciso trabalhar a outro nível, e o trabalho pode continuar comigo: organização e processos ou direção a tempo parcial.</p></div></details>
 <details class="linha rv"><summary><h3>Confidencialidade</h3><span class="mais" aria-hidden="true"></span></summary><div class="resp"><p>O que me diz nas sessões individuais fica nessas sessões. Com a liderança, partilho objetivos, progressos e padrões gerais que ajudam a orientar a estratégia, nunca o que foi dito em cada sessão.</p></div></details>
 </div>
@@ -629,6 +680,7 @@ h3,h4{line-height:1.25}
 <div class="ct-grid">
 <h2 class="t-l rv" style="max-width:20ch">Quer pensar as próximas decisões com alguém ao seu lado?</h2>
 <div class="ct-dir">
+<div class="ct-quem"><picture><source srcset="img/hugo-contacto.webp" type="image/webp"><img src="img/hugo-contacto.jpg" loading="lazy" alt="" width="160" height="160" decoding="async"></picture><p><b>Hugo Ávila Goulart</b><span>Coach executivo · Lajes do Pico, Açores</span></p></div>
 <p class="lead">Uma reunião inicial de uma hora, gratuita e sem compromisso, para perceber o ponto de partida e se faz sentido trabalharmos&nbsp;juntos.<br>Todas as mensagens têm resposta em 48 horas.</p>
 <div class="acoes">
 <a class="btn btn-ch" href="https://calendar.app.google/sAL11MT9BZyRDrzg7" target="_blank" rel="noopener" data-marcacao>Marcar reunião inicial</a>
@@ -746,6 +798,18 @@ h3,h4{line-height:1.25}
     box.addEventListener('touchend',function(e){ if(x0===null)return; var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40){ mostrar(atual+(dx<0?1:-1)); arrancar(); } x0=null; },{passive:true});
     estado(); arrancar();
   });
+})();
+</script>
+<a class="cta-fixo" href="#contacto" aria-hidden="true" tabindex="-1">Marcar reunião inicial</a>
+<script>
+(function(){
+  var b=document.querySelector('.cta-fixo'); if(!b||!('IntersectionObserver' in window)) { if(b) b.classList.add('on'); return; }
+  var topo=document.querySelector('section.hero'), cont=document.getElementById('contacto'), vTopo=true, vCont=false;
+  function upd(){ b.classList.toggle('on', !vTopo && !vCont); b.setAttribute('aria-hidden', (vTopo||vCont)?'true':'false'); b.tabIndex=(vTopo||vCont)?-1:0; }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.target===topo) vTopo=e.isIntersecting; if(e.target===cont) vCont=e.isIntersecting; }); upd(); },{threshold:0});
+  if(topo) io.observe(topo); else vTopo=false;
+  if(cont) io.observe(cont);
+  upd();
 })();
 </script>
 </body>
