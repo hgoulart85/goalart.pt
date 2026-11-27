@@ -675,11 +675,11 @@ body{padding-bottom:76px}
 .outros-lista li::before{content:"";position:absolute;left:0;top:.78em;width:10px;height:2px;background:var(--cobre)}
 .outros-lista b{font-weight:600;color:var(--tinta)}
 /* abordagem integrada: faixa a toda a largura, a fechar o conjunto (27/11) */
-.nucleo-integ{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:end;padding:22px 0 0;border-top:2px solid var(--pet)}
+.nucleo-integ{grid-column:1/-1;display:block;padding:22px 0 0;border-top:2px solid var(--pet)}
 .nucleo-integ .etq-c{margin:0}
 .nucleo-integ h3{margin:8px 0 0;font-size:22px;line-height:1.25;font-weight:600;letter-spacing:-.01em;color:var(--pet)}
 .nucleo-grid .nucleo-integ{margin-top:-4px}
-.nucleo-integ p:not(.etq-c){margin:0;font-size:18px;line-height:1.55;color:var(--tinta)}
+.nucleo-integ p:not(.etq-c){margin:8px 0 0;max-width:46em;font-size:18px;line-height:1.55;color:var(--tinta)}
 @media (max-width:900px){.nucleo-integ{grid-template-columns:1fr;gap:8px}}
 </style>
 <script>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('escreve-titulo');</script>
